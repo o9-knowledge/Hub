@@ -371,7 +371,7 @@ paths:
     description: Holidays description
     get:
       tags:
-        - Unknown
+        - Events
       summary: '''Holidays title'' *(Dimension)*'
       description: "Holidays description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
@@ -466,7 +466,7 @@ paths:
     description: IncomeGrp description
     get:
       tags:
-        - Unknown
+        - Consumer Metrics
       summary: '''IncomeGrp title'' *(Dimension)*'
       description: "IncomeGrp description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
@@ -625,7 +625,7 @@ paths:
     description: Location description
     get:
       tags:
-        - Unknown
+        - Market Structure
       summary: '''Location title'' *(Dimension)*'
       description: "Location description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
@@ -1057,7 +1057,7 @@ paths:
     description: Sports description
     get:
       tags:
-        - Unknown
+        - Events
       summary: '''Sports title'' *(Dimension)*'
       description: "Sports description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
@@ -1103,7 +1103,7 @@ paths:
     description: SportsTeam description
     get:
       tags:
-        - Unknown
+        - Events
       summary: '''SportsTeam title'' *(Dimension)*'
       description: "SportsTeam description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
@@ -3484,7 +3484,7 @@ paths:
     description: EVAdoptionYearly description
     get:
       tags:
-        - Unknown
+        - Consumer Metrics
       summary: EVAdoptionYearly title
       description: EVAdoptionYearly description
       parameters:
@@ -7680,7 +7680,7 @@ paths:
     description: PopulationMonthly description
     get:
       tags:
-        - Unknown
+        - Consumer Metrics
       summary: PopulationMonthly title
       description: PopulationMonthly description
       parameters:
@@ -8548,7 +8548,7 @@ paths:
     description: RetailSalesQuarterly description
     get:
       tags:
-        - Unknown
+        - Market Activity
       summary: RetailSalesQuarterly title
       description: RetailSalesQuarterly description
       parameters:
@@ -9835,7 +9835,7 @@ paths:
     description: WeatherDaily description
     get:
       tags:
-        - Unknown
+        - Weather
       summary: WeatherDaily title
       description: WeatherDaily description
       parameters:
@@ -9900,7 +9900,7 @@ paths:
     description: WeatherForecastBias description
     get:
       tags:
-        - Unknown
+        - Weather
       summary: WeatherForecastBias title
       description: WeatherForecastBias description
       parameters:
@@ -9955,7 +9955,7 @@ paths:
     description: WeatherForecastDaily description
     get:
       tags:
-        - Unknown
+        - Weather
       summary: WeatherForecastDaily title
       description: WeatherForecastDaily description
       parameters:
@@ -10100,7 +10100,7 @@ paths:
     description: WeatherReq description
     get:
       tags:
-        - Unknown
+        - Weather
       summary: WeatherReq title
       description: WeatherReq description
       parameters:
