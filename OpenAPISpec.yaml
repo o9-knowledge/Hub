@@ -108,7 +108,7 @@ paths:
     description: Catalog description
     get:
       tags:
-        - Unknown
+        - Model
       summary: '''Catalog title'' *(Dimension)*'
       description: "Catalog description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
@@ -1299,245 +1299,6 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
-  /master/MarketIntel/WCustomer:
-    summary: WCustomer title
-    description: WCustomer description
-    get:
-      tags:
-        - Unknown
-      summary: '''WCustomer title'' *(Dimension)*'
-      description: "WCustomer description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WCustomers:
-                        type: array
-                        items:
-                          title: WCustomer
-                          type: object
-                          properties:
-                            WCustomer:
-                              type: integer
-                              description: '(*Filterable dimensional attribute*) WCustomer title : WCustomer description'
-                            WRequestID:
-                              type: integer
-                              description: '(*Filterable dimensional attribute*) WRequestID title : WRequestID description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /master/MarketIntel/WDE:
-    summary: WDE title
-    description: WDE description
-    get:
-      tags:
-        - Unknown
-      summary: '''WDE title'' *(Dimension)*'
-      description: "WDE description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      Weather Driver Engineerings:
-                        type: array
-                        items:
-                          title: Weather Driver Engineering
-                          type: object
-                          properties:
-                            WDE_Customer:
-                              type: integer
-                              description: '(*Filterable dimensional attribute*) WDE_Customer title : WDE_Customer description'
-                            WDE_Project_ID:
-                              type: integer
-                              description: '(*Filterable dimensional attribute*) WDE_Project_ID title : WDE_Project_ID description'
-                            WDE_Project_Name:
-                              type: integer
-                              description: '(*Filterable dimensional attribute*) WDE_Project_Name title : WDE_Project_Name description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /master/MarketIntel/WDELocation:
-    summary: WDELocation title
-    description: WDELocation description
-    get:
-      tags:
-        - Unknown
-      summary: '''WDELocation title'' *(Dimension)*'
-      description: "WDELocation description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WDE Locations:
-                        type: array
-                        items:
-                          title: WDE Location
-                          type: object
-                          properties:
-                            WDE Location:
-                              type: integer
-                              description: '(*Filterable dimensional attribute*) WDE Location title : WDE Location description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /master/MarketIntel/WDENetwork:
-    summary: WDENetwork title
-    description: WDENetwork description
-    get:
-      tags:
-        - Unknown
-      summary: '''WDENetwork title'' *(Dimension)*'
-      description: "WDENetwork description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WDE Networks:
-                        type: array
-                        items:
-                          title: WDE Network
-                          type: object
-                          properties:
-                            WDE Network:
-                              type: integer
-                              description: '(*Filterable dimensional attribute*) WDE Network title : WDE Network description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /master/MarketIntel/WDESerialNumber:
-    summary: WDESerialNumber title
-    description: WDESerialNumber description
-    get:
-      tags:
-        - Unknown
-      summary: '''WDESerialNumber title'' *(Dimension)*'
-      description: "WDESerialNumber description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WDE Serial Numbers:
-                        type: array
-                        items:
-                          title: WDE Serial Number
-                          type: object
-                          properties:
-                            WDE Serial Number:
-                              type: integer
-                              description: '(*Filterable dimensional attribute*) WDE Serial Number title : WDE Serial Number description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
   /fact/MarketIntel/ActivityLog:
     summary: ActivityLog title
     description: ActivityLog description
@@ -1568,19 +1329,16 @@ paths:
                           title: ActivityLog
                           type: object
                           properties:
-                            RetrieverType:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) RetrieverType title : RetrieverType description.  \n<br/>*See 'RetrieverType title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            SourceType:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) SourceType title : SourceType description.  \n<br/>*See 'SourceType title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
-                            ActivityRuntimeSec:
-                              type: number
-                              description: 'ActivityRuntimeSec title : ActivityRuntimeSec description'
+                            RetrieverType:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) RetrieverType title : RetrieverType description.  \n<br/>*See 'RetrieverType title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            SourceType:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) SourceType title : SourceType description.  \n<br/>*See 'SourceType title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Dummy:
                               type: number
                               description: 'Dummy title : Dummy description'
@@ -1594,6 +1352,9 @@ paths:
                             GUID:
                               type: string
                               description: 'GUID title : GUID description'
+                            ActivityRuntimeSec:
+                              type: number
+                              description: 'ActivityRuntimeSec title : ActivityRuntimeSec description'
                             StartStamp:
                               type: string
                               description: 'StartStamp title : StartStamp description'
@@ -1652,10 +1413,10 @@ paths:
                           properties:
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             DistDoctor:
                               type: number
@@ -1714,10 +1475,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AppleMobilityDriving:
                               type: number
@@ -1782,7 +1543,7 @@ paths:
                           properties:
                             ContentItem:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             ContentDataOrigin:
                               type: string
                               description: 'ContentDataOrigin title : ContentDataOrigin description'
@@ -1949,10 +1710,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             GlobalCommodityPriceIndexAgriRawMaterials:
                               type: number
@@ -2023,15 +1784,63 @@ paths:
                             GlobalCommodityPriceIndexFood&Beverage:
                               type: number
                               description: 'GlobalCommodityPriceIndexFood&Beverage title : GlobalCommodityPriceIndexFood&Beverage description'
+                            GlobalCommodityPriceIndexHardwood:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexHardwood title : GlobalCommodityPriceIndexHardwood description'
+                            GlobalCommodityPriceIndexSeafood:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexSeafood title : GlobalCommodityPriceIndexSeafood description'
+                            GlobalCommodityPriceIndexSoftLogs:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexSoftLogs title : GlobalCommodityPriceIndexSoftLogs description'
+                            GlobalCommodityPriceIndexSoftwood:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexSoftwood title : GlobalCommodityPriceIndexSoftwood description'
+                            GlobalCommodityPriceIndexSorghum:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexSorghum title : GlobalCommodityPriceIndexSorghum description'
+                            GlobalCommodityPriceIndexSoybeanOil:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexSoybeanOil title : GlobalCommodityPriceIndexSoybeanOil description'
+                            GlobalCommodityPriceIndexSoybeans:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexSoybeans title : GlobalCommodityPriceIndexSoybeans description'
+                            GlobalCommodityPriceIndexSugar:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexSugar title : GlobalCommodityPriceIndexSugar description'
+                            GlobalCommodityPriceIndexSunflowerOil:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexSunflowerOil title : GlobalCommodityPriceIndexSunflowerOil description'
+                            GlobalCommodityPriceIndexTeaKenyan:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexTeaKenyan title : GlobalCommodityPriceIndexTeaKenyan description'
+                            GlobalCommodityPriceIndexTimber:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexTimber title : GlobalCommodityPriceIndexTimber description'
+                            GlobalCommodityPriceIndexTin:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexTin title : GlobalCommodityPriceIndexTin description'
+                            GlobalCommodityPriceIndexTomato:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexTomato title : GlobalCommodityPriceIndexTomato description'
+                            GlobalCommodityPriceIndexUrea:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexUrea title : GlobalCommodityPriceIndexUrea description'
+                            GlobalCommodityPriceIndexWheat:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexWheat title : GlobalCommodityPriceIndexWheat description'
+                            GlobalCommodityPriceIndexWool:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexWool title : GlobalCommodityPriceIndexWool description'
+                            GlobalCommodityPriceIndexZinc:
+                              type: number
+                              description: 'GlobalCommodityPriceIndexZinc title : GlobalCommodityPriceIndexZinc description'
                             GlobalCommodityPriceIndexGold:
                               type: number
                               description: 'GlobalCommodityPriceIndexGold title : GlobalCommodityPriceIndexGold description'
                             GlobalCommodityPriceIndexGroundnuts:
                               type: number
                               description: 'GlobalCommodityPriceIndexGroundnuts title : GlobalCommodityPriceIndexGroundnuts description'
-                            GlobalCommodityPriceIndexHardwood:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexHardwood title : GlobalCommodityPriceIndexHardwood description'
                             GlobalCommodityPriceIndexHides:
                               type: number
                               description: 'GlobalCommodityPriceIndexHides title : GlobalCommodityPriceIndexHides description'
@@ -2101,54 +1910,6 @@ paths:
                             GlobalCommodityPriceIndexRubber:
                               type: number
                               description: 'GlobalCommodityPriceIndexRubber title : GlobalCommodityPriceIndexRubber description'
-                            GlobalCommodityPriceIndexSeafood:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexSeafood title : GlobalCommodityPriceIndexSeafood description'
-                            GlobalCommodityPriceIndexSoftLogs:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexSoftLogs title : GlobalCommodityPriceIndexSoftLogs description'
-                            GlobalCommodityPriceIndexSoftwood:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexSoftwood title : GlobalCommodityPriceIndexSoftwood description'
-                            GlobalCommodityPriceIndexSorghum:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexSorghum title : GlobalCommodityPriceIndexSorghum description'
-                            GlobalCommodityPriceIndexSoybeanOil:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexSoybeanOil title : GlobalCommodityPriceIndexSoybeanOil description'
-                            GlobalCommodityPriceIndexSoybeans:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexSoybeans title : GlobalCommodityPriceIndexSoybeans description'
-                            GlobalCommodityPriceIndexSugar:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexSugar title : GlobalCommodityPriceIndexSugar description'
-                            GlobalCommodityPriceIndexSunflowerOil:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexSunflowerOil title : GlobalCommodityPriceIndexSunflowerOil description'
-                            GlobalCommodityPriceIndexTeaKenyan:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexTeaKenyan title : GlobalCommodityPriceIndexTeaKenyan description'
-                            GlobalCommodityPriceIndexTimber:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexTimber title : GlobalCommodityPriceIndexTimber description'
-                            GlobalCommodityPriceIndexTin:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexTin title : GlobalCommodityPriceIndexTin description'
-                            GlobalCommodityPriceIndexTomato:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexTomato title : GlobalCommodityPriceIndexTomato description'
-                            GlobalCommodityPriceIndexUrea:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexUrea title : GlobalCommodityPriceIndexUrea description'
-                            GlobalCommodityPriceIndexWheat:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexWheat title : GlobalCommodityPriceIndexWheat description'
-                            GlobalCommodityPriceIndexWool:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexWool title : GlobalCommodityPriceIndexWool description'
-                            GlobalCommodityPriceIndexZinc:
-                              type: number
-                              description: 'GlobalCommodityPriceIndexZinc title : GlobalCommodityPriceIndexZinc description'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -2194,17 +1955,11 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
-                            CovidConfirmedCases:
-                              type: number
-                              description: 'CovidConfirmedCases title : CovidConfirmedCases description'
-                            CovidConfirmedDeaths:
-                              type: number
-                              description: 'CovidConfirmedDeaths title : CovidConfirmedDeaths description'
                             CovidDailyConfirmedCases:
                               type: number
                               description: 'CovidDailyConfirmedCases title : CovidDailyConfirmedCases description'
@@ -2220,12 +1975,6 @@ paths:
                             CovidVaccinationPerHundredPeople:
                               type: number
                               description: 'CovidVaccinationPerHundredPeople title : CovidVaccinationPerHundredPeople description'
-                            CovidVaccinationsComplete:
-                              type: number
-                              description: 'CovidVaccinationsComplete title : CovidVaccinationsComplete description'
-                            CovidVaccinationsPartial:
-                              type: number
-                              description: 'CovidVaccinationsPartial title : CovidVaccinationsPartial description'
                             FacialCoveringsMandated:
                               type: number
                               description: 'FacialCoveringsMandated title : FacialCoveringsMandated description'
@@ -2319,6 +2068,18 @@ paths:
                             StateIncomeSupportSmall:
                               type: number
                               description: 'StateIncomeSupportSmall title : StateIncomeSupportSmall description'
+                            CovidConfirmedCases:
+                              type: number
+                              description: 'CovidConfirmedCases title : CovidConfirmedCases description'
+                            CovidConfirmedDeaths:
+                              type: number
+                              description: 'CovidConfirmedDeaths title : CovidConfirmedDeaths description'
+                            CovidVaccinationsComplete:
+                              type: number
+                              description: 'CovidVaccinationsComplete title : CovidVaccinationsComplete description'
+                            CovidVaccinationsPartial:
+                              type: number
+                              description: 'CovidVaccinationsPartial title : CovidVaccinationsPartial description'
                             VaccinationPolicyAbsent:
                               type: number
                               description: 'VaccinationPolicyAbsent title : VaccinationPolicyAbsent description'
@@ -2389,19 +2150,13 @@ paths:
                           title: Covid19StateDaily
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
-                            CovidConfirmedCases_region:
-                              type: number
-                              description: 'CovidConfirmedCases_region title : CovidConfirmedCases_region description'
-                            CovidConfirmedDeaths_region:
-                              type: number
-                              description: 'CovidConfirmedDeaths_region title : CovidConfirmedDeaths_region description'
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             CovidDailyConfirmedCases_region:
                               type: number
                               description: 'CovidDailyConfirmedCases_region title : CovidDailyConfirmedCases_region description'
@@ -2417,12 +2172,6 @@ paths:
                             CovidVaccinationPerHundredPeople_region:
                               type: number
                               description: 'CovidVaccinationPerHundredPeople_region title : CovidVaccinationPerHundredPeople_region description'
-                            CovidVaccinationsComplete_region:
-                              type: number
-                              description: 'CovidVaccinationsComplete_region title : CovidVaccinationsComplete_region description'
-                            CovidVaccinationsPartial_region:
-                              type: number
-                              description: 'CovidVaccinationsPartial_region title : CovidVaccinationsPartial_region description'
                             FacialCoveringsMandated_region:
                               type: number
                               description: 'FacialCoveringsMandated_region title : FacialCoveringsMandated_region description'
@@ -2516,6 +2265,18 @@ paths:
                             StateIncomeSupportSmall_region:
                               type: number
                               description: 'StateIncomeSupportSmall_region title : StateIncomeSupportSmall_region description'
+                            CovidConfirmedCases_region:
+                              type: number
+                              description: 'CovidConfirmedCases_region title : CovidConfirmedCases_region description'
+                            CovidConfirmedDeaths_region:
+                              type: number
+                              description: 'CovidConfirmedDeaths_region title : CovidConfirmedDeaths_region description'
+                            CovidVaccinationsComplete_region:
+                              type: number
+                              description: 'CovidVaccinationsComplete_region title : CovidVaccinationsComplete_region description'
+                            CovidVaccinationsPartial_region:
+                              type: number
+                              description: 'CovidVaccinationsPartial_region title : CovidVaccinationsPartial_region description'
                             VaccinationPolicyAbsent_region:
                               type: number
                               description: 'VaccinationPolicyAbsent_region title : VaccinationPolicyAbsent_region description'
@@ -2588,7 +2349,7 @@ paths:
                           properties:
                             PL7:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) PL7 title : PL7 description.  \n<br/>*See 'Product title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) PL7 title : PL7 description.  \n<br/>*See 'Product title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             RawBasePrice:
                               type: number
                               description: 'RawBasePrice title : RawBasePrice description'
@@ -2661,7 +2422,7 @@ paths:
                           properties:
                             IL4:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) IL4 title : IL4 description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) IL4 title : IL4 description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             CrawlRowsEmpty:
                               type: number
                               description: 'CrawlRowsEmpty title : CrawlRowsEmpty description'
@@ -2713,7 +2474,7 @@ paths:
                           properties:
                             IL4:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) IL4 title : IL4 description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) IL4 title : IL4 description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             CrawlDate:
                               type: string
                               description: 'CrawlDate title : CrawlDate description'
@@ -2763,7 +2524,7 @@ paths:
                           properties:
                             IL4:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) IL4 title : IL4 description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) IL4 title : IL4 description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             CrawledCategoryFolder:
                               type: string
                               description: 'CrawledCategoryFolder title : CrawledCategoryFolder description'
@@ -2813,16 +2574,16 @@ paths:
                           title: CrawlerLog
                           type: object
                           properties:
-                            StoreBatchID:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) StoreBatchID title : StoreBatchID description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            SourceType:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) SourceType title : SourceType description.  \n<br/>*See 'SourceType title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            SourceType:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) SourceType title : SourceType description.  \n<br/>*See 'SourceType title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            StoreBatchID:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) StoreBatchID title : StoreBatchID description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             CrawlEndStamp:
                               type: string
                               description: 'CrawlEndStamp title : CrawlEndStamp description'
@@ -2888,10 +2649,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AvgTemp:
                               type: number
@@ -2962,10 +2723,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             ExchangeDailyAll:
                               type: number
@@ -3015,10 +2776,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             CentralBankPrimeLoanRate:
                               type: number
@@ -3071,26 +2832,26 @@ paths:
                           properties:
                             Age:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Age title : Age description.  \n<br/>*See 'Age title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Age title : Age description.  \n<br/>*See 'Age title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             RootCause:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) RootCause title : RootCause description.  \n<br/>*See 'ICD10 title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) RootCause title : RootCause description.  \n<br/>*See 'ICD10 title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            DeathCauseTotalAgeYearly:
+                              type: number
+                              description: 'DeathCauseTotalAgeYearly title : DeathCauseTotalAgeYearly description'
                             DeathCauseFemalesAgeYearly:
                               type: number
                               description: 'DeathCauseFemalesAgeYearly title : DeathCauseFemalesAgeYearly description'
                             DeathCauseMalesAgeYearly:
                               type: number
                               description: 'DeathCauseMalesAgeYearly title : DeathCauseMalesAgeYearly description'
-                            DeathCauseTotalAgeYearly:
-                              type: number
-                              description: 'DeathCauseTotalAgeYearly title : DeathCauseTotalAgeYearly description'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -3136,13 +2897,13 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             RootCause:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) RootCause title : RootCause description.  \n<br/>*See 'ICD10 title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) RootCause title : RootCause description.  \n<br/>*See 'ICD10 title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             DeathCauseTotalYearly:
                               type: number
@@ -3192,10 +2953,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             Recessions:
                               type: number
@@ -3245,10 +3006,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AverageWeeklyHoursEmployedinRetailTradeNSA:
                               type: number
@@ -3349,10 +3110,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Quarter:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             NewJobsinConstructionSA:
                               type: number
@@ -3400,16 +3161,16 @@ paths:
                           title: EmploymentStateMonthly
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             IL2:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) IL2 title : IL2 description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) IL2 title : IL2 description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             StateEmployedPersonsSA:
                               type: number
                               description: 'StateEmployedPersonsSA title : StateEmployedPersonsSA description'
@@ -3458,10 +3219,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             UnemploymentYearlyNSA:
                               type: number
@@ -3511,10 +3272,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             EVSalesPercentLongTerm:
                               type: number
@@ -3616,10 +3377,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AmazonPrimeDays:
                               type: number
@@ -3675,10 +3436,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             TotalMonthlyBirthdays:
                               type: number
@@ -3728,7 +3489,7 @@ paths:
                           properties:
                             City:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             ForecastLocationLat:
                               type: number
                               description: 'ForecastLocationLat title : ForecastLocationLat description'
@@ -3780,13 +3541,13 @@ paths:
                           properties:
                             ContentItem:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSProjectIterationID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             FSForecastLowerbound:
                               type: number
@@ -3842,13 +3603,13 @@ paths:
                           properties:
                             ContentItem:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSProjectIterationID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             FSInputValue:
                               type: number
@@ -3901,10 +3662,10 @@ paths:
                           properties:
                             ContentItem:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSProjectIterationID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSDriverCategory:
                               type: string
                               description: 'FSDriverCategory title : FSDriverCategory description'
@@ -3975,10 +3736,10 @@ paths:
                           properties:
                             ContentItem:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSProjectModelID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectModelID title : FSProjectModelID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectModelID title : FSProjectModelID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSModelCatalogValue:
                               type: number
                               description: 'FSModelCatalogValue title : FSModelCatalogValue description'
@@ -4027,7 +3788,7 @@ paths:
                           properties:
                             FSProjectIterationID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSCollinearity:
                               type: number
                               description: 'FSCollinearity title : FSCollinearity description'
@@ -4112,7 +3873,7 @@ paths:
                           properties:
                             FSProjectType:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectType title : FSProjectType description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectType title : FSProjectType description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSProjectList:
                               type: number
                               description: 'FSProjectList title : FSProjectList description'
@@ -4161,7 +3922,7 @@ paths:
                           properties:
                             FSProjectModelID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectModelID title : FSProjectModelID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectModelID title : FSProjectModelID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             FSModelCountry:
                               type: string
                               description: 'FSModelCountry title : FSModelCountry description'
@@ -4219,10 +3980,10 @@ paths:
                           properties:
                             FSProjectIterationID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             FSTargetValueForecast:
                               type: number
@@ -4278,10 +4039,10 @@ paths:
                           properties:
                             FSProjectIterationID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             FSTargetInput2:
                               type: number
@@ -4331,10 +4092,10 @@ paths:
                           properties:
                             FSProjectModelID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectModelID title : FSProjectModelID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectModelID title : FSProjectModelID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             FSTargetRaw:
                               type: number
@@ -4387,10 +4148,10 @@ paths:
                           properties:
                             FSProjectIterationID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectIterationID title : FSProjectIterationID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             FSUserDriver3:
                               type: number
@@ -4440,17 +4201,17 @@ paths:
                           properties:
                             FSProjectModelID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) FSProjectModelID title : FSProjectModelID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) FSProjectModelID title : FSProjectModelID description.  \n<br/>*See 'FSProject title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
-                            FSUserDriver:
-                              type: number
-                              description: 'FSUserDriver title : FSUserDriver description'
                             FSUserDriver2:
                               type: number
                               description: 'FSUserDriver2 title : FSUserDriver2 description'
+                            FSUserDriver:
+                              type: number
+                              description: 'FSUserDriver title : FSUserDriver description'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -4496,7 +4257,7 @@ paths:
                           properties:
                             City:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             GHCNCode:
                               type: string
                               description: 'GHCNCode title : GHCNCode description'
@@ -4551,10 +4312,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             Grocery&Pharmacy:
                               type: number
@@ -4619,10 +4380,10 @@ paths:
                           properties:
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             Grocery&Pharmacy_County:
                               type: number
@@ -4685,13 +4446,13 @@ paths:
                           title: GoogleMobilityState
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Grocery&Pharmacy_State:
                               type: number
                               description: 'Grocery&Pharmacy_State title : Grocery&Pharmacy_State description'
@@ -4755,13 +4516,13 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Race:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Race title : Race description.  \n<br/>*See 'Race title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Race title : Race description.  \n<br/>*See 'Race title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             HealthCoveragebyRace:
                               type: number
@@ -4809,15 +4570,15 @@ paths:
                           title: HealthCoveragebyState
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             HealthInsuranceType:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) HealthInsuranceType title : HealthInsuranceType description.  \n<br/>*See 'Health Insurance (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) HealthInsuranceType title : HealthInsuranceType description.  \n<br/>*See 'Health Insurance (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             HealthCoverage%:
                               type: number
@@ -4870,10 +4631,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             HousingCompleted1UnitSAAR:
                               type: number
@@ -4989,10 +4750,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Quarter:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             HousingFurnishingsQuarterlySA:
                               type: number
@@ -5049,28 +4810,28 @@ paths:
                           title: HousingChangesStateMonthly
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             IL2:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) IL2 title : IL2 description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) IL2 title : IL2 description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             HousingCompletedMidWestUSAStatesNSA:
                               type: number
                               description: 'HousingCompletedMidWestUSAStatesNSA title : HousingCompletedMidWestUSAStatesNSA description'
                             HousingCompletedNorthEastUSAStatesNSA:
                               type: number
                               description: 'HousingCompletedNorthEastUSAStatesNSA title : HousingCompletedNorthEastUSAStatesNSA description'
-                            HousingCompletedSouthUSAStatesNSA:
-                              type: number
-                              description: 'HousingCompletedSouthUSAStatesNSA title : HousingCompletedSouthUSAStatesNSA description'
                             HousingCompletedStatesNSA:
                               type: number
                               description: 'HousingCompletedStatesNSA title : HousingCompletedStatesNSA description'
+                            HousingCompletedSouthUSAStatesNSA:
+                              type: number
+                              description: 'HousingCompletedSouthUSAStatesNSA title : HousingCompletedSouthUSAStatesNSA description'
                             HousingCompletedWestUSAStatesNSA:
                               type: number
                               description: 'HousingCompletedWestUSAStatesNSA title : HousingCompletedWestUSAStatesNSA description'
@@ -5083,12 +4844,12 @@ paths:
                             HousingStartedNorthEastUSAStatesNSA:
                               type: number
                               description: 'HousingStartedNorthEastUSAStatesNSA title : HousingStartedNorthEastUSAStatesNSA description'
-                            HousingStartedSouthUSAStatesNSA:
-                              type: number
-                              description: 'HousingStartedSouthUSAStatesNSA title : HousingStartedSouthUSAStatesNSA description'
                             HousingStartedStatesNSA:
                               type: number
                               description: 'HousingStartedStatesNSA title : HousingStartedStatesNSA description'
+                            HousingStartedSouthUSAStatesNSA:
+                              type: number
+                              description: 'HousingStartedSouthUSAStatesNSA title : HousingStartedSouthUSAStatesNSA description'
                             HousingStartedWestUSAStatesNSA:
                               type: number
                               description: 'HousingStartedWestUSAStatesNSA title : HousingStartedWestUSAStatesNSA description'
@@ -5137,10 +4898,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             HousingUnitsTotalYearlyNSA:
                               type: number
@@ -5190,10 +4951,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             CaseShillerIndexSA:
                               type: number
@@ -5279,10 +5040,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             HousingPrivateConstructionSpendingAmusementandrecreationNSA:
                               type: number
@@ -5471,15 +5232,15 @@ paths:
                           title: ILIActivityLevel
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             RootCause:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) RootCause title : RootCause description.  \n<br/>*See 'ICD10 title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) RootCause title : RootCause description.  \n<br/>*See 'ICD10 title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Week:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Week title : Week description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Week title : Week description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             ILI Activity Level:
                               type: number
@@ -5529,11 +5290,20 @@ paths:
                           properties:
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            IncHousPctBottom40:
+                              type: number
+                              description: 'IncHousPctBottom40 title : IncHousPctBottom40 description'
+                            IncHoushldsNrPvrtyLn:
+                              type: number
+                              description: 'IncHoushldsNrPvrtyLn title : IncHoushldsNrPvrtyLn description'
+                            IncHousPctTop20:
+                              type: number
+                              description: 'IncHousPctTop20 title : IncHousPctTop20 description'
                             IncAvgPerEarner:
                               type: number
                               description: 'IncAvgPerEarner title : IncAvgPerEarner description'
@@ -5552,15 +5322,6 @@ paths:
                             IncErnrsPctTop20:
                               type: number
                               description: 'IncErnrsPctTop20 title : IncErnrsPctTop20 description'
-                            IncHoushldsNrPvrtyLn:
-                              type: number
-                              description: 'IncHoushldsNrPvrtyLn title : IncHoushldsNrPvrtyLn description'
-                            IncHousPctBottom40:
-                              type: number
-                              description: 'IncHousPctBottom40 title : IncHousPctBottom40 description'
-                            IncHousPctTop20:
-                              type: number
-                              description: 'IncHousPctTop20 title : IncHousPctTop20 description'
                             IncLowIncHoushlds:
                               type: number
                               description: 'IncLowIncHoushlds title : IncLowIncHoushlds description'
@@ -5609,10 +5370,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AHEProdManNSA:
                               type: number
@@ -5711,13 +5472,13 @@ paths:
                           title: IncomeZipYearly
                           type: object
                           properties:
-                            Zip:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            Zip:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             A00100:
                               type: number
                               description: 'A00100 title : A00100 description'
@@ -5815,16 +5576,16 @@ paths:
                           title: IncomeZipYearlyCategory
                           type: object
                           properties:
-                            Zip:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             IncomeGrp:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) IncomeGrp title : IncomeGrp description.  \n<br/>*See 'IncomeGrp title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) IncomeGrp title : IncomeGrp description.  \n<br/>*See 'IncomeGrp title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            Zip:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             A00100_Cat:
                               type: number
                               description: 'A00100_Cat title : A00100_Cat description'
@@ -5924,10 +5685,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             CommodityPPIChemicalsPlasticNSA:
                               type: number
@@ -5950,12 +5711,6 @@ paths:
                             IndConstructionConfidenceIndicatorNSA:
                               type: number
                               description: 'IndConstructionConfidenceIndicatorNSA title : IndConstructionConfidenceIndicatorNSA description'
-                            IndRetailConfidenceIndicatorNSA:
-                              type: number
-                              description: 'IndRetailConfidenceIndicatorNSA title : IndRetailConfidenceIndicatorNSA description'
-                            IndServicesConfidenceIndicatorNSA:
-                              type: number
-                              description: 'IndServicesConfidenceIndicatorNSA title : IndServicesConfidenceIndicatorNSA description'
                             IndustryImportPriceFootwearEndUseNSA:
                               type: number
                               description: 'IndustryImportPriceFootwearEndUseNSA title : IndustryImportPriceFootwearEndUseNSA description'
@@ -6334,6 +6089,12 @@ paths:
                             IndustryProductionNonConstructionNSA:
                               type: number
                               description: 'IndustryProductionNonConstructionNSA title : IndustryProductionNonConstructionNSA description'
+                            IndRetailConfidenceIndicatorNSA:
+                              type: number
+                              description: 'IndRetailConfidenceIndicatorNSA title : IndRetailConfidenceIndicatorNSA description'
+                            IndServicesConfidenceIndicatorNSA:
+                              type: number
+                              description: 'IndServicesConfidenceIndicatorNSA title : IndServicesConfidenceIndicatorNSA description'
                             RetailSalesElectronicShoppingNSA:
                               type: number
                               description: 'RetailSalesElectronicShoppingNSA title : RetailSalesElectronicShoppingNSA description'
@@ -6382,10 +6143,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AdvancedRetailInventoryAutoNSA:
                               type: number
@@ -6504,10 +6265,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             Beer Store Sales:
                               type: number
@@ -6584,10 +6345,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             5yearInflationExpectationRateNSA:
                               type: number
@@ -6802,10 +6563,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Quarter:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             CPIAllNSA_AGR:
                               type: number
@@ -6870,10 +6631,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Week:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Week title : Week description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Week title : Week description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             BrentCrudeOilNSA:
                               type: number
@@ -6947,10 +6708,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AvgExpendituresTouristsbyAir:
                               type: number
@@ -7024,10 +6785,10 @@ paths:
                           properties:
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AreaLandHa:
                               type: number
@@ -7077,14 +6838,14 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            HolidayName:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) HolidayName title : HolidayName description.  \n<br/>*See 'Holidays title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            HolidayName:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) HolidayName title : HolidayName description.  \n<br/>*See 'Holidays title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             NationalHolidays:
                               type: number
                               description: 'NationalHolidays title : NationalHolidays description'
@@ -7140,10 +6901,10 @@ paths:
                           properties:
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             RGDPCountyNSA:
                               type: number
@@ -7193,10 +6954,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Quarter:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             ConstructionOutputSA:
                               type: number
@@ -7261,10 +7022,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             PCEFood&Beverages:
                               type: number
@@ -7317,10 +7078,10 @@ paths:
                           properties:
                             Drivetrain:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Drivetrain title : Drivetrain description.  \n<br/>*See 'Drivetrain title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Drivetrain title : Drivetrain description.  \n<br/>*See 'Drivetrain title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             VehicleDistanceTravelledPercentbyDrivetrain:
                               type: number
@@ -7379,10 +7140,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             IndustrialProdPharmaMonthly:
                               type: number
@@ -7450,10 +7211,10 @@ paths:
                           properties:
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             HouseholdsAvgSize:
                               type: number
@@ -7518,13 +7279,13 @@ paths:
                           properties:
                             Age:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Age title : Age description.  \n<br/>*See 'Age title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Age title : Age description.  \n<br/>*See 'Age title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             CountyFEMALES:
                               type: number
@@ -7580,10 +7341,10 @@ paths:
                           properties:
                             City:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             POPAnnualCityNSA:
                               type: number
@@ -7633,10 +7394,10 @@ paths:
                           properties:
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             PopAge0-15:
                               type: number
@@ -7707,10 +7468,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             POPTotalNSA:
                               type: number
@@ -7763,10 +7524,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Quarter:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             PopQuarterlyNSA:
                               type: number
@@ -7816,10 +7577,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             POPAnnualNSA:
                               type: number
@@ -7867,13 +7628,13 @@ paths:
                           title: PopulationZipYearly
                           type: object
                           properties:
-                            Zip:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            Zip:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             PopFemalesAnnualZip:
                               type: number
                               description: 'PopFemalesAnnualZip title : PopFemalesAnnualZip description'
@@ -7928,20 +7689,20 @@ paths:
                           properties:
                             Brand:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Brand title : Brand description.  \n<br/>*See 'Brand title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            Zip:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            IL5:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) IL5 title : IL5 description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            PL7:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) PL7 title : PL7 description.  \n<br/>*See 'Product title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Brand title : Brand description.  \n<br/>*See 'Brand title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            IL5:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) IL5 title : IL5 description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            PL7:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) PL7 title : PL7 description.  \n<br/>*See 'Product title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Zip:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             BasePrice:
                               type: number
                               description: 'BasePrice title : BasePrice description'
@@ -8041,7 +7802,7 @@ paths:
                           properties:
                             Driver:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Driver title : Driver description.  \n<br/>*See 'IndustryDriver title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Driver title : Driver description.  \n<br/>*See 'IndustryDriver title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             DriverContentMeasureGroup:
                               type: string
                               description: 'DriverContentMeasureGroup title : DriverContentMeasureGroup description'
@@ -8141,10 +7902,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AdvancedRetailSalesAuto%Change:
                               type: number
@@ -8575,10 +8336,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Quarter:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             EcomSalesPercentNSA:
                               type: number
@@ -8626,16 +8387,16 @@ paths:
                           title: RetailSalesStateMonthly
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             IL2:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) IL2 title : IL2 description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) IL2 title : IL2 description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             RetailSalesStateMonthly:
                               type: number
                               description: 'RetailSalesStateMonthly title : RetailSalesStateMonthly description'
@@ -8682,13 +8443,13 @@ paths:
                           title: SalesTaxStateMonthly
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             AlcoholicBeverage(SalesTaxMonthly):
                               type: number
                               description: 'AlcoholicBeverage(SalesTaxMonthly) title : AlcoholicBeverage(SalesTaxMonthly) description'
@@ -8749,10 +8510,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             IndexConsumerConfidence:
                               type: number
@@ -8808,10 +8569,10 @@ paths:
                           properties:
                             County:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) County title : County description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Year title : Year description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             BikesTotal:
                               type: number
@@ -8864,14 +8625,14 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            SportingEvents:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) SportingEvents title : SportingEvents description.  \n<br/>*See 'Sports title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            SportingEvents:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) SportingEvents title : SportingEvents description.  \n<br/>*See 'Sports title (Dimension)' in this document for the other attributes that might be used for filtering*"
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -8917,20 +8678,20 @@ paths:
                           properties:
                             City:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            SportingEvents:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) SportingEvents title : SportingEvents description.  \n<br/>*See 'Sports title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            SportsTeam:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) SportsTeam title : SportsTeam description.  \n<br/>*See 'SportsTeam title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            SportTournament:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) SportTournament title : SportTournament description.  \n<br/>*See 'SportTournament title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            SportingEvents:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) SportingEvents title : SportingEvents description.  \n<br/>*See 'Sports title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            SportsTeam:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) SportsTeam title : SportsTeam description.  \n<br/>*See 'SportsTeam title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            SportTournament:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) SportTournament title : SportTournament description.  \n<br/>*See 'SportTournament title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             SportsMatch:
                               type: string
                               description: 'SportsMatch title : SportsMatch description'
@@ -8977,16 +8738,16 @@ paths:
                           title: StateHolidays
                           type: object
                           properties:
-                            State:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            HolidayName:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) HolidayName title : HolidayName description.  \n<br/>*See 'Holidays title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            HolidayName:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) HolidayName title : HolidayName description.  \n<br/>*See 'Holidays title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            State:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) State title : State description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             StateHolidays:
                               type: number
                               description: 'StateHolidays title : StateHolidays description'
@@ -9040,12 +8801,12 @@ paths:
                           title: StoresLocation
                           type: object
                           properties:
-                            Zip:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
                             IL5:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) IL5 title : IL5 description.  \n<br/>*See 'Industry title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) IL5 title : IL5 description.  \n<br/>*See 'Industry title (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Zip:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) Zip title : Zip description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             StoreLinkedDC:
                               type: string
                               description: 'StoreLinkedDC title : StoreLinkedDC description'
@@ -9097,10 +8858,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             EXPTOTALLocalCurrencyNSA:
                               type: number
@@ -9150,10 +8911,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             ExportsManufacturingIronandSteel:
                               type: number
@@ -9239,10 +9000,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Quarter:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Quarter title : Quarter description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             EXPGSC1SA:
                               type: number
@@ -9301,10 +9062,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Month:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Month title : Month description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             CFIExpenditureNSA:
                               type: number
@@ -9393,10 +9154,10 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             AirPassengersDaily:
                               type: number
@@ -9446,377 +9207,17 @@ paths:
                           properties:
                             Country:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Country title : Country description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             Vaccine:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) Vaccine title : Vaccine description.  \n<br/>*See 'Vaccine title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Vaccine title : Vaccine description.  \n<br/>*See 'Vaccine title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             CovidVaccinationsbyManufacturer:
                               type: number
                               description: 'CovidVaccinationsbyManufacturer title : CovidVaccinationsbyManufacturer description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/ValidTag:
-    summary: ValidTag title
-    description: ValidTag description
-    get:
-      tags:
-        - Unknown
-      summary: ValidTag title
-      description: ValidTag description
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      ValidTags:
-                        type: array
-                        items:
-                          title: ValidTag
-                          type: object
-                          properties:
-                            ContentItem:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) ContentItem title : ContentItem description.  \n<br/>*See 'Catalog title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            Tag:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) Tag title : Tag description.  \n<br/>*See 'SearchTag title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            ValidTag:
-                              type: number
-                              description: 'ValidTag title : ValidTag description'
-                            ValidTag2:
-                              type: string
-                              description: 'ValidTag2 title : ValidTag2 description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/WDE_City_Cluster_List:
-    summary: WDE_City_Cluster_List title
-    description: WDE_City_Cluster_List description
-    get:
-      tags:
-        - Unknown
-      summary: WDE_City_Cluster_List title
-      description: WDE_City_Cluster_List description
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WDE_City_Cluster_Lists:
-                        type: array
-                        items:
-                          title: WDE_City_Cluster_List
-                          type: object
-                          properties:
-                            City:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            WDE_Project_ID:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) WDE_Project_ID title : WDE_Project_ID description.  \n<br/>*See 'WDE title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            WDE_City_Lat:
-                              type: number
-                              description: 'WDE_City_Lat title : WDE_City_Lat description'
-                            WDE_City_Long:
-                              type: number
-                              description: 'WDE_City_Long title : WDE_City_Long description'
-                            WDE_Location_Lat:
-                              type: number
-                              description: 'WDE_Location_Lat title : WDE_Location_Lat description'
-                            WDE_Location_Long:
-                              type: number
-                              description: 'WDE_Location_Long title : WDE_Location_Long description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/WDE_Fcst_Output:
-    summary: WDE_Fcst_Output title
-    description: WDE_Fcst_Output description
-    get:
-      tags:
-        - Unknown
-      summary: WDE_Fcst_Output title
-      description: WDE_Fcst_Output description
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WDE_Fcst_Outputs:
-                        type: array
-                        items:
-                          title: WDE_Fcst_Output
-                          type: object
-                          properties:
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                              format: YYYY-MM-DD
-                            WDE_Project_ID:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) WDE_Project_ID title : WDE_Project_ID description.  \n<br/>*See 'WDE title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            Aggregated_PRCPFC:
-                              type: number
-                              description: 'Aggregated_PRCPFC title : Aggregated_PRCPFC description'
-                            Aggregated_TAVGFC_Corrected:
-                              type: number
-                              description: 'Aggregated_TAVGFC_Corrected title : Aggregated_TAVGFC_Corrected description'
-                            Aggregated_TMAXFC_Corrected:
-                              type: number
-                              description: 'Aggregated_TMAXFC_Corrected title : Aggregated_TMAXFC_Corrected description'
-                            Aggregated_TMINFC_Corrected:
-                              type: number
-                              description: 'Aggregated_TMINFC_Corrected title : Aggregated_TMINFC_Corrected description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/WDE_Hist_Output:
-    summary: WDE_Hist_Output title
-    description: WDE_Hist_Output description
-    get:
-      tags:
-        - Unknown
-      summary: WDE_Hist_Output title
-      description: WDE_Hist_Output description
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WDE_Hist_Outputs:
-                        type: array
-                        items:
-                          title: WDE_Hist_Output
-                          type: object
-                          properties:
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                              format: YYYY-MM-DD
-                            WDE_Project_ID:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) WDE_Project_ID title : WDE_Project_ID description.  \n<br/>*See 'WDE title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            Aggregated_PRCP:
-                              type: number
-                              description: 'Aggregated_PRCP title : Aggregated_PRCP description'
-                            Aggregated_TAVG:
-                              type: number
-                              description: 'Aggregated_TAVG title : Aggregated_TAVG description'
-                            Aggregated_TMAX:
-                              type: number
-                              description: 'Aggregated_TMAX title : Aggregated_TMAX description'
-                            Aggregated_TMIN:
-                              type: number
-                              description: 'Aggregated_TMIN title : Aggregated_TMIN description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/WDE_Input:
-    summary: WDE_Input title
-    description: WDE_Input description
-    get:
-      tags:
-        - Unknown
-      summary: WDE_Input title
-      description: WDE_Input description
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WDE_Inputs:
-                        type: array
-                        items:
-                          title: WDE_Input
-                          type: object
-                          properties:
-                            WDE_Project_ID:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) WDE_Project_ID title : WDE_Project_ID description.  \n<br/>*See 'WDE title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            WDE_Country:
-                              type: string
-                              description: 'WDE_Country title : WDE_Country description'
-                            WDE_Latitude:
-                              type: number
-                              description: 'WDE_Latitude title : WDE_Latitude description'
-                            WDE_Location:
-                              type: string
-                              description: 'WDE_Location title : WDE_Location description'
-                            WDE_Longitude:
-                              type: number
-                              description: 'WDE_Longitude title : WDE_Longitude description'
-                            WDE_Network:
-                              type: string
-                              description: 'WDE_Network title : WDE_Network description'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/WDE_Time_Cluster_Info:
-    summary: WDE_Time_Cluster_Info title
-    description: WDE_Time_Cluster_Info description
-    get:
-      tags:
-        - Unknown
-      summary: WDE_Time_Cluster_Info title
-      description: WDE_Time_Cluster_Info description
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      WDE_Time_Cluster_Infos:
-                        type: array
-                        items:
-                          title: WDE_Time_Cluster_Info
-                          type: object
-                          properties:
-                            WDE_Project_ID:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) WDE_Project_ID title : WDE_Project_ID description.  \n<br/>*See 'WDE title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            WDE_Aggregation_Method:
-                              type: string
-                              description: 'WDE_Aggregation_Method title : WDE_Aggregation_Method description'
-                            WDE_Country_Cluster:
-                              type: string
-                              description: 'WDE_Country_Cluster title : WDE_Country_Cluster description'
-                            WDE_Run_Scope:
-                              type: string
-                              description: 'WDE_Run_Scope title : WDE_Run_Scope description'
-                            WDE_Start_Date:
-                              type: string
-                              description: 'WDE_Start_Date title : WDE_Start_Date description'
-                              format: YYYY-MM-DD
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -9862,14 +9263,14 @@ paths:
                           properties:
                             City:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            Location:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) Location title : Location description.  \n<br/>*See 'Location title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            Location:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) Location title : Location description.  \n<br/>*See 'Location title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             PRCP:
                               type: number
                               description: 'PRCP title : PRCP description'
@@ -9927,7 +9328,7 @@ paths:
                           properties:
                             City:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             TAVGFCBias:
                               type: number
                               description: 'TAVGFCBias title : TAVGFCBias description'
@@ -9982,14 +9383,14 @@ paths:
                           properties:
                             City:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
-                            Location:
-                              type: integer
-                              description: "(*Filterable dimensional attribute*) Location title : Location description.  \n<br/>*See 'Location title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            Location:
+                              type: integer
+                              description: "(*Filterable dimensional attribute*) Location title : Location description.  \n<br/>*See 'Location title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             HUMIDITYFC:
                               type: number
                               description: 'HUMIDITYFC title : HUMIDITYFC description'
@@ -10065,10 +9466,10 @@ paths:
                           properties:
                             City:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) City title : City description.  \n<br/>*See 'Geo title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) Day title : Day description.  \n<br/>*See 'Time title (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             PRCP_5YAVG:
                               type: number
@@ -10127,7 +9528,7 @@ paths:
                           properties:
                             WRequestID:
                               type: integer
-                              description: "(*Filterable dimensional attribute*) WRequestID title : WRequestID description.  \n<br/>*See 'WCustomer title (Dimension)' in this document for a listing of all the attributes in this dimension*"
+                              description: "(*Filterable dimensional attribute*) WRequestID title : WRequestID description.  \n<br/>*See 'WCustomer title (Dimension)' in this document for the other attributes that might be used for filtering*"
                             WAggMethod:
                               type: string
                               description: 'WAggMethod title : WAggMethod description'
@@ -10246,10 +9647,14 @@ components:
       description: Append the token issued by o9 to the word ApiKey e.g. 'ApiKey sd8ds.sdf93d09sd3d'
       scheme: bearerFormat
 tags:
+  - name: Model
+    description: Data used by many different areas e.g. Dimensional attributes of the cube
   - name: Consumer Metrics
     description: 'Information that describe consumer demographics, behavior as well as sentiment / expectations'
   - name: Events
     description: Cultural and other events
+  - name: Macroeconomic
+    description: Macroeconomic indicators
   - name: Market Activity
     description: Indicators of economic and commercial activity; primarily time series
   - name: Market Structure
