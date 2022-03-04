@@ -15,11 +15,12 @@ paths:
       tags:
         - Unknown
       summary: Age title (Dimension)
-      description: "Age description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Age description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -61,11 +62,12 @@ paths:
       tags:
         - Consumer Metrics
       summary: Age (Dimension)
-      description: "The age for a certain demographic class  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "The age for a certain demographic class  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -110,11 +112,12 @@ paths:
       tags:
         - Unknown
       summary: Catalog title (Dimension)
-      description: "Catalog description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Catalog description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -162,11 +165,12 @@ paths:
       tags:
         - Model
       summary: Drivetrain title (Dimension)
-      description: "Drivetrain description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Drivetrain description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -208,11 +212,12 @@ paths:
       tags:
         - Unknown
       summary: FSProject title (Dimension)
-      description: "FSProject description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "FSProject description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -266,11 +271,12 @@ paths:
       tags:
         - Unknown
       summary: Geo title (Dimension)
-      description: "Geo description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Geo description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -327,11 +333,12 @@ paths:
       tags:
         - Unknown
       summary: HealthInsuranceType title (Dimension)
-      description: "HealthInsuranceType description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "HealthInsuranceType description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -373,11 +380,12 @@ paths:
       tags:
         - Unknown
       summary: Health Insurance (Dimension)
-      description: "Holidays description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Holidays description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -419,11 +427,12 @@ paths:
       tags:
         - Events
       summary: ICD10 title (Dimension)
-      description: "ICD10 description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "ICD10 description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -468,11 +477,12 @@ paths:
       tags:
         - Unknown
       summary: IncomeGrp title (Dimension)
-      description: "IncomeGrp description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "IncomeGrp description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -514,11 +524,12 @@ paths:
       tags:
         - Unknown
       summary: Industry title (Dimension)
-      description: "Industry description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Industry description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -575,11 +586,12 @@ paths:
       tags:
         - Consumer Metrics
       summary: IndustryDriver title (Dimension)
-      description: "IndustryDriver description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "IndustryDriver description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -627,11 +639,12 @@ paths:
       tags:
         - Unknown
       summary: Location title (Dimension)
-      description: "Location description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Location description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -673,11 +686,12 @@ paths:
       tags:
         - Unknown
       summary: Personnel title (Dimension)
-      description: "Personnel description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Personnel description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -719,11 +733,12 @@ paths:
       tags:
         - Unknown
       summary: Product title (Dimension)
-      description: "Product description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Product description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -783,11 +798,12 @@ paths:
       tags:
         - Market Structure
       summary: Race title (Dimension)
-      description: "Race description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Race description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -829,11 +845,12 @@ paths:
       tags:
         - Unknown
       summary: RootCause title (Dimension)
-      description: "RootCause description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "RootCause description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -875,11 +892,12 @@ paths:
       tags:
         - Sports
       summary: SearchTag title (Dimension)
-      description: "SearchTag description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "SearchTag description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -921,11 +939,12 @@ paths:
       tags:
         - Unknown
       summary: Sequence title (Dimension)
-      description: "Sequence description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Sequence description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -967,11 +986,12 @@ paths:
       tags:
         - Unknown
       summary: SourceType title (Dimension)
-      description: "SourceType description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "SourceType description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1013,11 +1033,12 @@ paths:
       tags:
         - Sports
       summary: Sports (Dimension)
-      description: "The list of sports for which we have data  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "The list of sports for which we have data  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1059,11 +1080,12 @@ paths:
       tags:
         - Events
       summary: SportsTeam title (Dimension)
-      description: "SportsTeam description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "SportsTeam description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1105,11 +1127,12 @@ paths:
       tags:
         - Unknown
       summary: SportTournament title (Dimension)
-      description: "SportTournament description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "SportTournament description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1151,11 +1174,12 @@ paths:
       tags:
         - Unknown
       summary: Time title (Dimension)
-      description: "Time description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Time description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1214,11 +1238,12 @@ paths:
       tags:
         - Unknown
       summary: Vaccine title (Dimension)
-      description: "Vaccine description  \n*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Vaccine description  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1265,6 +1290,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1347,6 +1373,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1409,6 +1436,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1477,6 +1505,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1644,6 +1673,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -1889,6 +1919,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2086,6 +2117,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2283,6 +2315,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2356,6 +2389,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2408,6 +2442,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2458,6 +2493,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2510,6 +2546,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2583,6 +2620,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2657,6 +2695,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2710,6 +2749,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2766,6 +2806,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2831,6 +2872,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2887,6 +2929,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -2940,6 +2983,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3044,6 +3088,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3097,6 +3142,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3153,6 +3199,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3206,6 +3253,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3262,6 +3310,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3311,6 +3360,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3370,6 +3420,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3423,6 +3474,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3475,6 +3527,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3537,6 +3590,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3596,6 +3650,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3670,6 +3725,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3722,6 +3778,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3807,6 +3864,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3856,6 +3914,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3914,6 +3973,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -3973,6 +4033,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4026,6 +4087,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4082,6 +4144,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4135,6 +4198,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4191,6 +4255,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4246,6 +4311,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4314,6 +4380,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4382,6 +4449,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4450,6 +4518,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4506,6 +4575,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4565,6 +4635,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4684,6 +4755,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4746,6 +4818,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4832,6 +4905,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4885,6 +4959,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -4974,6 +5049,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -5168,6 +5244,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -5224,6 +5301,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -5304,6 +5382,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -5408,6 +5487,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -5512,6 +5592,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -5619,6 +5700,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6077,6 +6159,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6199,6 +6282,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6279,6 +6363,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6497,6 +6582,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6565,6 +6651,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6642,6 +6729,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6719,6 +6807,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6772,6 +6861,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6835,6 +6925,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6888,6 +6979,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -6956,6 +7048,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7012,6 +7105,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7074,6 +7168,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7145,6 +7240,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7213,6 +7309,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7275,6 +7372,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7328,6 +7426,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7402,6 +7501,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7458,6 +7558,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7511,6 +7612,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7564,6 +7666,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7623,6 +7726,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7736,6 +7840,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -7836,6 +7941,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8270,6 +8376,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8323,6 +8430,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8379,6 +8487,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8444,6 +8553,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8503,6 +8613,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8559,6 +8670,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8612,6 +8724,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8674,6 +8787,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8737,6 +8851,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8792,6 +8907,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8845,6 +8961,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8934,6 +9051,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -8996,6 +9114,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -9088,6 +9207,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -9141,6 +9261,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -9197,6 +9318,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -9262,6 +9384,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -9317,6 +9440,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -9400,6 +9524,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -9462,6 +9587,7 @@ paths:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
         - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
         - $ref: '#/components/parameters/Cursor'
       responses:
         '200':
@@ -9587,6 +9713,12 @@ components:
       name: size
       in: query
       description: Number of values to return per page. Should be greater than zero.
+      schema:
+        type: integer
+    Limit:
+      name: limit
+      in: query
+      description: Total number of records to return. Results will be paginated based on the 'size' parameter. Should be greater than zero.
       schema:
         type: integer
     Cursor:
