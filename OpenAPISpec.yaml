@@ -445,7 +445,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      ICD10s:
+                      ICD10:
                         type: array
                         items:
                           title: ICD10
@@ -542,7 +542,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      Industrys:
+                      Industries:
                         type: array
                         items:
                           title: Industry
@@ -1386,7 +1386,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      AmenitiesCountyYearlys:
+                      AmenitiesCountyYearlies:
                         type: array
                         items:
                           title: AmenitiesCountyYearly
@@ -1449,7 +1449,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      AppleMobilityCountrys:
+                      AppleMobilityCountries:
                         type: array
                         items:
                           title: AppleMobilityCountry
@@ -1686,7 +1686,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      CommodityPriceMonthlys:
+                      CommodityPriceMonthlies:
                         type: array
                         items:
                           title: CommodityPriceMonthly
@@ -1932,7 +1932,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      Covid19CountryDailys:
+                      Covid19CountryDaily:
                         type: array
                         items:
                           title: Covid19CountryDaily
@@ -2130,7 +2130,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      Covid19StateDailys:
+                      Covid19StateDaily:
                         type: array
                         items:
                           title: Covid19StateDaily
@@ -2819,7 +2819,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      DeathCauseAgeYearlys:
+                      DeathCauseAgeYearlies:
                         type: array
                         items:
                           title: DeathCauseAgeYearly
@@ -2885,7 +2885,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      DeathCauseYearlys:
+                      DeathCauseYearlies:
                         type: array
                         items:
                           title: DeathCauseYearly
@@ -2942,7 +2942,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      EcoEventsMonthlys:
+                      EcoEventsMonthlies:
                         type: array
                         items:
                           title: EcoEventsMonthly
@@ -2996,7 +2996,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      EmploymentMonthlys:
+                      EmploymentMonthlies:
                         type: array
                         items:
                           title: EmploymentMonthly
@@ -3101,7 +3101,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      EmploymentQuarterlys:
+                      EmploymentQuarterlies:
                         type: array
                         items:
                           title: EmploymentQuarterly
@@ -3155,7 +3155,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      EmploymentStateMonthlys:
+                      EmploymentStateMonthlies:
                         type: array
                         items:
                           title: EmploymentStateMonthly
@@ -3212,7 +3212,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      EmploymentYearlys:
+                      EmploymentYearlies:
                         type: array
                         items:
                           title: EmploymentYearly
@@ -3266,7 +3266,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      EVAdoptionYearlys:
+                      EVAdoptionYearlies:
                         type: array
                         items:
                           title: EVAdoptionYearly
@@ -3373,7 +3373,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      EventsDailys:
+                      EventsDailies:
                         type: array
                         items:
                           title: EventsDaily
@@ -3433,7 +3433,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      EventsMonthlys:
+                      EventsMonthlies:
                         type: array
                         items:
                           title: EventsMonthly
@@ -4046,7 +4046,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      FSTargetData2s:
+                      FSTargetData2:
                         type: array
                         items:
                           title: FSTargetData2
@@ -4324,7 +4324,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      GoogleMobilityCountrys:
+                      GoogleMobilityCountries:
                         type: array
                         items:
                           title: GoogleMobilityCountry
@@ -4393,7 +4393,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      GoogleMobilityCountys:
+                      GoogleMobilityCounties:
                         type: array
                         items:
                           title: GoogleMobilityCounty
@@ -4648,7 +4648,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      HousingChangesMonthlys:
+                      HousingChangesMonthlies:
                         type: array
                         items:
                           title: HousingChangesMonthly
@@ -4768,7 +4768,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      HousingChangesQuarterlys:
+                      HousingChangesQuarterlies:
                         type: array
                         items:
                           title: HousingChangesQuarterly
@@ -4831,7 +4831,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      HousingChangesStateMonthlys:
+                      HousingChangesStateMonthlies:
                         type: array
                         items:
                           title: HousingChangesStateMonthly
@@ -4918,7 +4918,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      HousingChangesYearlys:
+                      HousingChangesYearlies:
                         type: array
                         items:
                           title: HousingChangesYearly
@@ -4972,7 +4972,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      HousingIndexMonthlys:
+                      HousingIndexMonthlies:
                         type: array
                         items:
                           title: HousingIndexMonthly
@@ -5062,7 +5062,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      HousingSpendMonthlys:
+                      HousingSpendMonthlies:
                         type: array
                         items:
                           title: HousingSpendMonthly
@@ -5314,7 +5314,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      IncomeCountyYearlys:
+                      IncomeCountyYearlies:
                         type: array
                         items:
                           title: IncomeCountyYearly
@@ -5395,7 +5395,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      IncomeMonthlys:
+                      IncomeMonthlies:
                         type: array
                         items:
                           title: IncomeMonthly
@@ -5500,7 +5500,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      IncomeZipYearlys:
+                      IncomeZipYearlies:
                         type: array
                         items:
                           title: IncomeZipYearly
@@ -5605,7 +5605,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      IncomeZipYearlyCategorys:
+                      IncomeZipYearlyCategories:
                         type: array
                         items:
                           title: IncomeZipYearlyCategory
@@ -5713,7 +5713,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      IndustryIndexMonthlys:
+                      IndustryIndexMonthlies:
                         type: array
                         items:
                           title: IndustryIndexMonthly
@@ -6172,7 +6172,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      IndustryInvMonthlys:
+                      IndustryInvMonthlies:
                         type: array
                         items:
                           title: IndustryInvMonthly
@@ -6295,7 +6295,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      IndustrySalesMonthlys:
+                      IndustrySalesMonthlies:
                         type: array
                         items:
                           title: IndustrySalesMonthly
@@ -6376,7 +6376,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      InflationMonthlys:
+                      InflationMonthlies:
                         type: array
                         items:
                           title: InflationMonthly
@@ -6595,7 +6595,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      InflationQuarterlys:
+                      InflationQuarterlies:
                         type: array
                         items:
                           title: InflationQuarterly
@@ -6664,7 +6664,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      InflationWeeklys:
+                      InflationWeeklies:
                         type: array
                         items:
                           title: InflationWeekly
@@ -6742,7 +6742,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      InternationalVisitorsMonthlys:
+                      InternationalVisitorsMonthlies:
                         type: array
                         items:
                           title: InternationalVisitorsMonthly
@@ -6820,7 +6820,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      LandAreaCountyYearlys:
+                      LandAreaCountyYearlies:
                         type: array
                         items:
                           title: LandAreaCountyYearly
@@ -6938,7 +6938,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      OutputCountyYearlys:
+                      OutputCountyYearlies:
                         type: array
                         items:
                           title: OutputCountyYearly
@@ -6992,7 +6992,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      OutputQuarterlys:
+                      OutputQuarterlies:
                         type: array
                         items:
                           title: OutputQuarterly
@@ -7061,7 +7061,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      OutputYearlys:
+                      OutputYearlies:
                         type: array
                         items:
                           title: OutputYearly
@@ -7118,7 +7118,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PassengerVehiclesDrivetrainYearlys:
+                      PassengerVehiclesDrivetrainYearlies:
                         type: array
                         items:
                           title: PassengerVehiclesDrivetrainYearly
@@ -7181,7 +7181,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PharmaMonthlys:
+                      PharmaMonthlies:
                         type: array
                         items:
                           title: PharmaMonthly
@@ -7253,7 +7253,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PopHouseholdsCountyYearlys:
+                      PopHouseholdsCountyYearlies:
                         type: array
                         items:
                           title: PopHouseholdsCountyYearly
@@ -7322,7 +7322,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PopulationAgeCountyYearlys:
+                      PopulationAgeCountyYearlies:
                         type: array
                         items:
                           title: PopulationAgeCountyYearly
@@ -7385,7 +7385,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PopulationCityYearlys:
+                      PopulationCityYearlies:
                         type: array
                         items:
                           title: PopulationCityYearly
@@ -7439,7 +7439,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PopulationCountyYearlys:
+                      PopulationCountyYearlies:
                         type: array
                         items:
                           title: PopulationCountyYearly
@@ -7514,7 +7514,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PopulationMonthlys:
+                      PopulationMonthlies:
                         type: array
                         items:
                           title: PopulationMonthly
@@ -7571,7 +7571,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PopulationQuarterlys:
+                      PopulationQuarterlies:
                         type: array
                         items:
                           title: PopulationQuarterly
@@ -7625,7 +7625,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PopulationYearlys:
+                      PopulationYearlies:
                         type: array
                         items:
                           title: PopulationYearly
@@ -7679,7 +7679,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      PopulationZipYearlys:
+                      PopulationZipYearlies:
                         type: array
                         items:
                           title: PopulationZipYearly
@@ -7739,7 +7739,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      ProductManfInfos:
+                      ProductManfInfoes:
                         type: array
                         items:
                           title: ProductManfInfo
@@ -7954,7 +7954,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      RetailSalesMonthlys:
+                      RetailSalesMonthlies:
                         type: array
                         items:
                           title: RetailSalesMonthly
@@ -8389,7 +8389,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      RetailSalesQuarterlys:
+                      RetailSalesQuarterlies:
                         type: array
                         items:
                           title: RetailSalesQuarterly
@@ -8443,7 +8443,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      RetailSalesStateMonthlys:
+                      RetailSalesStateMonthlies:
                         type: array
                         items:
                           title: RetailSalesStateMonthly
@@ -8500,7 +8500,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      SalesTaxStateMonthlys:
+                      SalesTaxStateMonthlies:
                         type: array
                         items:
                           title: SalesTaxStateMonthly
@@ -8566,7 +8566,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      SentimentMonthlys:
+                      SentimentMonthlies:
                         type: array
                         items:
                           title: SentimentMonthly
@@ -8626,7 +8626,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      SpendingCountyYearlys:
+                      SpendingCountyYearlies:
                         type: array
                         items:
                           title: SpendingCountyYearly
@@ -8920,7 +8920,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      TradeLocalCurrencyMonthlys:
+                      TradeLocalCurrencyMonthlies:
                         type: array
                         items:
                           title: TradeLocalCurrencyMonthly
@@ -8974,7 +8974,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      TradeMonthlys:
+                      TradeMonthlies:
                         type: array
                         items:
                           title: TradeMonthly
@@ -9064,7 +9064,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      TradeQuarterlys:
+                      TradeQuarterlies:
                         type: array
                         items:
                           title: TradeQuarterly
@@ -9127,7 +9127,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      TransportMonthlys:
+                      TransportMonthlies:
                         type: array
                         items:
                           title: TransportMonthly
@@ -9220,7 +9220,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      TravelDailys:
+                      TravelDailies:
                         type: array
                         items:
                           title: TravelDaily
@@ -9387,7 +9387,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      WDE_City_Cluster_Lists:
+                      WDE_City_Cluster_List:
                         type: array
                         items:
                           title: WDE_City_Cluster_List
@@ -9449,7 +9449,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      WDE_Fcst_Outputs:
+                      WDE_Fcst_Output:
                         type: array
                         items:
                           title: WDE_Fcst_Output
@@ -9512,7 +9512,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      WDE_Hist_Outputs:
+                      WDE_Hist_Output:
                         type: array
                         items:
                           title: WDE_Hist_Output
@@ -9575,7 +9575,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      WDE_Inputs:
+                      WDE_Input:
                         type: array
                         items:
                           title: WDE_Input
@@ -9637,7 +9637,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      WDE_Time_Cluster_Infos:
+                      WDE_Time_Cluster_Info:
                         type: array
                         items:
                           title: WDE_Time_Cluster_Info
@@ -9697,7 +9697,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      WeatherDailys:
+                      WeatherDailies:
                         type: array
                         items:
                           title: WeatherDaily
@@ -9819,7 +9819,7 @@ paths:
                   Data:
                     type: object
                     properties:
-                      WeatherForecastDailys:
+                      WeatherForecastDailies:
                         type: array
                         items:
                           title: WeatherForecastDaily
