@@ -10090,7 +10090,7 @@ components:
     Cursor:
       name: cursor
       in: query
-      description: The forward-only cursor to access paginated responses (i.e. when results exceed size parameter)
+      description: The forward-only cursor to access paginated responses (i.e. when results exceed the 'size' parameter)
       schema:
         type: string
   securitySchemes:
