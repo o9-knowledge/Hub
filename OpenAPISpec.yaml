@@ -271,7 +271,7 @@ paths:
       tags:
         - Unknown
       summary: Geo (Dimension)
-      description: "Description of Geo  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Description of Geo  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition is specified in the `filters` parameter*\n```\n[{\n\"AttributeName\": \"City\",   \n\"Properties\": [\"CentroidCityLat\", \"CentroidCityLong\"]\n}, {\n\"AttributeName\": \"Continent\",   \n\"Properties\": [\"ContinentFlag\"]\n}, {\n\"AttributeName\": \"Country\",   \n\"Properties\": [\"CentroidCountryLat\", \"CentroidCountryLong\", \"CountryFlag\", \"CountryLocale\"]\n}, {\n\"AttributeName\": \"County\",   \n\"Properties\": [\"CentroidCountyLat\", \"CentroidCountyLong\"]\n}, {\n\"AttributeName\": \"State\",   \n\"Properties\": [\"CentroidStateLat\", \"CentroidStateLong\"]\n}, {\n\"AttributeName\": \"Zip\",   \n\"Properties\": [\"CentroidZipLat\", \"CentroidZipLong\", \"ZipArea\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -298,21 +298,49 @@ paths:
                             City:
                               type: integer
                               description: '(*Filterable dimensional attribute*) City : Description of City'
+                            CentroidCityLat:
+                              description: 'Centroid City Lat: A property of the ''*City*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            CentroidCityLong:
+                              description: 'Centroid City Long: A property of the ''*City*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             Continent:
                               type: integer
                               description: '(*Filterable dimensional attribute*) Continent : Description of Continent'
+                            ContinentFlag:
+                              description: 'Continent Flag: A property of the ''*Continent*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             Country:
                               type: integer
                               description: '(*Filterable dimensional attribute*) Country : Description of Country'
+                            CentroidCountryLat:
+                              description: 'Centroid Country Lat: A property of the ''*Country*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            CentroidCountryLong:
+                              description: 'Centroid Country Long: A property of the ''*Country*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            CountryFlag:
+                              description: 'Country Flag: A property of the ''*Country*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            CountryLocale:
+                              description: 'Country Locale: A property of the ''*Country*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             County:
                               type: integer
                               description: '(*Filterable dimensional attribute*) County : Description of County'
+                            CentroidCountyLat:
+                              description: 'Centroid County Lat: A property of the ''*County*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            CentroidCountyLong:
+                              description: 'Centroid County Long: A property of the ''*County*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             State:
                               type: integer
                               description: '(*Filterable dimensional attribute*) State : Description of State'
+                            CentroidStateLat:
+                              description: 'Centroid State Lat: A property of the ''*State*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            CentroidStateLong:
+                              description: 'Centroid State Long: A property of the ''*State*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             Zip:
                               type: integer
                               description: '(*Filterable dimensional attribute*) Zip : Description of Zip'
+                            CentroidZipLat:
+                              description: 'Centroid Zip Lat: A property of the ''*Zip*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            CentroidZipLong:
+                              description: 'Centroid Zip Long: A property of the ''*Zip*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            ZipArea:
+                              description: 'Zip Area: A property of the ''*Zip*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -524,7 +552,7 @@ paths:
       tags:
         - Unknown
       summary: Industry (Dimension)
-      description: "Description of Industry  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Description of Industry  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition is specified in the `filters` parameter*\n```\n[{\n\"AttributeName\": \"IL5\",   \n\"Properties\": [\"AdditionalNotes\", \"Latitude\", \"LinkedRDC\", \"Longitude\", \"ParentCompany\", \"RetailerCategory\", \"Rowstoscrape\", \"ScrapeId\", \"StoreAddress\", \"StoreFormat\", \"StoreId\", \"StoreKey\", \"StoreURL\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -563,6 +591,32 @@ paths:
                             IL5:
                               type: integer
                               description: '(*Filterable dimensional attribute*) IL5 : Description of IL5'
+                            AdditionalNotes:
+                              description: 'Additional Notes: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            Latitude:
+                              description: 'Latitude: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            LinkedRDC:
+                              description: 'Linked RDC: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            Longitude:
+                              description: 'Longitude: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            ParentCompany:
+                              description: 'Parent Company: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            RetailerCategory:
+                              description: 'Retailer Category: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            Rowstoscrape:
+                              description: 'Rowstoscrape: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            ScrapeId:
+                              description: 'Scrape Id: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            StoreAddress:
+                              description: 'Store Address: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            StoreFormat:
+                              description: 'Store Format: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            StoreId:
+                              description: 'Store Id: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            StoreKey:
+                              description: 'Store Key: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            StoreURL:
+                              description: 'Store URL: A property of the ''*IL5*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             StoreBatchID:
                               type: integer
                               description: '(*Filterable dimensional attribute*) Store Batch ID : Description of Store Batch ID'
@@ -586,7 +640,7 @@ paths:
       tags:
         - Consumer Metrics
       summary: Industry Driver (Dimension)
-      description: "Description of Industry Driver  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Description of Industry Driver  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition is specified in the `filters` parameter*\n```\n[{\n\"AttributeName\": \"Driver\",   \n\"Properties\": [\"Driver Source\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -613,6 +667,8 @@ paths:
                             Driver:
                               type: integer
                               description: '(*Filterable dimensional attribute*) Driver : Description of Driver'
+                            Driver Source:
+                              description: 'Driver Source: A property of the ''*Driver*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             Driver Group:
                               type: integer
                               description: '(*Filterable dimensional attribute*) Driver Group : Description of Driver Group'
@@ -639,7 +695,7 @@ paths:
       tags:
         - Unknown
       summary: Location (Dimension)
-      description: "Description of Location  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Description of Location  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition is specified in the `filters` parameter*\n```\n[{\n\"AttributeName\": \"Location\",   \n\"Properties\": [\"Latitude\", \"LocationType\", \"Longitude\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -666,6 +722,12 @@ paths:
                             Location:
                               type: integer
                               description: '(*Filterable dimensional attribute*) Location : Description of Location'
+                            Latitude:
+                              description: 'Latitude: A property of the ''*Location*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            LocationType:
+                              description: 'Location Type: A property of the ''*Location*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            Longitude:
+                              description: 'Longitude: A property of the ''*Location*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -686,7 +748,7 @@ paths:
       tags:
         - Unknown
       summary: Personnel (Dimension)
-      description: "Description of Personnel  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Description of Personnel  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition is specified in the `filters` parameter*\n```\n[{\n\"AttributeName\": \"Email\",   \n\"Properties\": [\"Image\", \"Is MPower User\", \"User Id\", \"User Name\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -713,6 +775,14 @@ paths:
                             Email:
                               type: integer
                               description: '(*Filterable dimensional attribute*) Email : Description of Email'
+                            Image:
+                              description: 'Image: A property of the ''*Email*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            Is MPower User:
+                              description: 'Is M Power User: A property of the ''*Email*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            User Id:
+                              description: 'User Id: A property of the ''*Email*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
+                            User Name:
+                              description: 'User Name: A property of the ''*Email*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -733,7 +803,7 @@ paths:
       tags:
         - Unknown
       summary: Product (Dimension)
-      description: "Description of Product  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      description: "Description of Product  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition is specified in the `filters` parameter*\n```\n[{\n\"AttributeName\": \"PL7\",   \n\"Properties\": [\"ProductImage\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -778,6 +848,8 @@ paths:
                             PL7:
                               type: integer
                               description: '(*Filterable dimensional attribute*) PL7 : Description of PL7'
+                            ProductImage:
+                              description: 'Product Image: A property of the ''*PL7*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
