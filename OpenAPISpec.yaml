@@ -209,6 +209,56 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /master/MarketIntel/ICD10:
+    summary: Disease Classification (ICD 10)
+    description: The data on morbidity (where public) as well as causes of mortality are organized by the ICD 10 classification
+    get:
+      tags:
+        - Health
+      summary: Disease Classification (ICD 10) (Dimension)
+      description: "The data on morbidity (where public) as well as causes of mortality are organized by the ICD 10 classification  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      ICD10:
+                        type: array
+                        items:
+                          title: ICD10
+                          type: object
+                          properties:
+                            DiseaseCode:
+                              type: string
+                              description: (*Filterable dimensional attribute*) Disease code per ICD 10 Classification
+                            DiseaseGroup:
+                              type: string
+                              description: (*Filterable dimensional attribute*) Disease group per ICD 10 Classification
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /master/MarketIntel/EventCategory:
     summary: Event Category
     description: Weather events are classified by these categories of weather phenomena
@@ -399,53 +449,6 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
-  /master/MarketIntel/HealthInsuranceType:
-    summary: Type of Health Insurance
-    description: 'Type of health insurance (Employer, Govt, Private, None, etc) that people have'
-    get:
-      tags:
-        - Health
-      summary: Type of Health Insurance (Dimension)
-      description: "Type of health insurance (Employer, Govt, Private, None, etc) that people have  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      HealthInsuranceTypes:
-                        type: array
-                        items:
-                          title: HealthInsuranceType
-                          type: object
-                          properties:
-                            HealthInsuranceType:
-                              type: string
-                              description: '(*Filterable dimensional attribute*) Type of health insurance (Employer, Govt, Private, None, etc)'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
   /master/MarketIntel/Holidays:
     summary: Holidays
     description: This dimension has the list of holidays for which dates are available
@@ -480,56 +483,6 @@ paths:
                             HolidayName:
                               type: string
                               description: (*Filterable dimensional attribute*) Name of holiday (Alternate names are separate members)
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /master/MarketIntel/ICD10:
-    summary: Disease Classification (ICD 10)
-    description: The data on morbidity (where public) as well as causes of mortality are organized by the ICD 10 classification
-    get:
-      tags:
-        - Health
-      summary: Disease Classification (ICD 10) (Dimension)
-      description: "The data on morbidity (where public) as well as causes of mortality are organized by the ICD 10 classification  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      ICD10:
-                        type: array
-                        items:
-                          title: ICD10
-                          type: object
-                          properties:
-                            DiseaseCode:
-                              type: string
-                              description: (*Filterable dimensional attribute*) Disease code per ICD 10 Classification
-                            DiseaseGroup:
-                              type: string
-                              description: (*Filterable dimensional attribute*) Disease group per ICD 10 Classification
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -989,6 +942,53 @@ paths:
                               type: string
                               description: (*Filterable dimensional attribute*) Year
                               format: YYYY-MM-DD
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /master/MarketIntel/HealthInsuranceType:
+    summary: Type of Health Insurance
+    description: 'Type of health insurance (Employer, Govt, Private, None, etc) that people have'
+    get:
+      tags:
+        - Health
+      summary: Type of Health Insurance (Dimension)
+      description: "Type of health insurance (Employer, Govt, Private, None, etc) that people have  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      HealthInsuranceTypes:
+                        type: array
+                        items:
+                          title: HealthInsuranceType
+                          type: object
+                          properties:
+                            HealthInsuranceType:
+                              type: string
+                              description: '(*Filterable dimensional attribute*) Type of health insurance (Employer, Govt, Private, None, etc)'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
