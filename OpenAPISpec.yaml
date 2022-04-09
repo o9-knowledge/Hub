@@ -1464,7 +1464,7 @@ paths:
     description: Public and Private Construction Spend in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: Construction Spend - Mthly
       description: Public and Private Construction Spend in U.S Dollars Monthly
       parameters:
@@ -1530,7 +1530,7 @@ paths:
     description: Public and Private Construction Spend on Commercial Projects in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Commercial - Mthly'
       description: Public and Private Construction Spend on Commercial Projects in U.S Dollars Monthly
       parameters:
@@ -1601,7 +1601,7 @@ paths:
     description: Public and Private Construction Spend on Communication Projects in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Communication - Mthly'
       description: Public and Private Construction Spend on Communication Projects in U.S Dollars Monthly
       parameters:
@@ -1661,7 +1661,7 @@ paths:
     description: Public and Private Construction Spend on Educational Institutions in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Education - Mthly'
       description: Public and Private Construction Spend on Educational Institutions in U.S Dollars Monthly
       parameters:
@@ -1721,7 +1721,7 @@ paths:
     description: Public and Private Construction Spend on Energy in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Energy - Mthly'
       description: Public and Private Construction Spend on Energy in U.S Dollars Monthly
       parameters:
@@ -1781,7 +1781,7 @@ paths:
     description: Public and Private Construction Spend on Entertainment in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Entertainment - Mthly'
       description: Public and Private Construction Spend on Entertainment in U.S Dollars Monthly
       parameters:
@@ -1841,7 +1841,7 @@ paths:
     description: Public and Private Construction Spend on HealthCare in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Healthcare - Mthly'
       description: Public and Private Construction Spend on HealthCare in U.S Dollars Monthly
       parameters:
@@ -1904,7 +1904,7 @@ paths:
     description: Public and Private Construction Spend on Hospitality in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Hospitality - Mthly'
       description: Public and Private Construction Spend on Hospitality in U.S Dollars Monthly
       parameters:
@@ -1967,7 +1967,7 @@ paths:
     description: Public and Private Construction Spend on Infrastructure in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Infrastructure - Mthly'
       description: Public and Private Construction Spend on Infrastructure in U.S Dollars Monthly
       parameters:
@@ -2030,7 +2030,7 @@ paths:
     description: Public and Private Construction Spend on Manufacturing in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Manufacturing - Mthly'
       description: Public and Private Construction Spend on Manufacturing in U.S Dollars Monthly
       parameters:
@@ -2090,7 +2090,7 @@ paths:
     description: Public and Private Construction Spend on Non Residential Projects in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Non-Residential - Mthly'
       description: Public and Private Construction Spend on Non Residential Projects in U.S Dollars Monthly
       parameters:
@@ -2147,7 +2147,7 @@ paths:
     description: Public and Private Construction Spend on Residential Projects in U.S Dollars Monthly
     get:
       tags:
-        - Construction
+        - Housing & Construction
       summary: 'Construction: Residential - Mthly'
       description: Public and Private Construction Spend on Residential Projects in U.S Dollars Monthly
       parameters:
@@ -3480,132 +3480,6 @@ paths:
                             StateIncomeSupportSmall:
                               type: number
                               description: Government replacing upto 50% of lost wages
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/Covid19InternalMovementRestrictionsCountryDaily:
-    summary: 'Domestic Travel Restrictions: Country'
-    description: Domestic travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
-    get:
-      tags:
-        - Pandemic
-      summary: 'Domestic Travel Restrictions: Country'
-      description: Domestic travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      Covid19InternalMovementRestrictionsCountryDaily:
-                        type: array
-                        items:
-                          title: Covid19InternalMovementRestrictionsCountryDaily
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            MovementDiscouraged:
-                              type: number
-                              description: Domestic movement discouraged
-                            MovementRestricted:
-                              type: number
-                              description: Restriction on domestic movement enacted
-                            PublicTransportClosed:
-                              type: number
-                              description: Most people restricted from using public transport
-                            PublicTransportRestricted:
-                              type: number
-                              description: Significant reduction in public transport
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/Covid19InternalMovementRestrictionsStateDaily:
-    summary: 'Domestic Travel Restrictions: State'
-    description: Domestic travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
-    get:
-      tags:
-        - Pandemic
-      summary: 'Domestic Travel Restrictions: State'
-      description: Domestic travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      Covid19InternalMovementRestrictionsStateDaily:
-                        type: array
-                        items:
-                          title: Covid19InternalMovementRestrictionsStateDaily
-                          type: object
-                          properties:
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            State:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            MovementDiscouraged:
-                              type: number
-                              description: Domestic movement discouraged
-                            MovementRestricted:
-                              type: number
-                              description: Restriction on domestic movement
-                            PublicTransportClosed:
-                              type: number
-                              description: Most people restricted from using public transport
-                            PublicTransportRestricted:
-                              type: number
-                              description: Significant reduction in public transport
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -5446,7 +5320,7 @@ paths:
     description: Monthly data of Housing Units Completed
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Completed - Mthly
       description: Monthly data of Housing Units Completed
       parameters:
@@ -5500,7 +5374,7 @@ paths:
     description: Quarterly data of Housing Units Completed
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Completed - Quarterly
       description: Quarterly data of Housing Units Completed
       parameters:
@@ -5554,7 +5428,7 @@ paths:
     description: 'Monthly data of Housing Units Completed: Region wise'
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: 'Housing Completed: Regional - Mthly'
       description: 'Monthly data of Housing Units Completed: Region wise'
       parameters:
@@ -5623,7 +5497,7 @@ paths:
     description: Monthly data of Housing Units in Construction
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Construction - Mthly
       description: Monthly data of Housing Units in Construction
       parameters:
@@ -5683,7 +5557,7 @@ paths:
     description: Quarterly Household Furnishings Spend data
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Furnishings - Quarterly
       description: Quarterly Household Furnishings Spend data
       parameters:
@@ -5737,7 +5611,7 @@ paths:
     description: Quarterly Household Maintenance Spend data
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Maintenance - Quarterly
       description: Quarterly Household Maintenance Spend data
       parameters:
@@ -5791,7 +5665,7 @@ paths:
     description: 'Monthly data about Number of Housing Permits: Country wise'
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Permits - Mthly
       description: 'Monthly data about Number of Housing Permits: Country wise'
       parameters:
@@ -5857,7 +5731,7 @@ paths:
     description: 'Monthly data about Number of Housing Permits: State wise'
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: 'Housing Permits: State - Mthly'
       description: 'Monthly data about Number of Housing Permits: State wise'
       parameters:
@@ -5914,7 +5788,7 @@ paths:
     description: Monthly Index on Housing Prices
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Price Index - Mthly
       description: Monthly Index on Housing Prices
       parameters:
@@ -5971,7 +5845,7 @@ paths:
     description: Monthly data on Number of Housing Units started
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Starts - Mthly
       description: Monthly data on Number of Housing Units started
       parameters:
@@ -6034,7 +5908,7 @@ paths:
     description: 'Quarterly data on Number of Housing Units started: Country wise'
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Starts - Quarterly
       description: 'Quarterly data on Number of Housing Units started: Country wise'
       parameters:
@@ -6088,7 +5962,7 @@ paths:
     description: 'Monthly data on Number of Housing Units started: Region wise'
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Starts Regional - Mthly
       description: 'Monthly data on Number of Housing Units started: Region wise'
       parameters:
@@ -6151,7 +6025,7 @@ paths:
     description: Number of New Housing Units Yearly
     get:
       tags:
-        - Housing
+        - Housing & Construction
       summary: Housing Units Yrly
       description: Number of New Housing Units Yearly
       parameters:
@@ -6319,7 +6193,7 @@ paths:
     description: Yearly statistics for income by zipcode and income class
     get:
       tags:
-        - Macroeconomic
+        - Income
       summary: Income (Yrly) By Class & Zip
       description: Yearly statistics for income by zipcode and income class
       parameters:
@@ -6988,7 +6862,7 @@ paths:
     description: Monthly statistics for icome in manufacturing sector
     get:
       tags:
-        - Macroeconomic
+        - Income
       summary: Income Manufacturing - Mthly
       description: Monthly statistics for icome in manufacturing sector
       parameters:
@@ -7045,7 +6919,7 @@ paths:
     description: Monthly statistics for overall income across all sectors
     get:
       tags:
-        - Macroeconomic
+        - Income
       summary: Income Overall - Mthly
       description: Monthly statistics for overall income across all sectors
       parameters:
@@ -8160,132 +8034,6 @@ paths:
                             BySea:
                               type: number
                               description: Average spend by international vistiors arriving by sea
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/Covid19InternationalTravelRestrictionsCountryDaily:
-    summary: 'Internat''l Travel Restriction: Country'
-    description: International travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
-    get:
-      tags:
-        - Pandemic
-      summary: 'Internat''l Travel Restriction: Country'
-      description: International travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      Covid19InternationalTravelRestrictionsCountryDaily:
-                        type: array
-                        items:
-                          title: Covid19InternationalTravelRestrictionsCountryDaily
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            AllCountriesBanned:
-                              type: number
-                              description: Total border closure
-                            Quarantined:
-                              type: number
-                              description: Quarantine of arrival from some or all regions
-                            Screened:
-                              type: number
-                              description: Screening of international arrivals
-                            SomeCountriesBanned:
-                              type: number
-                              description: Ban of arrival from some regions
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/Covid19InternationalTravelRestrictionsStateDaily:
-    summary: 'Internat''l Travel Restriction: State'
-    description: International travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
-    get:
-      tags:
-        - Pandemic
-      summary: 'Internat''l Travel Restriction: State'
-      description: International travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      Covid19InternationalTravelRestrictionsStateDaily:
-                        type: array
-                        items:
-                          title: Covid19InternationalTravelRestrictionsStateDaily
-                          type: object
-                          properties:
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            State:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            AllCountriesBanned:
-                              type: number
-                              description: Total border closure
-                            Quarantined:
-                              type: number
-                              description: Quarantine of arrival from some or all regions
-                            Screened:
-                              type: number
-                              description: Screening of international arrivals
-                            SomeCountriesBanned:
-                              type: number
-                              description: Ban of arrival from some regions
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -10478,12 +10226,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIAllMonthly:
-    summary: PPI All - Mthly
+    summary: 'PPI: All - Mthly'
     description: Monthly statistics for Producer's Price Index for all products
     get:
       tags:
         - Macroeconomic
-      summary: PPI All - Mthly
+      summary: 'PPI: All - Mthly'
       description: Monthly statistics for Producer's Price Index for all products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -10534,13 +10282,70 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /fact/MarketIntel/PPIHouseholdAppliancesMonthly:
+    summary: 'PPI: Appliances - Mthly'
+    description: Monthly statistics for Producer's Price Index for household appliances
+    get:
+      tags:
+        - Macroeconomic
+      summary: 'PPI: Appliances - Mthly'
+      description: Monthly statistics for Producer's Price Index for household appliances
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      PPIHouseholdAppliancesMonthlies:
+                        type: array
+                        items:
+                          title: PPIHouseholdAppliancesMonthly
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Month:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            HouseholdAppliancesNSA:
+                              type: number
+                              description: Producer Price Index for Household Appliance Manufacturing (Not Seasonally Adjusted)
+                            MajorAppliancesNSA:
+                              type: number
+                              description: Producer Price Index for Major Appliance Manufacturing (Not Seasonally Adjusted)
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIAutomotiveMonthly:
-    summary: PPI Automotive - Mthly
+    summary: 'PPI: Automotive - Mthly'
     description: Monthly statistics for Producer's Price Index for automotive products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Automotive - Mthly
+      summary: 'PPI: Automotive - Mthly'
       description: Monthly statistics for Producer's Price Index for automotive products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -10592,12 +10397,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPICerealsMonthly:
-    summary: PPI Cereals - Mthly
+    summary: 'PPI: Cereals - Mthly'
     description: Monthly statistics for Producer's Price Index for cereals
     get:
       tags:
         - Macroeconomic
-      summary: PPI Cereals - Mthly
+      summary: 'PPI: Cereals - Mthly'
       description: Monthly statistics for Producer's Price Index for cereals
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -10673,12 +10478,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIChemicalsMonthly:
-    summary: PPI Chemicals - Mthly
+    summary: 'PPI: Chemicals - Mthly'
     description: Monthly statistics for Producer's Price Index for chemical product
     get:
       tags:
         - Macroeconomic
-      summary: PPI Chemicals - Mthly
+      summary: 'PPI: Chemicals - Mthly'
       description: Monthly statistics for Producer's Price Index for chemical product
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -10751,12 +10556,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIClothingMonthly:
-    summary: PPI Clothing - Mthly
+    summary: 'PPI: Clothing - Mthly'
     description: Monthly statistics for Producer's Price Index for clothing
     get:
       tags:
         - Macroeconomic
-      summary: PPI Clothing - Mthly
+      summary: 'PPI: Clothing - Mthly'
       description: Monthly statistics for Producer's Price Index for clothing
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -10805,12 +10610,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIConstructionMonthly:
-    summary: PPI Construction - Mthly
+    summary: 'PPI: Construction - Mthly'
     description: Monthly statistics for Producer's Price Index for construction products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Construction - Mthly
+      summary: 'PPI: Construction - Mthly'
       description: Monthly statistics for Producer's Price Index for construction products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -10871,12 +10676,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPICosmeticsMonthly:
-    summary: PPI Cosmetics - Mthly
+    summary: 'PPI: Cosmetics - Mthly'
     description: Monthly statistics for Producer's Price Index for cosmetic products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Cosmetics - Mthly
+      summary: 'PPI: Cosmetics - Mthly'
       description: Monthly statistics for Producer's Price Index for cosmetic products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -10930,12 +10735,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIDairyMonthly:
-    summary: PPI Dairy - Mthly
+    summary: 'PPI: Dairy - Mthly'
     description: Monthly statistics for Producer's Price Index for dairy products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Dairy - Mthly
+      summary: 'PPI: Dairy - Mthly'
       description: Monthly statistics for Producer's Price Index for dairy products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -10987,12 +10792,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIECommerceMonthly:
-    summary: PPI ECommerce - Mthly
+    summary: 'PPI: ECommerce - Mthly'
     description: Monthly statistics for Producer's Price Index for e-commerce products
     get:
       tags:
         - Macroeconomic
-      summary: PPI ECommerce - Mthly
+      summary: 'PPI: ECommerce - Mthly'
       description: Monthly statistics for Producer's Price Index for e-commerce products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11041,12 +10846,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIEdibleOilsMonthly:
-    summary: PPI Edible Oils - Mthly
+    summary: 'PPI: Edible Oils - Mthly'
     description: Monthly statistics for Producer's Price Index for edible oil products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Edible Oils - Mthly
+      summary: 'PPI: Edible Oils - Mthly'
       description: Monthly statistics for Producer's Price Index for edible oil products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11098,12 +10903,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIElectricalMonthly:
-    summary: PPI Electrical - Mthly
+    summary: 'PPI: Electrical - Mthly'
     description: Monthly statistics for Producer's Price Index for electrical products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Electrical - Mthly
+      summary: 'PPI: Electrical - Mthly'
       description: Monthly statistics for Producer's Price Index for electrical products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11152,12 +10957,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIEnergyMonthly:
-    summary: PPI Energy - Mthly
+    summary: 'PPI: Energy - Mthly'
     description: Monthly statistics for Producer's Price Index for energy
     get:
       tags:
         - Macroeconomic
-      summary: PPI Energy - Mthly
+      summary: 'PPI: Energy - Mthly'
       description: Monthly statistics for Producer's Price Index for energy
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11212,12 +11017,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIFarmMonthly:
-    summary: PPI Farm - Mthly
+    summary: 'PPI: Farm - Mthly'
     description: Monthly statistics for Producer's Price Index for farm products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Farm - Mthly
+      summary: 'PPI: Farm - Mthly'
       description: Monthly statistics for Producer's Price Index for farm products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11266,12 +11071,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIFertilizersMonthly:
-    summary: PPI Fertilizers - Mthly
+    summary: 'PPI: Fertilizers - Mthly'
     description: Monthly statistics for Producer's Price Index for fertilizers products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Fertilizers - Mthly
+      summary: 'PPI: Fertilizers - Mthly'
       description: Monthly statistics for Producer's Price Index for fertilizers products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11319,12 +11124,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIFinishedGoodsMonthly:
-    summary: PPI Finished Goods - Mthly
+    summary: 'PPI: Finished Goods - Mthly'
     description: Monthly statistics for Producer's Price Index for finished goods products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Finished Goods - Mthly
+      summary: 'PPI: Finished Goods - Mthly'
       description: Monthly statistics for Producer's Price Index for finished goods products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11379,12 +11184,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIFoodMonthly:
-    summary: PPI Food - Mthly
+    summary: 'PPI: Food - Mthly'
     description: Monthly statistics for Producer's Price Index for food products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Food - Mthly
+      summary: 'PPI: Food - Mthly'
       description: Monthly statistics for Producer's Price Index for food products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11445,12 +11250,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIFootwearMonthly:
-    summary: PPI Footwear - Mthly
+    summary: 'PPI: Footwear - Mthly'
     description: Monthly statistics for Producer's Price Index for footwear products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Footwear - Mthly
+      summary: 'PPI: Footwear - Mthly'
       description: Monthly statistics for Producer's Price Index for footwear products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11495,12 +11300,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIFruitsnNutsMonthly:
-    summary: PPI Fruits & Nuts - Mthly
+    summary: 'PPI: Fruits & Nuts - Mthly'
     description: Monthly statistics for Producer's Price Index for fruits and nuts
     get:
       tags:
         - Macroeconomic
-      summary: PPI Fruits & Nuts - Mthly
+      summary: 'PPI: Fruits & Nuts - Mthly'
       description: Monthly statistics for Producer's Price Index for fruits and nuts
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11570,12 +11375,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIGovtSpendMonthly:
-    summary: PPI Govt Spend - Mthly
+    summary: 'PPI: Govt Spend - Mthly'
     description: Monthly statistics for Producer's Price Index for government spending
     get:
       tags:
         - Macroeconomic
-      summary: PPI Govt Spend - Mthly
+      summary: 'PPI: Govt Spend - Mthly'
       description: Monthly statistics for Producer's Price Index for government spending
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11624,12 +11429,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIHealthcareMonthly:
-    summary: PPI Healthcare - Mthly
+    summary: 'PPI: Healthcare - Mthly'
     description: Monthly statistics for Producer's Price Index for healthcare services
     get:
       tags:
         - Macroeconomic
-      summary: PPI Healthcare - Mthly
+      summary: 'PPI: Healthcare - Mthly'
       description: Monthly statistics for Producer's Price Index for healthcare services
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11678,12 +11483,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIIndustrialMonthly:
-    summary: PPI Industrial - Mthly
+    summary: 'PPI: Industrial - Mthly'
     description: Monthly statistics for Producer's Price Index for industrial products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Industrial - Mthly
+      summary: 'PPI: Industrial - Mthly'
       description: Monthly statistics for Producer's Price Index for industrial products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11732,12 +11537,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIIndustrialChemicalsMonthly:
-    summary: PPI Industrial Chemicals - Mthly
+    summary: 'PPI: Industrial Chemicals - Mthly'
     description: Monthly statistics for Producer's Price Index for industrial chemicals
     get:
       tags:
         - Macroeconomic
-      summary: PPI Industrial Chemicals - Mthly
+      summary: 'PPI: Industrial Chemicals - Mthly'
       description: Monthly statistics for Producer's Price Index for industrial chemicals
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11798,12 +11603,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPILegumesMonthly:
-    summary: PPI Legumes - Mthly
+    summary: 'PPI: Legumes - Mthly'
     description: Monthly statistics for Producer's Price Index for legumes
     get:
       tags:
         - Macroeconomic
-      summary: PPI Legumes - Mthly
+      summary: 'PPI: Legumes - Mthly'
       description: Monthly statistics for Producer's Price Index for legumes
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11852,12 +11657,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPINonEnergyMonthly:
-    summary: PPI Less Energy - Mthly
+    summary: 'PPI: Less Energy - Mthly'
     description: Monthly statistics for Producer's Price Index for non-energy products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Less Energy - Mthly
+      summary: 'PPI: Less Energy - Mthly'
       description: Monthly statistics for Producer's Price Index for non-energy products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11909,12 +11714,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPINonFoodMonthly:
-    summary: PPI Less Food - Mthly
+    summary: 'PPI: Less Food - Mthly'
     description: 'Monthly statistics for Producer''s Price Index for non-food services '
     get:
       tags:
         - Macroeconomic
-      summary: PPI Less Food - Mthly
+      summary: 'PPI: Less Food - Mthly'
       description: 'Monthly statistics for Producer''s Price Index for non-food services '
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -11969,12 +11774,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPINonFoodEnergyMonthly:
-    summary: PPI Less Food Energy - Mthly
+    summary: 'PPI: Less Food Energy - Mthly'
     description: Monthly statistics for Producer's Price Index for non-food energy products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Less Food Energy - Mthly
+      summary: 'PPI: Less Food Energy - Mthly'
       description: Monthly statistics for Producer's Price Index for non-food energy products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -12019,12 +11824,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPINonFoodEnergyServicesMonthly:
-    summary: 'PPI Less Food, Energy, Svcs - Mthly'
+    summary: 'PPI: Less Food, Energy, Svcs - Mthly'
     description: 'Monthly statistics for Producer''s Price Index for non-food energy services '
     get:
       tags:
         - Macroeconomic
-      summary: 'PPI Less Food, Energy, Svcs - Mthly'
+      summary: 'PPI: Less Food, Energy, Svcs - Mthly'
       description: 'Monthly statistics for Producer''s Price Index for non-food energy services '
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -12073,12 +11878,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPINonServicesMonthly:
-    summary: PPI Less Services - Mthly
+    summary: 'PPI: Less Services - Mthly'
     description: Monthly statistics for Producer's Price Index for non-services products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Less Services - Mthly
+      summary: 'PPI: Less Services - Mthly'
       description: Monthly statistics for Producer's Price Index for non-services products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -12127,12 +11932,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPILumberMonthly:
-    summary: PPI Lumber - Mthly
+    summary: 'PPI: Lumber - Mthly'
     description: Monthly statistics for Producer's Price Index for lumber products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Lumber - Mthly
+      summary: 'PPI: Lumber - Mthly'
       description: Monthly statistics for Producer's Price Index for lumber products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -12211,12 +12016,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIMeatMonthly:
-    summary: PPI Meat - Mthly
+    summary: 'PPI: Meat - Mthly'
     description: Monthly statistics for Producer's Price Index for meat
     get:
       tags:
         - Macroeconomic
-      summary: PPI Meat - Mthly
+      summary: 'PPI: Meat - Mthly'
       description: Monthly statistics for Producer's Price Index for meat
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -12273,12 +12078,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIMiningMonthly:
-    summary: PPI Mining - Mthly
+    summary: 'PPI: Mining - Mthly'
     description: Monthly statistics for Producer's Price Index for mining services
     get:
       tags:
         - Macroeconomic
-      summary: PPI Mining - Mthly
+      summary: 'PPI: Mining - Mthly'
       description: Monthly statistics for Producer's Price Index for mining services
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -12327,12 +12132,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPINonMetalsMonthly:
-    summary: PPI Non-Metals - Mthly
+    summary: 'PPI: Non-Metals - Mthly'
     description: Monthly statistics for Producer's Price Index for non-metal products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Non-Metals - Mthly
+      summary: 'PPI: Non-Metals - Mthly'
       description: Monthly statistics for Producer's Price Index for non-metal products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -12384,12 +12189,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/PPIOthersMonthly:
-    summary: PPI Others - Mthly
+    summary: 'PPI: Others - Mthly'
     description: Monthly statistics for Producer's Price Index for other products
     get:
       tags:
         - Macroeconomic
-      summary: PPI Others - Mthly
+      summary: 'PPI: Others - Mthly'
       description: Monthly statistics for Producer's Price Index for other products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -12424,63 +12229,6 @@ paths:
                             OthersDemandSA:
                               type: number
                               description: 'Producer Price Index: Final Demand Less Foods and Energy for USA, (Seasonally Adjusted)'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/PPIHouseholdAppliancesMonthly:
-    summary: 'PPI: Appliances - Mthly'
-    description: Monthly statistics for Producer's Price Index for household appliances
-    get:
-      tags:
-        - Macroeconomic
-      summary: 'PPI: Appliances - Mthly'
-      description: Monthly statistics for Producer's Price Index for household appliances
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      PPIHouseholdAppliancesMonthlies:
-                        type: array
-                        items:
-                          title: PPIHouseholdAppliancesMonthly
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Month:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            HouseholdAppliancesNSA:
-                              type: number
-                              description: Producer Price Index for Household Appliance Manufacturing (Not Seasonally Adjusted)
-                            MajorAppliancesNSA:
-                              type: number
-                              description: Producer Price Index for Major Appliance Manufacturing (Not Seasonally Adjusted)
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -13142,14 +12890,68 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
-  /fact/MarketIntel/RetailSalesMonthly:
-    summary: Retail Sales - Mthly
-    description: Monthly data of Country wise Retail Sales
+  /fact/MarketIntel/CommodityIndexOthersMonthly:
+    summary: Rubber
+    description: 'These are price indices for the commodities listed below. Unless otherwise stated, the index year is 2016 with that year''s price indexed at 100.'
     get:
       tags:
-        - Industry
-      summary: Retail Sales - Mthly
-      description: Monthly data of Country wise Retail Sales
+        - Commodities
+      summary: Rubber
+      description: 'These are price indices for the commodities listed below. Unless otherwise stated, the index year is 2016 with that year''s price indexed at 100.'
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      CommodityIndexOthersMonthlies:
+                        type: array
+                        items:
+                          title: CommodityIndexOthersMonthly
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Month:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            Rubber:
+                              type: number
+                              description: 'Rubber [Index - 2016=100]'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/RetailSalesMonthly:
+    summary: Sales - Mthly
+    description: Monthly Retail Sales
+    get:
+      tags:
+        - Retail
+      summary: Sales - Mthly
+      description: Monthly Retail Sales
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -13233,12 +13035,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesQuarterly:
-    summary: Retail Sales - Quarterly
+    summary: Sales - Quarterly
     description: Quarterly retail sales for all products
     get:
       tags:
-        - Industry
-      summary: Retail Sales - Quarterly
+        - Retail
+      summary: Sales - Quarterly
       description: Quarterly retail sales for all products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13286,13 +13088,133 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /fact/MarketIntel/SalesECommerceMonthly:
+    summary: Sales ECommerce - Mthly
+    description: Monthly sales for e-commerce
+    get:
+      tags:
+        - Retail
+      summary: Sales ECommerce - Mthly
+      description: Monthly sales for e-commerce
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      SalesECommerceMonthlies:
+                        type: array
+                        items:
+                          title: SalesECommerceMonthly
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Month:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            RetailSalesElectronicShoppingNSA:
+                              type: number
+                              description: 'Retail Sales: Online Shopping and E-Commerce (Not Seasonally Adjusted)'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/SalesTaxStateMonthly:
+    summary: Sales Taxes by State - Mthly
+    description: 'Monthly Sales Tax data: State wise'
+    get:
+      tags:
+        - Macroeconomic
+      summary: Sales Taxes by State - Mthly
+      description: 'Monthly Sales Tax data: State wise'
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      SalesTaxStateMonthlies:
+                        type: array
+                        items:
+                          title: SalesTaxStateMonthly
+                          type: object
+                          properties:
+                            Month:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            State:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            AlcoholicBeverage:
+                              type: number
+                              description: 'Sales Tax: Alco Bev'
+                            GeneralSales:
+                              type: number
+                              description: 'Sales Tax: General Sales'
+                            Lodging:
+                              type: number
+                              description: 'Sales Tax: Lodging'
+                            MotorFuel:
+                              type: number
+                              description: 'Sales Tax: Motor Fuel'
+                            Tobacco:
+                              type: number
+                              description: 'Sales Tax: Tobacco'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesHouseholdAppliancesMonthly:
-    summary: 'Retail Sales: Appliances - Mthly'
+    summary: 'Sales: Appliances - Mthly'
     description: Monthly retail sales for household appliances
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Appliances - Mthly'
+        - Retail
+      summary: 'Sales: Appliances - Mthly'
       description: Monthly retail sales for household appliances
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13341,12 +13263,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesAutoMonthly:
-    summary: 'Retail Sales: Auto - Mthly'
+    summary: 'Sales: Auto - Mthly'
     description: 'Monthly retail sales for motor vehicles & automobiles. Autos are all passenger cars, including station wagons. '
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Auto - Mthly'
+        - Retail
+      summary: 'Sales: Auto - Mthly'
       description: 'Monthly retail sales for motor vehicles & automobiles. Autos are all passenger cars, including station wagons. '
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13458,12 +13380,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesBuildingMaterialMonthly:
-    summary: 'Retail Sales: Building Material - Mthly'
+    summary: 'Sales: Building Material - Mthly'
     description: Monthly retail sales for building materials. The value for the most recent month is an advance estimate that is based on data from a subsample of firms from the larger Monthly Retail Trade Survey. Details at https://www.census.gov/retail/marts/about_the_surveys.html
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Building Material - Mthly'
+        - Retail
+      summary: 'Sales: Building Material - Mthly'
       description: Monthly retail sales for building materials. The value for the most recent month is an advance estimate that is based on data from a subsample of firms from the larger Monthly Retail Trade Survey. Details at https://www.census.gov/retail/marts/about_the_surveys.html
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13521,12 +13443,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesClothingMonthly:
-    summary: 'Retail Sales: Clothing - Mthly'
+    summary: 'Sales: Clothing - Mthly'
     description: Monthly retail sales for clothing. The value for the most recent month is an advance estimate that is based on data from a subsample of firms from the larger Monthly Retail Trade Survey. Details at https://www.census.gov/retail/marts/about_the_surveys.html
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Clothing - Mthly'
+        - Retail
+      summary: 'Sales: Clothing - Mthly'
       description: Monthly retail sales for clothing. The value for the most recent month is an advance estimate that is based on data from a subsample of firms from the larger Monthly Retail Trade Survey. Details at https://www.census.gov/retail/marts/about_the_surveys.html
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13590,12 +13512,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesCommunicationMonthly:
-    summary: 'Retail Sales: Communication - Mthly'
+    summary: 'Sales: Communication - Mthly'
     description: Monthly retail sales for communications
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Communication - Mthly'
+        - Retail
+      summary: 'Sales: Communication - Mthly'
       description: Monthly retail sales for communications
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13644,12 +13566,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesECommMonthly:
-    summary: 'Retail Sales: EComm - Mthly'
+    summary: 'Sales: EComm - Mthly'
     description: Monthly retail sales for e-commerce
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: EComm - Mthly'
+        - Retail
+      summary: 'Sales: EComm - Mthly'
       description: Monthly retail sales for e-commerce
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13701,12 +13623,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesElectronicsMonthly:
-    summary: 'Retail Sales: Electronics - Mthly'
+    summary: 'Sales: Electronics - Mthly'
     description: Monthly retail sales for electronics
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Electronics - Mthly'
+        - Retail
+      summary: 'Sales: Electronics - Mthly'
       description: Monthly retail sales for electronics
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13770,12 +13692,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesEnergyMonthly:
-    summary: 'Retail Sales: Energy - Mthly'
+    summary: 'Sales: Energy - Mthly'
     description: Monthly retail sales for energy
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Energy - Mthly'
+        - Retail
+      summary: 'Sales: Energy - Mthly'
       description: Monthly retail sales for energy
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13860,12 +13782,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesFoodnBeverageMonthly:
-    summary: 'Retail Sales: Food & Beverage - Mthly'
+    summary: 'Sales: Food & Beverage - Mthly'
     description: Monthly retail sales for food and beverages
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Food & Beverage - Mthly'
+        - Retail
+      summary: 'Sales: Food & Beverage - Mthly'
       description: Monthly retail sales for food and beverages
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -13944,12 +13866,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesFootwearMonthly:
-    summary: 'Retail Sales: Footwear - Mthly'
+    summary: 'Sales: Footwear - Mthly'
     description: Monthly data of Retail Footwear Sales
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Footwear - Mthly'
+        - Retail
+      summary: 'Sales: Footwear - Mthly'
       description: Monthly data of Retail Footwear Sales
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14001,12 +13923,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesFurnitureMonthly:
-    summary: 'Retail Sales: Furniture - Mthly'
+    summary: 'Sales: Furniture - Mthly'
     description: Monthly retail sales for furniture
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Furniture - Mthly'
+        - Retail
+      summary: 'Sales: Furniture - Mthly'
       description: Monthly retail sales for furniture
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14073,12 +13995,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesHardwareMonthly:
-    summary: 'Retail Sales: Hardware - Mthly'
+    summary: 'Sales: Hardware - Mthly'
     description: Monthly retail sales for hardware
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Hardware - Mthly'
+        - Retail
+      summary: 'Sales: Hardware - Mthly'
       description: Monthly retail sales for hardware
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14127,12 +14049,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesWatchesnJewelleryMonthly:
-    summary: 'Retail Sales: Jewellery - Mthly'
+    summary: 'Sales: Jewellery - Mthly'
     description: Monthly retail sales for watches and jewellery
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Jewellery - Mthly'
+        - Retail
+      summary: 'Sales: Jewellery - Mthly'
       description: Monthly retail sales for watches and jewellery
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14181,12 +14103,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesMiscStoresMonthly:
-    summary: 'Retail Sales: Misc Stores - Mthly'
+    summary: 'Sales: Misc Stores - Mthly'
     description: Monthly retail sales for misc. stores
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Misc Stores - Mthly'
+        - Retail
+      summary: 'Sales: Misc Stores - Mthly'
       description: Monthly retail sales for misc. stores
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14244,12 +14166,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesNonAutoMonthly:
-    summary: 'Retail Sales: Non-Auto - Mthly'
+    summary: 'Sales: Non-Auto - Mthly'
     description: Monthly retail sales for non-auto
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Non-Auto - Mthly'
+        - Retail
+      summary: 'Sales: Non-Auto - Mthly'
       description: Monthly retail sales for non-auto
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14307,12 +14229,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesNonFoodMonthly:
-    summary: 'Retail Sales: Non-Food - Mthly'
+    summary: 'Sales: Non-Food - Mthly'
     description: Monthly retail sales for non-food auto
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Non-Food - Mthly'
+        - Retail
+      summary: 'Sales: Non-Food - Mthly'
       description: Monthly retail sales for non-food auto
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14370,12 +14292,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesNonStoreMonthly:
-    summary: 'Retail Sales: Non-Store - Mthly'
+    summary: 'Sales: Non-Store - Mthly'
     description: Monthly retail sales for non-store
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Non-Store - Mthly'
+        - Retail
+      summary: 'Sales: Non-Store - Mthly'
       description: Monthly retail sales for non-store
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14433,12 +14355,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesOtherMonthly:
-    summary: 'Retail Sales: Other - Mthly'
+    summary: 'Sales: Other - Mthly'
     description: Monthly retail sales for other products
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Other - Mthly'
+        - Retail
+      summary: 'Sales: Other - Mthly'
       description: Monthly retail sales for other products
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14487,12 +14409,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesPersonalCareMonthly:
-    summary: 'Retail Sales: Personal Care - Mthly'
+    summary: 'Sales: Personal Care - Mthly'
     description: 'Monthly retail sales for personal care '
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Personal Care - Mthly'
+        - Retail
+      summary: 'Sales: Personal Care - Mthly'
       description: 'Monthly retail sales for personal care '
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14550,12 +14472,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesPharmaMonthly:
-    summary: 'Retail Sales: Pharma - Mthly'
+    summary: 'Sales: Pharma - Mthly'
     description: Monthly retail sales for pharma
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Pharma - Mthly'
+        - Retail
+      summary: 'Sales: Pharma - Mthly'
       description: Monthly retail sales for pharma
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14604,12 +14526,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesSportingGoodsMonthly:
-    summary: 'Retail Sales: Sporting Goods - Mthly'
+    summary: 'Sales: Sporting Goods - Mthly'
     description: Monthly retail sales for sporting goods
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Sporting Goods - Mthly'
+        - Retail
+      summary: 'Sales: Sporting Goods - Mthly'
       description: Monthly retail sales for sporting goods
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14667,12 +14589,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesStateMonthly:
-    summary: 'Retail Sales: State - Mthly'
+    summary: 'Sales: State - Mthly'
     description: Monthly data of State wise Retail Sales.
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: State - Mthly'
+        - Retail
+      summary: 'Sales: State - Mthly'
       description: Monthly data of State wise Retail Sales.
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14724,12 +14646,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/RetailSalesUsedGoodsMonthly:
-    summary: 'Retail Sales: Used Goods - Mthly'
+    summary: 'Sales: Used Goods - Mthly'
     description: Monthly retail sales for used goods
     get:
       tags:
-        - Industry
-      summary: 'Retail Sales: Used Goods - Mthly'
+        - Retail
+      summary: 'Sales: Used Goods - Mthly'
       description: Monthly retail sales for used goods
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -14764,273 +14686,6 @@ paths:
                             IndexforSecondhandGoods:
                               type: number
                               description: Second-Hand Goods In Stores (Index 2015=100)
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/RetailStoreSalesMonthly:
-    summary: Retail Store Sales - Mthly
-    description: Monthly data of Country wise Retail Store Sales
-    get:
-      tags:
-        - Industry
-      summary: Retail Store Sales - Mthly
-      description: Monthly data of Country wise Retail Store Sales
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      RetailStoreSalesMonthlies:
-                        type: array
-                        items:
-                          title: RetailStoreSalesMonthly
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Month:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            AdvanceSalesDepartmentStoresNSA:
-                              type: number
-                              description: 'Sales (Advance Release): Departmental Stores (Not Seasonally Adjusted)'
-                            AdvanceSalesDepartmentStoresPercChangeNSA:
-                              type: number
-                              description: 'Sales (Advance Release): Departmental Stores % Chg (Not Seasonally Adjusted)'
-                            AdvanceSalesDepartmentStoresPercChangeSA:
-                              type: number
-                              description: 'Sales (Advance Release): Departmental Stores % Chg (Seasonally Adjusted)'
-                            AdvanceSalesDepartmentStoresSA:
-                              type: number
-                              description: 'Sales (Advance Release): Departmental Stores (Seasonally Adjusted)'
-                            AdvanceSalesGeneralMerchStoresNSA:
-                              type: number
-                              description: 'Sales (Advance Release): General Merchandise Stores (Not Seasonally Adjusted)'
-                            AdvanceSalesGeneralMerchStoresPercChangeNSA:
-                              type: number
-                              description: 'Sales (Advance Release): General Merchandise Stores % Chg (Not Seasonally Adjusted)'
-                            AdvanceSalesGeneralMerchStoresPercChangeSA:
-                              type: number
-                              description: 'Sales (Advance Release): General Merchandise Stores % Chg (Seasonally Adjusted)'
-                            AdvanceSalesGeneralMerchStoresSA:
-                              type: number
-                              description: 'Sales (Advance Release): General Merchandise Stores (Seasonally Adjusted)'
-                            AdvanceSalesGroceryStoresNSA:
-                              type: number
-                              description: 'Sales (Advance Release): Grocery Stores (Not Seasonally Adjusted)'
-                            AdvanceSalesGroceryStoresPercChangeNSA:
-                              type: number
-                              description: 'Sales (Advance Release): Grocery Stores % Chg (Not Seasonally Adjusted)'
-                            AdvanceSalesGroceryStoresPercChangeSA:
-                              type: number
-                              description: 'Sales (Advance Release): Grocery Stores % Chg (Seasonally Adjusted)'
-                            AdvanceSalesGroceryStoresSA:
-                              type: number
-                              description: 'Sales (Advance Release): Grocery Stores (Seasonally Adjusted)'
-                            ConvenienceStoresSA:
-                              type: number
-                              description: 'Retail Sales: Convenience Stores (Seasonally Adjusted)'
-                            SupermarketStoresSA:
-                              type: number
-                              description: 'Retail Sales: Supermarkets (Seasonally Adjusted)'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/CommodityIndexOthersMonthly:
-    summary: Rubber
-    description: 'These are price indices for the commodities listed below. Unless otherwise stated, the index year is 2016 with that year''s price indexed at 100.'
-    get:
-      tags:
-        - Commodities
-      summary: Rubber
-      description: 'These are price indices for the commodities listed below. Unless otherwise stated, the index year is 2016 with that year''s price indexed at 100.'
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      CommodityIndexOthersMonthlies:
-                        type: array
-                        items:
-                          title: CommodityIndexOthersMonthly
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Month:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            Rubber:
-                              type: number
-                              description: 'Rubber [Index - 2016=100]'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/SalesECommerceMonthly:
-    summary: Sales ECommerce - Mthly
-    description: Monthly sales for e-commerce
-    get:
-      tags:
-        - Industry
-      summary: Sales ECommerce - Mthly
-      description: Monthly sales for e-commerce
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      SalesECommerceMonthlies:
-                        type: array
-                        items:
-                          title: SalesECommerceMonthly
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Month:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            RetailSalesElectronicShoppingNSA:
-                              type: number
-                              description: 'Retail Sales: Online Shopping and E-Commerce (Not Seasonally Adjusted)'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/SalesTaxStateMonthly:
-    summary: Sales Taxes by State - Mthly
-    description: 'Monthly Sales Tax data: State wise'
-    get:
-      tags:
-        - Macroeconomic
-      summary: Sales Taxes by State - Mthly
-      description: 'Monthly Sales Tax data: State wise'
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      SalesTaxStateMonthlies:
-                        type: array
-                        items:
-                          title: SalesTaxStateMonthly
-                          type: object
-                          properties:
-                            Month:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            State:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            AlcoholicBeverage:
-                              type: number
-                              description: 'Sales Tax: Alco Bev'
-                            GeneralSales:
-                              type: number
-                              description: 'Sales Tax: General Sales'
-                            Lodging:
-                              type: number
-                              description: 'Sales Tax: Lodging'
-                            MotorFuel:
-                              type: number
-                              description: 'Sales Tax: Motor Fuel'
-                            Tobacco:
-                              type: number
-                              description: 'Sales Tax: Tobacco'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -15643,12 +15298,105 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /fact/MarketIntel/RetailStoreSalesMonthly:
+    summary: Store Sales - Mthly
+    description: Monthly data of Country wise Retail Store Sales
+    get:
+      tags:
+        - Retail
+      summary: Store Sales - Mthly
+      description: Monthly data of Country wise Retail Store Sales
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      RetailStoreSalesMonthlies:
+                        type: array
+                        items:
+                          title: RetailStoreSalesMonthly
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Month:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            AdvanceSalesDepartmentStoresNSA:
+                              type: number
+                              description: 'Sales (Advance Release): Departmental Stores (Not Seasonally Adjusted)'
+                            AdvanceSalesDepartmentStoresPercChangeNSA:
+                              type: number
+                              description: 'Sales (Advance Release): Departmental Stores % Chg (Not Seasonally Adjusted)'
+                            AdvanceSalesDepartmentStoresPercChangeSA:
+                              type: number
+                              description: 'Sales (Advance Release): Departmental Stores % Chg (Seasonally Adjusted)'
+                            AdvanceSalesDepartmentStoresSA:
+                              type: number
+                              description: 'Sales (Advance Release): Departmental Stores (Seasonally Adjusted)'
+                            AdvanceSalesGeneralMerchStoresNSA:
+                              type: number
+                              description: 'Sales (Advance Release): General Merchandise Stores (Not Seasonally Adjusted)'
+                            AdvanceSalesGeneralMerchStoresPercChangeNSA:
+                              type: number
+                              description: 'Sales (Advance Release): General Merchandise Stores % Chg (Not Seasonally Adjusted)'
+                            AdvanceSalesGeneralMerchStoresPercChangeSA:
+                              type: number
+                              description: 'Sales (Advance Release): General Merchandise Stores % Chg (Seasonally Adjusted)'
+                            AdvanceSalesGeneralMerchStoresSA:
+                              type: number
+                              description: 'Sales (Advance Release): General Merchandise Stores (Seasonally Adjusted)'
+                            AdvanceSalesGroceryStoresNSA:
+                              type: number
+                              description: 'Sales (Advance Release): Grocery Stores (Not Seasonally Adjusted)'
+                            AdvanceSalesGroceryStoresPercChangeNSA:
+                              type: number
+                              description: 'Sales (Advance Release): Grocery Stores % Chg (Not Seasonally Adjusted)'
+                            AdvanceSalesGroceryStoresPercChangeSA:
+                              type: number
+                              description: 'Sales (Advance Release): Grocery Stores % Chg (Seasonally Adjusted)'
+                            AdvanceSalesGroceryStoresSA:
+                              type: number
+                              description: 'Sales (Advance Release): Grocery Stores (Seasonally Adjusted)'
+                            ConvenienceStoresSA:
+                              type: number
+                              description: 'Retail Sales: Convenience Stores (Seasonally Adjusted)'
+                            SupermarketStoresSA:
+                              type: number
+                              description: 'Retail Sales: Supermarkets (Seasonally Adjusted)'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /fact/MarketIntel/StoresLocation:
     summary: Stores Location
     description: Zip Code wise Stores Location data
     get:
       tags:
-        - Industry
+        - Retail
       summary: Stores Location
       description: Zip Code wise Stores Location data
       parameters:
@@ -16193,6 +15941,258 @@ paths:
                             AirPassengersDaily:
                               type: number
                               description: Daily number of passengers in air travel
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/Covid19InternalMovementRestrictionsCountryDaily:
+    summary: 'Travel, Domestic: Country'
+    description: Domestic travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
+    get:
+      tags:
+        - Pandemic
+      summary: 'Travel, Domestic: Country'
+      description: Domestic travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      Covid19InternalMovementRestrictionsCountryDaily:
+                        type: array
+                        items:
+                          title: Covid19InternalMovementRestrictionsCountryDaily
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            MovementDiscouraged:
+                              type: number
+                              description: Domestic movement discouraged
+                            MovementRestricted:
+                              type: number
+                              description: Restriction on domestic movement enacted
+                            PublicTransportClosed:
+                              type: number
+                              description: Most people restricted from using public transport
+                            PublicTransportRestricted:
+                              type: number
+                              description: Significant reduction in public transport
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/Covid19InternalMovementRestrictionsStateDaily:
+    summary: 'Travel, Domestic: State'
+    description: Domestic travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
+    get:
+      tags:
+        - Pandemic
+      summary: 'Travel, Domestic: State'
+      description: Domestic travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      Covid19InternalMovementRestrictionsStateDaily:
+                        type: array
+                        items:
+                          title: Covid19InternalMovementRestrictionsStateDaily
+                          type: object
+                          properties:
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            State:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            MovementDiscouraged:
+                              type: number
+                              description: Domestic movement discouraged
+                            MovementRestricted:
+                              type: number
+                              description: Restriction on domestic movement
+                            PublicTransportClosed:
+                              type: number
+                              description: Most people restricted from using public transport
+                            PublicTransportRestricted:
+                              type: number
+                              description: Significant reduction in public transport
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/Covid19InternationalTravelRestrictionsCountryDaily:
+    summary: 'Travel, Internat''l: Country'
+    description: International travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
+    get:
+      tags:
+        - Pandemic
+      summary: 'Travel, Internat''l: Country'
+      description: International travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      Covid19InternationalTravelRestrictionsCountryDaily:
+                        type: array
+                        items:
+                          title: Covid19InternationalTravelRestrictionsCountryDaily
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            AllCountriesBanned:
+                              type: number
+                              description: Total border closure
+                            Quarantined:
+                              type: number
+                              description: Quarantine of arrival from some or all regions
+                            Screened:
+                              type: number
+                              description: Screening of international arrivals
+                            SomeCountriesBanned:
+                              type: number
+                              description: Ban of arrival from some regions
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/Covid19InternationalTravelRestrictionsStateDaily:
+    summary: 'Travel, Internat''l: State'
+    description: International travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
+    get:
+      tags:
+        - Pandemic
+      summary: 'Travel, Internat''l: State'
+      description: International travel restrictions that were put in place. These data are one-hot encoded for direct use in ML models
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      Covid19InternationalTravelRestrictionsStateDaily:
+                        type: array
+                        items:
+                          title: Covid19InternationalTravelRestrictionsStateDaily
+                          type: object
+                          properties:
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            State:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            AllCountriesBanned:
+                              type: number
+                              description: Total border closure
+                            Quarantined:
+                              type: number
+                              description: Quarantine of arrival from some or all regions
+                            Screened:
+                              type: number
+                              description: Screening of international arrivals
+                            SomeCountriesBanned:
+                              type: number
+                              description: Ban of arrival from some regions
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -16977,22 +16977,33 @@ tags:
     description: Data used by many different areas e.g. Dimensional attributes of the cube
   - name: Consumer Metrics
     description: 'Information that describe consumer demographics, behavior as well as sentiment / expectations'
-  - name: Branded Commerce
-    description: 'Marketing activities and indicators e.g. Brand, Price, Promotions, etc...'
+  - name: Income
+    description: Income and wealth of consumers
+  - name: Social Infrastructure
+    description: Measures of social amenities and their availabiity
   - name: Cultural
     description: 'Cultural and other events e.g. Sports, Holidays'
-  - name: Weather
-    description: Weather history and forecast
+  - name: Transportation
+    description: Logistics and transportation related information
   - name: Pandemic
     description: Information and high-frequency indicators for tracking the pandemic
+  - name: Health
+    description: Data on morbidity and mortality
+  - name: Mobility
+    description: Data derived from mobile phone geolocation
   - name: Macroeconomic
     description: Macroeconomic indicators both monetary and output measurements
   - name: Commodities
     description: Commodity price history
-  - name: Market Activity
-    description: Indicators of economic and commercial activity; primarily time series
-  - name: Market Structure
-    description: The organisation of global commerce and supply chains
+  - name: Industry
+    description: Industry specific indicators
+  - name: Retail
+    description: Indicators from the retail industry
+  - name: Branded Commerce
+    description: 'Marketing activities and indicators e.g. Brand, Price, Promotions, etc...'
+  - name: Housing & Construction
+    description: Real-estate and Construction
   - name: Technology
     description: Adoption and trends in IT industry
-  - name: Unknown
+  - name: Weather
+    description: Weather history and forecast
