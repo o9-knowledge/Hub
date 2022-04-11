@@ -3313,9 +3313,6 @@ paths:
                             ContentDataOrigin:
                               type: string
                               description: Source of data
-                            ContentDimensionName:
-                              type: string
-                              description: Internal use only
                             ContentEndDate:
                               type: string
                               description: Date of last observation available for this data source
@@ -3323,12 +3320,6 @@ paths:
                             ContentExchangeRateType:
                               type: string
                               description: 'Exchange rate used, if the data element is a monetary measure'
-                            ContentFactor:
-                              type: number
-                              description: Internal use only
-                            ContentFilter:
-                              type: string
-                              description: Internal use only
                             ContentFrequency:
                               type: string
                               description: The frequency with with observations are made
@@ -3350,9 +3341,6 @@ paths:
                             ContentGeoZip:
                               type: string
                               description: The postal code for which the data are available (as defined in the ContentGeoType)
-                            ContentIsCurrencyType:
-                              type: number
-                              description: Internal use only
                             ContentLongDescription:
                               type: string
                               description: Description of the data measure
@@ -3365,12 +3353,6 @@ paths:
                             ContentNAICSLevel2:
                               type: string
                               description: Additional grain for indicating relevant industry for the driver data (as per NAICS hierarchy)
-                            ContentPlan:
-                              type: string
-                              description: Internal use only
-                            ContentRawFile:
-                              type: string
-                              description: Internal use only
                             ContentScript:
                               type: string
                               description: Name of the script that populates this data
@@ -3396,9 +3378,6 @@ paths:
                             ContentURL:
                               type: string
                               description: Website/section to access data on the source database
-                            Count:
-                              type: number
-                              description: Internal use only
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
