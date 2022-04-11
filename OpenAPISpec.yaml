@@ -1104,12 +1104,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/AppleMobilityCountry:
-    summary: Apple Mobility
+    summary: Apple
     description: 'These are data made available by Apple Inc. They provide changes from baseline levels for select countries.  Countries covered include USA, BEL, NLD, BRA, ARE, AUS, BGR, CAN, CHE, CHL, CZE, DEU, DNK, EGY, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IDN, IND, IRL, ISR, ITA, JPN, KHM, LTU, LVA, MEX, MYS, NOR, NZL, PHL, POL, PRT, ROU, SAU, SVK, SVN, SWE, TUR, URY, VNM, ZAF, ALB, HKG, ISL, KOR, LUX, MAC, MAR, SGP, SRB, THA, TWN, UKR, ARG, AUT, COL, RUS'
     get:
       tags:
-        - Apple Mobility
-      summary: Apple Mobility
+        - Mobility
+      summary: Apple
       description: 'These are data made available by Apple Inc. They provide changes from baseline levels for select countries.  Countries covered include USA, BEL, NLD, BRA, ARE, AUS, BGR, CAN, CHE, CHL, CZE, DEU, DNK, EGY, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IDN, IND, IRL, ISR, ITA, JPN, KHM, LTU, LVA, MEX, MYS, NOR, NZL, PHL, POL, PRT, ROU, SAU, SVK, SVN, SWE, TUR, URY, VNM, ZAF, ALB, HKG, ISL, KOR, LUX, MAC, MAR, SGP, SRB, THA, TWN, UKR, ARG, AUT, COL, RUS'
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -4710,12 +4710,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/GoogleMobilityCountry:
-    summary: 'Google Mobility: Country'
+    summary: 'Google: Country'
     description: 'Google Mobility: Country wise'
     get:
       tags:
         - Mobility
-      summary: 'Google Mobility: Country'
+      summary: 'Google: Country'
       description: 'Google Mobility: Country wise'
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -4779,12 +4779,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/GoogleMobilityCounty:
-    summary: 'Google Mobility: County'
+    summary: 'Google: County'
     description: 'Google Mobility: County wise'
     get:
       tags:
         - Mobility
-      summary: 'Google Mobility: County'
+      summary: 'Google: County'
       description: 'Google Mobility: County wise'
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -4848,12 +4848,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/GoogleMobilityState:
-    summary: 'Google Mobility: State'
+    summary: 'Google: State'
     description: 'Google Mobility: State wise'
     get:
       tags:
         - Mobility
-      summary: 'Google Mobility: State'
+      summary: 'Google: State'
       description: 'Google Mobility: State wise'
       parameters:
         - $ref: '#/components/parameters/Token'
