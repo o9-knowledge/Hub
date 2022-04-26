@@ -158,57 +158,6 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
-  /master/MarketIntel/Currency:
-    summary: Currency
-    description: The names of the currencies that are used in the data
-    get:
-      tags:
-        - Common Models
-      summary: Currency (Dimension)
-      description: "The names of the currencies that are used in the data  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition(s) are specified in the `filters` array parameter*\n```\n[{\n\"AttributeName\": \"Currency\",   \n\"Properties\": [\"Currency Image\", \"Currency Locale\"]\n}]\n```"
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      Currencies:
-                        type: array
-                        items:
-                          title: Currency
-                          type: object
-                          properties:
-                            Currency:
-                              type: string
-                              description: '(*Filterable dimensional attribute*) Currency code [per ISO 4217]'
-                            Currency Image:
-                              description: 'Currency Image: A property of the ''*Currency*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
-                            Currency Locale:
-                              description: 'Currency Locale: A property of the ''*Currency*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
   /master/MarketIntel/ICD10:
     summary: Diseases (ICD 10)
     description: The data on morbidity (where public) as well as causes of mortality are organized by the ICD 10 classification
@@ -366,7 +315,7 @@ paths:
       tags:
         - Common Models
       summary: Geography (Dimension)
-      description: "This dimension has the administrative geography for each country in the database. Starting from the continent level and going down to the postal code level. Not all countries have the same level of detail.  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition(s) are specified in the `filters` array parameter*\n```\n[{\n\"AttributeName\": \"City\",   \n\"Properties\": [\"CityCentroidLat\", \"CityCentroidLng\"]\n}, {\n\"AttributeName\": \"Continent\",   \n\"Properties\": [\"ContinentFlag\"]\n}, {\n\"AttributeName\": \"Country\",   \n\"Properties\": [\"CountryCentroidLat\", \"CountryCentroidLng\", \"CountryFlag\", \"CountryLocale\"]\n}, {\n\"AttributeName\": \"County\",   \n\"Properties\": [\"CountyCentroidLat\", \"CountyCentroidLng\"]\n}, {\n\"AttributeName\": \"State\",   \n\"Properties\": [\"StateCentroidLat\", \"StateCentroidLng\"]\n}, {\n\"AttributeName\": \"Zip\",   \n\"Properties\": [\"ZipCentroidLat\", \"ZipCentroidLng\", \"ZipArea\"]\n}]\n```"
+      description: "This dimension has the administrative geography for each country in the database. Starting from the continent level and going down to the postal code level. Not all countries have the same level of detail.  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition(s) are specified in the `filters` array parameter*\n```\n[{\n\"AttributeName\": \"City\",   \n\"Properties\": [\"CityCentroidLat\", \"CityCentroidLng\"]\n}, {\n\"AttributeName\": \"Continent\",   \n\"Properties\": [\"ContinentFlag\"]\n}, {\n\"AttributeName\": \"Country\",   \n\"Properties\": [\"CountryCentroidLat\", \"CountryCentroidLng\", \"CountryFlag\"]\n}, {\n\"AttributeName\": \"County\",   \n\"Properties\": [\"CountyCentroidLat\", \"CountyCentroidLng\"]\n}, {\n\"AttributeName\": \"State\",   \n\"Properties\": [\"StateCentroidLat\", \"StateCentroidLng\"]\n}, {\n\"AttributeName\": \"Zip\",   \n\"Properties\": [\"ZipCentroidLat\", \"ZipCentroidLng\", \"ZipArea\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -411,8 +360,6 @@ paths:
                               description: 'Country Centroid Lng: A property of the ''*Country*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             CountryFlag:
                               description: 'Country Flag: A property of the ''*Country*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
-                            CountryLocale:
-                              description: 'Country Locale: A property of the ''*Country*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             County:
                               type: string
                               description: (*Filterable dimensional attribute*) Name of County or Municipal Authority
@@ -550,7 +497,7 @@ paths:
       tags:
         - Common Models
       summary: Industry (Dimension)
-      description: "This dimension has all the attributes and levels to organize data by industry. We use NAICS classification ontology as well as identifiers.  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition(s) are specified in the `filters` array parameter*\n```\n[{\n\"AttributeName\": \"CompanyFacility\",   \n\"Properties\": [\"CompanyFacilityAdditionalNotes\", \"Latitude\", \"CompanyFacilityLinkedRDC\", \"Longitude\", \"CompanyFacilityParentCompany\", \"CompanyFacilityRetailerCategory\", \"CompanyFacilityRowstoscrape\", \"CompanyFacilityScrapeId\", \"CompanyFacilityAddress\", \"CompanyFacilityFormat\", \"CompanyFacilityId\", \"CompanyFacilityKey\", \"CompanyFacilityURL\"]\n}]\n```"
+      description: "This dimension has all the attributes and levels to organize data by industry. We use NAICS classification ontology as well as identifiers.  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition(s) are specified in the `filters` array parameter*\n```\n[{\n\"AttributeName\": \"Company\",   \n\"Properties\": [\"ParentCompany\"]\n}, {\n\"AttributeName\": \"CompanyFacility\",   \n\"Properties\": [\"CompanyFacilityAdditionalNotes\", \"Latitude\", \"CompanyFacilityLinkedRDC\", \"Longitude\", \"CompanyFacilityRetailerCategory\", \"CompanyFacilityRowstoscrape\", \"CompanyFacilityScrapeId\", \"CompanyFacilityAddress\", \"CompanyFacilityFormat\", \"CompanyFacilityId\", \"CompanyFacilityKey\", \"CompanyFacilityURL\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -577,6 +524,8 @@ paths:
                             Company:
                               type: string
                               description: (*Filterable dimensional attribute*) Name of the company
+                            ParentCompany:
+                              description: 'Parent Company: A property of the ''*Company*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             CompanyFacility:
                               type: string
                               description: (*Filterable dimensional attribute*) Store/Warehouse/etc
@@ -588,8 +537,6 @@ paths:
                               description: 'Company Facility Linked RDC: A property of the ''*CompanyFacility*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             Longitude:
                               description: 'Longitude: A property of the ''*CompanyFacility*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
-                            CompanyFacilityParentCompany:
-                              description: 'Company Facility Parent Company: A property of the ''*CompanyFacility*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             CompanyFacilityRetailerCategory:
                               description: 'Company Facility Retailer Category: A property of the ''*CompanyFacility*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             CompanyFacilityRowstoscrape:
@@ -2545,9 +2492,6 @@ paths:
                             AllNSAForecast:
                               type: number
                               description: Consumer Price Index Forecast
-                            AllNSAForecast_Temp:
-                              type: number
-                              description: Consumer Price Index Forecast
                             AllSA:
                               type: number
                               description: 'Consumer Price Index (All areas) for USA, Seasonally Adjusted'
@@ -3925,63 +3869,6 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
-  /fact/MarketIntel/EVAdoptionYearly:
-    summary: EV Adoption - Yrly
-    description: Short & Long Term EV Adoption Percentages Yearly
-    get:
-      tags:
-        - Industry
-      summary: EV Adoption - Yrly
-      description: Short & Long Term EV Adoption Percentages Yearly
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      EVAdoptionYearlies:
-                        type: array
-                        items:
-                          title: EVAdoptionYearly
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Year:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Year.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            SalesPercentLongTerm:
-                              type: number
-                              description: Long Term  (2015-2040) Electric Vehicles Sales Percentage of Total Vehicles Sales
-                            SalesPercentShortTerm:
-                              type: number
-                              description: Short Term (2015-2023) Electric Vehicles Sales Percentage of Total Vehicles Sales
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
   /fact/MarketIntel/EventsDaily:
     summary: Events - Daily
     description: Events Daily
@@ -4130,9 +4017,6 @@ paths:
                             Country:
                               type: string
                               description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Currency:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Currency code [per ISO 4217].  \n<br/>*See 'Currency (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Day:
                               type: string
                               description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
@@ -5006,6 +4890,70 @@ paths:
                             HealthCoveragePercent:
                               type: number
                               description: Health Coverage Percentage by State
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/CountryHolidays:
+    summary: 'Holidays: Country'
+    description: Holidays and observances followed at a country level. State level holidays may differ.
+    get:
+      tags:
+        - Culture
+      summary: 'Holidays: Country'
+      description: Holidays and observances followed at a country level. State level holidays may differ.
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      CountryHolidays:
+                        type: array
+                        items:
+                          title: CountryHolidays
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            HolidayName:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Name of holiday (Alternate names are separate members).  \n<br/>*See 'Holidays (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            CountryHolidays:
+                              type: number
+                              description: Holidays and observances
+                            CountryHolidaysActualDate:
+                              type: string
+                              description: Holidays and observances (actual date)
+                              format: YYYY-MM-DD
+                            CountryHolidaysPublic:
+                              type: number
+                              description: Flag indicating if it is a public holiday
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -10925,6 +10873,9 @@ paths:
                             ConsumerGoodsNonFoodDemandSA:
                               type: number
                               description: 'Producer Price Index: Final Demand: Finished Consumer Goods Less Foods and Energy (Seasonally Adjusted)'
+                            IndustryPPIConsumerGoodsNSA:
+                              type: number
+                              description: "OECD descriptor ID: PITGCG02_x000D_\nOECD unit ID: IXOB_x000D_\nOECD country ID: DEU_x000D_\nAll OECD data should be cited as follows: OECD, \"Main Economic Indicators - complete database\", Main Economic Indicators (database),http://dx.doi.org/10.1787/data-00052-en (Accessed on date)_x000D_\nCopyright, 2016, OECD. Reprinted with permission."
                             NonFoodDemandSA:
                               type: number
                               description: 'Producer Price Index: Final Demand: Finished Goods Less Foods and Energy (Seasonally Adjusted)'
@@ -14548,6 +14499,10 @@ paths:
                           title: Covid19SchoolsClosingStateDaily
                           type: object
                           properties:
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
                             State:
                               type: string
                               description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
@@ -15272,66 +15227,6 @@ paths:
                             SupermarketStoresSA:
                               type: number
                               description: 'Retail Sales: Supermarkets (Seasonally Adjusted)'
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/ProductManfInfo:
-    summary: Syndicated Data
-    description: Syndicated Data
-    get:
-      tags:
-        - Branded Commerce
-      summary: Syndicated Data
-      description: Syndicated Data
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      ProductManfInfoes:
-                        type: array
-                        items:
-                          title: ProductManfInfo
-                          type: object
-                          properties:
-                            Brand:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Brand.  \n<br/>*See 'Brand (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            CompanyFacility:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Store/Warehouse/etc.  \n<br/>*See 'Industry (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            SKU:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Product UPC.  \n<br/>*See 'Product (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Zip:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) ZIP or Postal Code.  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
