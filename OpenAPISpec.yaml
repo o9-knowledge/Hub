@@ -496,6 +496,53 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /master/MarketIntel/IncomeGrp:
+    summary: Income
+    description: This dimension has the various income classes that are used to organize data
+    get:
+      tags:
+        - Consumer Metrics
+      summary: Income (Dimension)
+      description: "This dimension has the various income classes that are used to organize data  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*"
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      IncomeGrps:
+                        type: array
+                        items:
+                          title: IncomeGrp
+                          type: object
+                          properties:
+                            Class:
+                              type: string
+                              description: (*Filterable dimensional attribute*) Income class
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /master/MarketIntel/Industry:
     summary: Industry
     description: This dimension has all the attributes and levels to organize data by industry. We use NAICS classification ontology as well as identifiers.
@@ -1104,13 +1151,13 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/AppleMobilityCountry:
-    summary: Apple
-    description: 'These are data made available by Apple Inc. They provide changes from baseline levels for select countries.  Countries covered include USA, BEL, NLD, BRA, ARE, AUS, BGR, CAN, CHE, CHL, CZE, DEU, DNK, EGY, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IDN, IND, IRL, ISR, ITA, JPN, KHM, LTU, LVA, MEX, MYS, NOR, NZL, PHL, POL, PRT, ROU, SAU, SVK, SVN, SWE, TUR, URY, VNM, ZAF, ALB, HKG, ISL, KOR, LUX, MAC, MAR, SGP, SRB, THA, TWN, UKR, ARG, AUT, COL, RUS'
+    summary: Apple Mobility
+    description: These are data made available by Apple Inc. They provide changes from baseline levels for select countries.
     get:
       tags:
-        - Mobility
-      summary: Apple
-      description: 'These are data made available by Apple Inc. They provide changes from baseline levels for select countries.  Countries covered include USA, BEL, NLD, BRA, ARE, AUS, BGR, CAN, CHE, CHL, CZE, DEU, DNK, EGY, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IDN, IND, IRL, ISR, ITA, JPN, KHM, LTU, LVA, MEX, MYS, NOR, NZL, PHL, POL, PRT, ROU, SAU, SVK, SVN, SWE, TUR, URY, VNM, ZAF, ALB, HKG, ISL, KOR, LUX, MAC, MAR, SGP, SRB, THA, TWN, UKR, ARG, AUT, COL, RUS'
+        - Apple Mobility
+      summary: Apple Mobility
+      description: These are data made available by Apple Inc. They provide changes from baseline levels for select countries.
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -1395,12 +1442,12 @@ paths:
           $ref: '#/components/responses/500'
   /fact/MarketIntel/DailyInterestRates:
     summary: 'Bank Rates (Policy) - Daily '
-    description: 'These are interest rates that are applicable for modelling effect of monetary policy. They are available for the following countries - ALB, ARE, ARG, AUS, AUT, BEL, BGR, BHR, BIH, BRA, BRN, CAN, CHE, CHL, CHN, COL, CYP, CZE, DEU, DNK, DZA, ESP, EST, FIN, FRA, GBR, GRC, HKG, HRV, HUN, IDN, IND, IRL, IRN, ISL, ISR, ITA, JPN, KAZ, KOR, KWT, LKA, LTU, LUX, LVA, MEX, MKD, MLT, MUS, MYS, NLD, NOR, NPL, NZL, OMN, PAK, PER, PHL, POL, PRT, QAT, ROU, RUS, SAU, SGP, SRB, SVK, SVN, SWE, THA, TTO, TUN, TUR, TWN, UKR, URY, USA, VEN, ZAF'
+    description: These are interest rates that are applicable for modelling effect of monetary policy.
     get:
       tags:
         - Macroeconomic
       summary: 'Bank Rates (Policy) - Daily '
-      description: 'These are interest rates that are applicable for modelling effect of monetary policy. They are available for the following countries - ALB, ARE, ARG, AUS, AUT, BEL, BGR, BHR, BIH, BRA, BRN, CAN, CHE, CHL, CHN, COL, CYP, CZE, DEU, DNK, DZA, ESP, EST, FIN, FRA, GBR, GRC, HKG, HRV, HUN, IDN, IND, IRL, IRN, ISL, ISR, ITA, JPN, KAZ, KOR, KWT, LKA, LTU, LUX, LVA, MEX, MKD, MLT, MUS, MYS, NLD, NOR, NPL, NZL, OMN, PAK, PER, PHL, POL, PRT, QAT, ROU, RUS, SAU, SGP, SRB, SVK, SVN, SWE, THA, TTO, TUN, TUR, TWN, UKR, URY, USA, VEN, ZAF'
+      description: These are interest rates that are applicable for modelling effect of monetary policy.
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -2498,6 +2545,9 @@ paths:
                             AllNSAForecast:
                               type: number
                               description: Consumer Price Index Forecast
+                            AllNSAForecast_Temp:
+                              type: number
+                              description: Consumer Price Index Forecast
                             AllSA:
                               type: number
                               description: 'Consumer Price Index (All areas) for USA, Seasonally Adjusted'
@@ -3276,121 +3326,6 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
-  /fact/MarketIntel/CatalogProp:
-    summary: Data Catalog
-    description: List of all datasets with their related metadata fields
-    get:
-      tags:
-        - Catalog
-      summary: Data Catalog
-      description: List of all datasets with their related metadata fields
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      CatalogProps:
-                        type: array
-                        items:
-                          title: CatalogProp
-                          type: object
-                          properties:
-                            ContentItem:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Knowledge Stream.  \n<br/>*See 'Catalog (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            ContentDataOrigin:
-                              type: string
-                              description: Source of data
-                            ContentEndDate:
-                              type: string
-                              description: Date of last observation available for this data source
-                              format: YYYY-MM-DD
-                            ContentExchangeRateType:
-                              type: string
-                              description: 'Exchange rate used, if the data element is a monetary measure'
-                            ContentFrequency:
-                              type: string
-                              description: The frequency with with observations are made
-                            ContentGeoCity:
-                              type: string
-                              description: The city for the which the data are available (as defined in the ContentGeoType)
-                            ContentGeoCountry:
-                              type: string
-                              description: The country for the which the data are available (as defined in the ContentGeoType)
-                            ContentGeoCounty:
-                              type: string
-                              description: The county for the which the data are available (as defined in the ContentGeoType)
-                            ContentGeoState:
-                              type: string
-                              description: The state for the which the data are available (as defined in the ContentGeoType)
-                            ContentGeoType:
-                              type: string
-                              description: 'The geographic administrative level for which the data are available '
-                            ContentGeoZip:
-                              type: string
-                              description: The postal code for which the data are available (as defined in the ContentGeoType)
-                            ContentLongDescription:
-                              type: string
-                              description: Description of the data measure
-                            ContentMeasureGroup:
-                              type: string
-                              description: The resource name that contains this data measure. Please look up this name in our API documentation.
-                            ContentMeasureName:
-                              type: string
-                              description: The field name that contains this data measure. Please look up this name (as well the API resource) in our API documentation.
-                            ContentNAICSLevel2:
-                              type: string
-                              description: Additional grain for indicating relevant industry for the driver data (as per NAICS hierarchy)
-                            ContentScript:
-                              type: string
-                              description: Name of the script that populates this data
-                            ContentSeasonalAdjustmentAllowed:
-                              type: number
-                              description: Whether seasonality has to be adjusted (for use in Driver Selection tool)
-                            ContentSeasonality:
-                              type: string
-                              description: Seasonality of the data
-                            ContentSeriesID:
-                              type: string
-                              description: Unique ID to identify the indicator on the source database. Used as input param for the scripts to get data
-                            ContentStartDate:
-                              type: string
-                              description: Date of first observation available for this data source
-                              format: YYYY-MM-DD
-                            ContentTrendAdjustmentAllowed:
-                              type: number
-                              description: Whether trend has to be adjusted (for use in Driver Selection tool)
-                            ContentUnits:
-                              type: string
-                              description: Unit of Measure of the data
-                            ContentURL:
-                              type: string
-                              description: Website/section to access data on the source database
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
   /fact/MarketIntel/Covid19EcoReliefCountryDaily:
     summary: 'Debt & Income Support: Country'
     description: Governments offered income replacement and / or debt relief during lockdowns. These data are one-hot encoded for direct use in ML models
@@ -3494,10 +3429,10 @@ paths:
                               description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
                             StateDebtReliefBroad:
                               type: number
-                              description: Broad debt & contract relief
+                              description: Broad debt & contract relief offered to debtors
                             StateDebtReliefNarrow:
                               type: number
-                              description: Narrow debt & contract relief
+                              description: Narrow debt & contract relief offered to debtors
                             StateIncomeSupportLarge:
                               type: number
                               description: Government replacing more than 50% of lost wages
@@ -3582,12 +3517,12 @@ paths:
           $ref: '#/components/responses/500'
   /fact/MarketIntel/EmploymentMonthly:
     summary: Employment - Mthly
-    description: 'Employment, Unemployment and Outlook figures for USA, BEL, NLD, DEU, CAN, ALB, AUT, BGR, CYP, CZE, DNK, EST, GRC, ESP, FIN, FRA, HRV, HUN, IRL, ITA, LTU, LUX, LVA, MNE, MKD, MLT, POL, PRT, ROU, SRB, SWE, SVN, SVK, TUR, GBR Monthly'
+    description: 'Employment, Unemployment and Outlook figures for select countries'
     get:
       tags:
         - Macroeconomic
       summary: Employment - Mthly
-      description: 'Employment, Unemployment and Outlook figures for USA, BEL, NLD, DEU, CAN, ALB, AUT, BGR, CYP, CZE, DNK, EST, GRC, ESP, FIN, FRA, HRV, HUN, IRL, ITA, LTU, LUX, LVA, MNE, MKD, MLT, POL, PRT, ROU, SRB, SWE, SVN, SVK, TUR, GBR Monthly'
+      description: 'Employment, Unemployment and Outlook figures for select countries'
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -4163,12 +4098,12 @@ paths:
           $ref: '#/components/responses/500'
   /fact/MarketIntel/DailyExchangeRates:
     summary: Exchange Rates
-    description: 'Daily exchange rates that are published daily by the BIS. Data are available for the following countries - ALB, ARE, ARG, AUS, AUT, BEL, BGR, BHR, BIH, BRA, BRN, CAN, CHE, CHL, CHN, COL, CYP, CZE, DEU, DNK, DZA, ESP, EST, FIN, FRA, GBR, GRC, HKG, HRV, HUN, IDN, IND, IRL, IRN, ISL, ISR, ITA, JPN, KAZ, KOR, KWT, LKA, LTU, LUX, LVA, MEX, MKD, MLT, MUS, MYS, NLD, NOR, NPL, NZL, OMN, PAK, PER, PHL, POL, PRT, QAT, ROU, RUS, SAU, SGP, SRB, SVK, SVN, SWE, THA, TTO, TUN, TUR, TWN, UKR, URY, USA, VEN, ZAF'
+    description: Daily exchange rates that are published daily by the BIS.
     get:
       tags:
         - Macroeconomic
       summary: Exchange Rates
-      description: 'Daily exchange rates that are published daily by the BIS. Data are available for the following countries - ALB, ARE, ARG, AUS, AUT, BEL, BGR, BHR, BIH, BRA, BRN, CAN, CHE, CHL, CHN, COL, CYP, CZE, DEU, DNK, DZA, ESP, EST, FIN, FRA, GBR, GRC, HKG, HRV, HUN, IDN, IND, IRL, IRN, ISL, ISR, ITA, JPN, KAZ, KOR, KWT, LKA, LTU, LUX, LVA, MEX, MKD, MLT, MUS, MYS, NLD, NOR, NPL, NZL, OMN, PAK, PER, PHL, POL, PRT, QAT, ROU, RUS, SAU, SGP, SRB, SVK, SVN, SWE, THA, TTO, TUN, TUR, TWN, UKR, URY, USA, VEN, ZAF'
+      description: Daily exchange rates that are published daily by the BIS.
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -4330,7 +4265,7 @@ paths:
                               description: Facial coverings recommended
                             RequiredinPublic:
                               type: number
-                              description: Facial coverings required in all shared/public spaces outside the home with other people present
+                              description: Facial coverings required in all shared & public spaces outside the home with other people present
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -4689,12 +4624,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/GoogleMobilityCountry:
-    summary: 'Google: Country'
+    summary: 'Google Mobility: Country'
     description: 'Google Mobility: Country wise'
     get:
       tags:
         - Mobility
-      summary: 'Google: Country'
+      summary: 'Google Mobility: Country'
       description: 'Google Mobility: Country wise'
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -4758,12 +4693,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/GoogleMobilityCounty:
-    summary: 'Google: County'
+    summary: 'Google Mobility: County'
     description: 'Google Mobility: County wise'
     get:
       tags:
         - Mobility
-      summary: 'Google: County'
+      summary: 'Google Mobility: County'
       description: 'Google Mobility: County wise'
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -4827,12 +4762,12 @@ paths:
         '500':
           $ref: '#/components/responses/500'
   /fact/MarketIntel/GoogleMobilityState:
-    summary: 'Google: State'
+    summary: 'Google Mobility: State'
     description: 'Google Mobility: State wise'
     get:
       tags:
         - Mobility
-      summary: 'Google: State'
+      summary: 'Google Mobility: State'
       description: 'Google Mobility: State wise'
       parameters:
         - $ref: '#/components/parameters/Token'
@@ -5071,70 +5006,6 @@ paths:
                             HealthCoveragePercent:
                               type: number
                               description: Health Coverage Percentage by State
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/NationalHolidays:
-    summary: 'Holidays: National'
-    description: Holidays and observances followed at a national level. State level holidays may differ.
-    get:
-      tags:
-        - Culture
-      summary: 'Holidays: National'
-      description: Holidays and observances followed at a national level. State level holidays may differ.
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      NationalHolidays:
-                        type: array
-                        items:
-                          title: NationalHolidays
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            HolidayName:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Name of holiday (Alternate names are separate members).  \n<br/>*See 'Holidays (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            NationalHolidays:
-                              type: number
-                              description: Holidays and observances
-                            NationalHolidaysActualDate:
-                              type: string
-                              description: Holidays and observances (actual date)
-                              format: YYYY-MM-DD
-                            NationalHolidaysPublic:
-                              type: number
-                              description: Flag indicating if it is a public holiday
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -6085,6 +5956,57 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /fact/MarketIntel/HousingSpendMonthly:
+    summary: HousingSpendMonthly
+    description: HousingSpendMonthly
+    get:
+      tags:
+        - Housing & Construction
+      summary: HousingSpendMonthly
+      description: HousingSpendMonthly
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      HousingSpendMonthlies:
+                        type: array
+                        items:
+                          title: HousingSpendMonthly
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Month:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /fact/MarketIntel/ImportPriceFootwearMonthly:
     summary: Import Price Footwear - Mthly
     description: Montly Import Footwear Prices
@@ -6232,7 +6154,7 @@ paths:
                           properties:
                             Class:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Income class.  \n<br/>*See 'Income Grp (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              description: "(*Filterable dimensional attribute*) Income class.  \n<br/>*See 'Income (Dimension)' in this document for the other attributes that might be used for filtering*"
                             Year:
                               type: string
                               description: "(*Filterable dimensional attribute*) Year.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
@@ -6251,19 +6173,19 @@ paths:
                               description: Number of elderly returns
                             NumberOfHeadOfHouseholdReturns:
                               type: number
-                              description: Head of Household Returns
+                              description: Number of head of household returns
                             NumberOfJointReturns:
                               type: number
-                              description: Joint Returns
+                              description: Number of joint returns
                             NumberOfReturnsWithAdditionalMedicareTax:
                               type: number
                               description: Number of returns with additional Medicare tax
                             NumberOfReturnsWithHealthcareDeduction:
                               type: number
-                              description: Returns with Healthcare Deduction
+                              description: Number of returns with a healthcare (medical or dental) deduction
                             NumberOfReturnsWithIncome:
                               type: number
-                              description: Returns with Income
+                              description: Number of returns with total income
                             NumberOfReturnsWithPersonalPropertyTaxes:
                               type: number
                               description: Number of returns with Personal property taxes
@@ -7865,6 +7787,9 @@ paths:
                             PPINSAForecast:
                               type: number
                               description: Producer Price Index Forecast (Not Seasonally Adjusted)
+                            PPINSAForecast_Temp:
+                              type: number
+                              description: Producer Price Index Forecast (Not Seasonally Adjusted)
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -7925,12 +7850,12 @@ paths:
                             CPIAllNSAQoQGrowthRate:
                               type: number
                               description: Consumer Price Index QoQ Growth Rate (Not Seasonally Adjusted)
-                            IndustryPPIConsumerGoodsNSA:
-                              type: number
-                              description: "OECD descriptor ID: PITGCG02_x000D_\nOECD unit ID: IXOB_x000D_\nOECD country ID: DEU_x000D_\nAll OECD data should be cited as follows: OECD, \"Main Economic Indicators - complete database\", Main Economic Indicators (database),http://dx.doi.org/10.1787/data-00052-en (Accessed on date)_x000D_\nCopyright, 2016, OECD. Reprinted with permission."
                             PPINSAForecastQ:
                               type: number
                               description: Producer Price Index Quarterly Forecast (Not Seasonally Adjusted)
+                            RealPropertyPriceNSA:
+                              type: number
+                              description: Real Residential Property Prices (Index 2010=100)
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -9220,12 +9145,12 @@ paths:
           $ref: '#/components/responses/500'
   /fact/MarketIntel/DeathCauseYearly:
     summary: Mortality
-    description: 'Annually collected data on cause of death (using the ICD 10 Classification of Diseases).  Data available for the following countries - AUT, BEL, BGR, CHE, CYP, CZE, DEU, DNK, ESP, EST, FIN, FLK, FRA, GBR, HRV, HUN, IRL, ISL, ITA, LIE, LTU, LUX, LVA, MLT, NLD, NOR, POL, PRT, ROU, SLV, SRB, SVK, SVN, SWE, TUR'
+    description: Annually collected data on cause of death (using the ICD 10 Classification of Diseases).
     get:
       tags:
         - Health
       summary: Mortality
-      description: 'Annually collected data on cause of death (using the ICD 10 Classification of Diseases).  Data available for the following countries - AUT, BEL, BGR, CHE, CYP, CZE, DEU, DNK, ESP, EST, FIN, FLK, FRA, GBR, HRV, HUN, IRL, ISL, ITA, LIE, LTU, LUX, LVA, MLT, NLD, NOR, POL, PRT, ROU, SLV, SRB, SVK, SVN, SWE, TUR'
+      description: Annually collected data on cause of death (using the ICD 10 Classification of Diseases).
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -9277,12 +9202,12 @@ paths:
           $ref: '#/components/responses/500'
   /fact/MarketIntel/DeathCauseAgeYearly:
     summary: 'Mortality: Age Group'
-    description: 'Annually collected data on cause of death (using the ICD 10 Classification of Diseases) by age groups.  Data available for the following countries - AUT, BEL, BGR, CHE, CYP, CZE, DEU, DNK, ESP, EST, FIN, FLK, FRA, GBR, HRV, HUN, IRL, ISL, ITA, LIE, LTU, LUX, LVA, MLT, NLD, NOR, POL, PRT, ROU, SLV, SRB, SVK, SVN, SWE, TUR'
+    description: Annually collected data on cause of death (using the ICD 10 Classification of Diseases) by age groups.
     get:
       tags:
         - Health
       summary: 'Mortality: Age Group'
-      description: 'Annually collected data on cause of death (using the ICD 10 Classification of Diseases) by age groups.  Data available for the following countries - AUT, BEL, BGR, CHE, CYP, CZE, DEU, DNK, ESP, EST, FIN, FLK, FRA, GBR, HRV, HUN, IRL, ISL, ITA, LIE, LTU, LUX, LVA, MLT, NLD, NOR, POL, PRT, ROU, SLV, SRB, SVK, SVN, SWE, TUR'
+      description: Annually collected data on cause of death (using the ICD 10 Classification of Diseases) by age groups.
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -12649,7 +12574,7 @@ paths:
                               description: Recommended cancelling of public events
                             SmallGatheringsRestricted:
                               type: number
-                              description: Public gatherings restricted to fewer than 10 people
+                              description: Restricted public gathering of fewer than 10 people
                             VeryLargeGatheringsRestricted:
                               type: number
                               description: Restricted public gathering of over 1000 people
@@ -15248,6 +15173,12 @@ paths:
                             Zip:
                               type: string
                               description: "(*Filterable dimensional attribute*) ZIP or Postal Code.  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            StoreLinkedDC:
+                              type: string
+                              description: Crawled DC linked to Walmart Stores
+                            StoreName:
+                              type: string
+                              description: Crawled Store Name
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -15341,6 +15272,66 @@ paths:
                             SupermarketStoresSA:
                               type: number
                               description: 'Retail Sales: Supermarkets (Seasonally Adjusted)'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/ProductManfInfo:
+    summary: Syndicated Data
+    description: Syndicated Data
+    get:
+      tags:
+        - Branded Commerce
+      summary: Syndicated Data
+      description: Syndicated Data
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      ProductManfInfoes:
+                        type: array
+                        items:
+                          title: ProductManfInfo
+                          type: object
+                          properties:
+                            Brand:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Brand.  \n<br/>*See 'Brand (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            CompanyFacility:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Store/Warehouse/etc.  \n<br/>*See 'Industry (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            SKU:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Product UPC.  \n<br/>*See 'Product (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Zip:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) ZIP or Postal Code.  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -15455,6 +15446,9 @@ paths:
                               type: string
                               description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            ExportsAllCurrency:
+                              type: number
+                              description: Description of Trade Monthly Exports All Currency
                             ExportsTotalNSA:
                               type: number
                               description: 'Exports: All (Not Seasonally Adjusted)'
@@ -15973,7 +15967,7 @@ paths:
                               description: Domestic movement discouraged
                             MovementRestricted:
                               type: number
-                              description: Restriction on domestic movement
+                              description: Restriction on domestic movement enacted
                             PublicTransportClosed:
                               type: number
                               description: Most people restricted from using public transport
@@ -16213,7 +16207,7 @@ paths:
                               format: YYYY-MM-DD
                             DailyVaccinationsCompleted:
                               type: number
-                              description: Full vaccination completed on that date
+                              description: Full vaccinations completed on that date
                             DailyVaccinationsPartial:
                               type: number
                               description: Partial vaccinations achieved on that date
@@ -16279,16 +16273,16 @@ paths:
                               description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
                             DailyVaccinationsCompleted:
                               type: number
-                              description: Daily complete vaccinations
+                              description: Full vaccinations completed on that date
                             DailyVaccinationsPartial:
                               type: number
-                              description: Daily partial vaccinations
+                              description: Partial vaccinations achieved on that date
                             TotalVaccinationsCompleted:
                               type: number
-                              description: People fully vaccinated
+                              description: Number of people fully vaccinated by this date
                             TotalVaccinationsPartial:
                               type: number
-                              description: People partially vaccinated
+                              description: Number of people partially vaccinated by this date
                             VaccinationPerHundredPeople:
                               type: number
                               description: '% of Population Vaccinated'
@@ -16535,6 +16529,90 @@ paths:
                             Tomato:
                               type: number
                               description: 'Tomatoes [Index - 2016=100]'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/WeatherForecastDaily:
+    summary: Weather Forecast - Daily
+    description: Weather Forecast - Daily
+    get:
+      tags:
+        - Weather
+      summary: Weather Forecast - Daily
+      description: Weather Forecast - Daily
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      WeatherForecastDailies:
+                        type: array
+                        items:
+                          title: WeatherForecastDaily
+                          type: object
+                          properties:
+                            City:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Name of the city.  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            Location:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Name of location.  \n<br/>*See 'Location (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            AvgTempFcst:
+                              type: number
+                              description: Daily Weather Forecast by City - Average Temperature
+                            AvgTempFcstRaw:
+                              type: number
+                              description: Daily Weather Forecast by City - Average Temperature Raw
+                            HumidityFcst:
+                              type: number
+                              description: Daily Weather Forecast by City - Humidity
+                            MaxTempFcst:
+                              type: number
+                              description: Daily Weather Forecast by City - Maximum Temperature
+                            MaxTempFcstRaw:
+                              type: number
+                              description: Daily Weather Forecast by City - Maximum Temperature Raw
+                            MinTempFcst:
+                              type: number
+                              description: Daily Weather Forecast by City - Minimum Temperature
+                            MinTempFcstRaw:
+                              type: number
+                              description: Daily Weather Forecast by City - Minimum Temperature Raw
+                            PrecipitationFcst:
+                              type: number
+                              description: Daily Weather Forecast by City - Precipitation
+                            SnowFcst:
+                              type: number
+                              description: Daily Weather Forecast by City - Snowfall
+                            WindSpeedFcst:
+                              type: number
+                              description: Daily Weather Forecast by City - Windspeed
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
