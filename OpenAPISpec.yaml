@@ -3270,6 +3270,143 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /fact/MarketIntel/CatalogProp:
+    summary: Data Catalog
+    description: List of all datasets with their related metadata fields
+    get:
+      tags:
+        - Catalog
+      summary: Data Catalog
+      description: List of all datasets with their related metadata fields
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      CatalogProps:
+                        type: array
+                        items:
+                          title: CatalogProp
+                          type: object
+                          properties:
+                            ContentItem:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Knowledge Stream.  \n<br/>*See 'Catalog (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            ContentCitation:
+                              type: string
+                              description: Attribution of intellectual property in the format required by source of data
+                            ContentDataOrigin:
+                              type: string
+                              description: Source of data
+                            ContentDimensionName:
+                              type: string
+                              description: Internal use only
+                            ContentEndDate:
+                              type: string
+                              description: Date of last observation available for this data source
+                              format: YYYY-MM-DD
+                            ContentFactor:
+                              type: number
+                              description: Internal use only
+                            ContentFilter:
+                              type: string
+                              description: Internal use only
+                            ContentFrequency:
+                              type: string
+                              description: The frequency with which observations are made
+                            ContentGeoCity:
+                              type: string
+                              description: The city for which the data are available (as defined in the ContentGeoType)
+                            ContentGeoCountry:
+                              type: string
+                              description: The country for which the data are available (as defined in the ContentGeoType)
+                            ContentGeoCounty:
+                              type: string
+                              description: The county for which the data are available (as defined in the ContentGeoType)
+                            ContentGeoState:
+                              type: string
+                              description: The state for which the data are available (as defined in the ContentGeoType)
+                            ContentGeoType:
+                              type: string
+                              description: 'The geographic administrative level for which the data are available '
+                            ContentGeoZip:
+                              type: string
+                              description: The postal code for which the data are available (as defined in the ContentGeoType)
+                            ContentLastUpdated:
+                              type: string
+                              description: Date when this data source was last updated
+                              format: YYYY-MM-DD
+                            ContentLongDescription:
+                              type: string
+                              description: Description of the data measure
+                            ContentMeasureGroup:
+                              type: string
+                              description: The resource name that contains this data measure. Please look up this name in our API documentation.
+                            ContentMeasureLS:
+                              type: string
+                              description: The measure that actually contains this data measure on the LiveServer datamodel
+                            ContentMeasureName:
+                              type: string
+                              description: The field name that contains this data measure. Please look up this name (as well the API resource) in our API documentation.
+                            ContentNAICSLevel2:
+                              type: string
+                              description: Additional grain for indicating relevant industry for the driver data (as per NAICS hierarchy)
+                            ContentPlan:
+                              type: string
+                              description: Internal use only
+                            ContentRawFile:
+                              type: string
+                              description: Internal use only
+                            ContentScript:
+                              type: string
+                              description: Name of the script that populates this data
+                            ContentSeasonalAdjustmentAllowed:
+                              type: number
+                              description: Whether seasonality has to be adjusted (for use in Driver Selection tool)
+                            ContentSeasonality:
+                              type: string
+                              description: Seasonality of the data
+                            ContentSeriesID:
+                              type: string
+                              description: Unique ID to identify the indicator on the source database. Used as input param for the scripts to get data
+                            ContentStartDate:
+                              type: string
+                              description: Date of first observation available for this data source
+                              format: YYYY-MM-DD
+                            ContentTrendAdjustmentAllowed:
+                              type: number
+                              description: Whether trend has to be adjusted (for use in Driver Selection tool)
+                            ContentUnits:
+                              type: string
+                              description: Unit of Measure of the data
+                            ContentURL:
+                              type: string
+                              description: Website/section to access data on the source database
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /fact/MarketIntel/Covid19EcoReliefCountryDaily:
     summary: 'Debt & Income Support: Country'
     description: Governments offered income replacement and / or debt relief during lockdowns. These data are one-hot encoded for direct use in ML models
