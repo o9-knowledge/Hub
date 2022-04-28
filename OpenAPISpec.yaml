@@ -3354,9 +3354,6 @@ paths:
                             ContentMeasureGroup:
                               type: string
                               description: The resource name that contains this data measure. Please look up this name in our API documentation.
-                            ContentMeasureLS:
-                              type: string
-                              description: The measure that actually contains this data measure on the LiveServer datamodel
                             ContentMeasureName:
                               type: string
                               description: The field name that contains this data measure. Please look up this name (as well the API resource) in our API documentation.
@@ -5089,70 +5086,6 @@ paths:
                               description: Holidays and observances (actual date)
                               format: YYYY-MM-DD
                             CountryHolidaysPublic:
-                              type: number
-                              description: Flag indicating if it is a public holiday
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/StateHolidays:
-    summary: 'Holidays: State'
-    description: State Holidays
-    get:
-      tags:
-        - Culture
-      summary: 'Holidays: State'
-      description: State Holidays
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      StateHolidays:
-                        type: array
-                        items:
-                          title: StateHolidays
-                          type: object
-                          properties:
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            HolidayName:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Name of holiday (Alternate names are separate members).  \n<br/>*See 'Holidays (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            State:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Name of state / province / region as applicable .  \n<br/>*See 'Geography (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            StateHolidays:
-                              type: number
-                              description: Holidays and observances
-                            StateHolidaysActualDate:
-                              type: string
-                              description: Holidays and observances (actual date)
-                              format: YYYY-MM-DD
-                            StateHolidaysPublic:
                               type: number
                               description: Flag indicating if it is a public holiday
                   Cursor:
