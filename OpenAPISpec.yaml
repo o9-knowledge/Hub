@@ -1102,7 +1102,7 @@ paths:
     description: These are data made available by Apple Inc. They provide changes from baseline levels for select countries.
     get:
       tags:
-        - Apple Mobility
+        - Mobility
       summary: Apple Mobility
       description: These are data made available by Apple Inc. They provide changes from baseline levels for select countries.
       parameters:
