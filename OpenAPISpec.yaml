@@ -649,7 +649,7 @@ paths:
       tags:
         - Common Models
       summary: Industry (Dimension)
-      description: "This dimension has all the attributes and levels to organize data by industry. We use NAICS classification ontology as well as identifiers.  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition(s) are specified in the `filters` array parameter*\n```\n[{\n\"AttributeName\": \"Company\",   \n\"Properties\": [\"ParentCompany\"]\n}, {\n\"AttributeName\": \"CompanyFacility\",   \n\"Properties\": [\"CompanyFacilityAdditionalNotes\", \"FacilityFormat\", \"FacilityType\", \"Latitude\", \"CompanyFacilityLinkedRDC\", \"Longitude\", \"CompanyFacilityRetailerCategory\", \"CompanyFacilityRowstoscrape\", \"CompanyFacilityScrapeId\", \"CompanyFacilityAddress\", \"CompanyFacilityId\", \"CompanyFacilityKey\", \"CompanyFacilityURL\"]\n}]\n```"
+      description: "This dimension has all the attributes and levels to organize data by industry. We use NAICS classification ontology as well as identifiers.  \n<br/>*Note: This is a dimension of the cube data model and these attributes can be used to filter data*. *There are properties attached to some attributes of this dimension which are only returned if the following condition(s) are specified in the `filters` array parameter*\n```\n[{\n\"AttributeName\": \"Company\",   \n\"Properties\": [\"ParentCompany\"]\n}, {\n\"AttributeName\": \"CompanyFacility\",   \n\"Properties\": [\"CompanyFacilityAdditionalNotes\", \"Facility Format\", \"Facility Type\", \"Latitude\", \"CompanyFacilityLinkedRDC\", \"Longitude\", \"CompanyFacilityRetailerCategory\", \"CompanyFacilityRowstoscrape\", \"CompanyFacilityScrapeId\", \"CompanyFacilityAddress\", \"CompanyFacilityId\", \"CompanyFacilityKey\", \"CompanyFacilityURL\"]\n}]\n```"
       parameters:
         - $ref: '#/components/parameters/Token'
         - $ref: '#/components/parameters/Filters'
@@ -683,9 +683,9 @@ paths:
                               description: '(*Filterable dimensional attribute*) "Company Facility e.g., Store/Warehouse/etc"'
                             CompanyFacilityAdditionalNotes:
                               description: 'Company Facility Additional Notes: A property of the ''*CompanyFacility*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
-                            FacilityFormat:
+                            Facility Format:
                               description: 'Facility Format: A property of the ''*CompanyFacility*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
-                            FacilityType:
+                            Facility Type:
                               description: 'Facility Type: A property of the ''*CompanyFacility*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
                             Latitude:
                               description: 'Latitude: A property of the ''*CompanyFacility*'' dimensional attribute. *Note: Set the appropriate filter condition to retrieve this value. See details above.*'
@@ -1750,9 +1750,9 @@ paths:
                             Country:
                               type: string
                               description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            WeekFri:
+                            WeekThu:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Week starting from Friday.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              description: "(*Filterable dimensional attribute*) Week starting from Thursday.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             MortgageRate30YearsNSA:
                               type: number
@@ -3253,22 +3253,22 @@ paths:
                               description: 'Private Commercial Construction Spend in U.S Dollars by Retail, Wholesale and selected Service Industries (Not Seasonally Adjusted)'
                             PrivateOfficeNSA:
                               type: number
-                              description: 'Private Construction Spend in Administrative buildings, Office buildings, Professional building, Financial Institutions, Manufacturing Companies (not Plant locations), Motion Pictures, Television and Radio offices etc.,  in U.S Dollars (Not Seasonally Adjusted)'
+                              description: 'Private Construction Spend in Administrative buildings, Office buildings, Professional building, Financial Institutions, Manufacturing Companies (not Plant locations), Motion Pictures, Television and Radio offices etc., in U.S Dollars (Not Seasonally Adjusted)'
                             PrivateOfficeSAAR:
                               type: number
-                              description: 'Private Construction Spend in Administrative buildings, Office buildings, Professional building, Financial Institutions, Manufacturing Companies (not Plant locations), Motion Pictures, Television and Radio offices etc.,  in U.S Dollars (Seasonally Adjusted Annual Rate)'
+                              description: 'Private Construction Spend in Administrative buildings, Office buildings, Professional building, Financial Institutions, Manufacturing Companies (not Plant locations), Motion Pictures, Television and Radio offices etc., in U.S Dollars (Seasonally Adjusted Annual Rate)'
                             PublicNSA:
                               type: number
                               description: 'Public Commercial Construction Spend by Retail, Wholesale and selected Service Industries in U.S Dollars (Not Seasonally Adjusted)'
                             PublicOfficeNSA:
                               type: number
-                              description: 'Public Construction Spend in Administrative buildings, Office buildings, Professional building, Financial Institutions, Television and Radio offices, City Halls, Borough Halls, Muncipality Buildings, Courts, State Capitol buildings etc.,  in U.S Dollars (Not Seasonally Adjusted)'
+                              description: 'Public Construction Spend in Administrative buildings, Office buildings, Professional building, Financial Institutions, Television and Radio offices, City Halls, Borough Halls, Muncipality Buildings, Courts, State Capitol buildings etc., in U.S Dollars (Not Seasonally Adjusted)'
                             TotalNSA:
                               type: number
                               description: 'Total Commercial Construction Spend in U.S Dollars by Retail, Wholesale and selected Service Industries in U.S Dollars (Not Seasonally Adjusted)'
                             TotalOfficeSAAR:
                               type: number
-                              description: 'Total Construction Spend in Administrative buildings, Office buildings, Professional buildings, Financial Institutions, Television and Radio offices, City Halls, Borough Halls, Muncipality Buildings, Courts, State Capitol buildings, Manufacturing Offices, Computer Centers, Motion Picture offices etc.,  in U.S Dollars (Seasonally Adjusted Annual Rate)'
+                              description: 'Total Construction Spend in Administrative buildings, Office buildings, Professional buildings, Financial Institutions, Television and Radio offices, City Halls, Borough Halls, Muncipality Buildings, Courts, State Capitol buildings, Manufacturing Offices, Computer Centers, Motion Picture offices etc., in U.S Dollars (Seasonally Adjusted Annual Rate)'
                             TotalSAAR:
                               type: number
                               description: 'Total Commercial Construction Spend Percentage Change in Retail, Wholesale and selected Service Industries in U.S Dollars (Seasonally Adjusted Annual Rate)'
@@ -4427,6 +4427,18 @@ paths:
                             BeerNSA:
                               type: number
                               description: 'Consumer Price Index: Beer (NSA)'
+                            CPIAlcoholicBeveragesatHomeSA:
+                              type: number
+                              description: 'Consumer Price Index: Alcoholic Beverages at Home (Urban)'
+                            CPIAlcoholicBeveragesAwayfrmHomeSA:
+                              type: number
+                              description: 'Consumer Price Index: Alcoholic Beverages Away from Home (Urban)'
+                            CPIAlcoholicBeveragesSA:
+                              type: number
+                              description: Consumer Price Index for Alcoholic Beverages (Urban)
+                            CPINonAlcoholicBeveragesSA:
+                              type: number
+                              description: 'Consumer Price Index: Nonalcoholic Beverages and Beverage Materials (Urban)'
                             FoodfromStoresNSA:
                               type: number
                               description: 'Consumer Price Index: Food Stores (NSA)'
@@ -4436,6 +4448,9 @@ paths:
                             OilsandFatsNSA:
                               type: number
                               description: 'Consumer Price Index: Oils & Fats (NSA)'
+                            TobacconSmokingProductsSA:
+                              type: number
+                              description: 'Consumer Price Index: Tobacco and Smoking Products (Urban)'
                             WineNSA:
                               type: number
                               description: 'Consumer Price Index: Wine (NSA)'
@@ -5518,6 +5533,9 @@ paths:
                             EmployedinManufacturingNSA:
                               type: number
                               description: Number of People Employed in Manufacturing Sector (Not Seasonally Adjusted)
+                            EmployedinManufacturingSA:
+                              type: number
+                              description: 'All Employees (Manufacturing), Seasonally Adjusted'
                             EmploymentRateFemales:
                               type: number
                               description: Percentage of Females Unemployed
@@ -5533,6 +5551,9 @@ paths:
                             FemaleEmploymentRateSA:
                               type: number
                               description: Percentage of Females Employed (Seasonally Adjusted)
+                            JobsTransportationNSA:
+                              type: number
+                              description: 'Job Openings in Transportation, Warehousing, and Utilities, Not Seasonally Adjusted'
                             LabourForcePercentSA:
                               type: number
                               description: Labour Force Participation Rate (Seasonally Adjusted)
@@ -5611,6 +5632,9 @@ paths:
                               type: string
                               description: "(*Filterable dimensional attribute*) Quarter.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            LaborCostMfgSA:
+                              type: number
+                              description: 'Total Unit Labor Cost: Manufacturing, Seasonally Adjusted'
                             NewJobsinConstructionSA:
                               type: number
                               description: New Workforce Jobs in Construction Sector (Seasonally Adjusted)
@@ -5823,7 +5847,7 @@ paths:
                               description: Coal Supply (short tons)
                             CrudeNGPLandotherLiquidsProduction:
                               type: number
-                              description: 'Monthly statistics on Crude Oil, Natural Gas, and other liquid Production'
+                              description: 'Crude oil, Natural gas plant liquids, and other liquids production (thousand barrels per day)'
                             CrudeOilProduction:
                               type: number
                               description: Crude Oil Production (barrels per day)
@@ -5925,7 +5949,7 @@ paths:
                               description: Natural Gas Net Imports (cubic feet per day)
                             NaturalGasPlantLiquidsProduction:
                               type: number
-                              description: Monthly statistics on Natural Gas plant liquid production
+                              description: Natural gas plant liquids production (thousand barrels per day)
                             NaturalGasSupply:
                               type: number
                               description: Total Natural Gas Supply (cubic feet per day)
@@ -5934,7 +5958,7 @@ paths:
                               description: Natural Gas Vehicle Use (cubic feet per day)
                             PetroleumandotherlLiquidsProduction:
                               type: number
-                              description: Monthly statistics on Petroleum and other liquid production
+                              description: Petroleum and other liquids production (thousand barrels per day)
                             PetroleumNetImports:
                               type: number
                               description: Total Petroleum Net Imports (barrels per day)
@@ -5958,7 +5982,7 @@ paths:
                               description: 'Production Index, Petroleum and Coal Products (Index, 2017=100 seasonally adjusted)'
                             RefineryProcessingGain:
                               type: number
-                              description: Monthly Statistics on Refinery Processing Gain
+                              description: Refinery processing gain (thousand barrels per day)
                             RenewableEnergyConsumption:
                               type: number
                               description: Renewable Energy Consumption (BTU)
@@ -6084,9 +6108,9 @@ paths:
                             Country:
                               type: string
                               description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            WeekSat:
+                            WeekFri:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Week starting from Saturday.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              description: "(*Filterable dimensional attribute*) Week starting from Friday.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             BrentCrudeOilNSA:
                               type: number
@@ -6150,7 +6174,7 @@ paths:
                               format: YYYY-MM-DD
                             SalesPercentLongTerm:
                               type: number
-                              description: Long Term  (2015-2040) Electric Vehicles Sales Percentage of Total Vehicles Sales
+                              description: Long Term (2015-2040) Electric Vehicles Sales Percentage of Total Vehicles Sales
                             SalesPercentShortTerm:
                               type: number
                               description: Short Term (2015-2023) Electric Vehicles Sales Percentage of Total Vehicles Sales
@@ -6829,6 +6853,9 @@ paths:
                               type: string
                               description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            MaltBeveragesPriceNSA:
+                              type: number
+                              description: 'Average Price: Malt Beverages, All Types, All Sizes, Any Origin'
                             WholesaleFoodPricesNSA:
                               type: number
                               description: Total Wholesale Food Prices
@@ -10120,9 +10147,9 @@ paths:
                             Country:
                               type: string
                               description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            WeekSun:
+                            WeekSat:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Week starting from Sunday.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              description: "(*Filterable dimensional attribute*) Week starting from Saturday.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             EcoLewisMertensStockNSA:
                               type: number
@@ -10295,6 +10322,9 @@ paths:
                             ProductionNonConstructionNSA:
                               type: number
                               description: 'Production: Total industry excluding construction (Not Seasonally Adjusted)'
+                            TruckTrailerMfgSA:
+                              type: number
+                              description: 'Industrial Production: Manufacturing: Durable Goods: Truck Trailer, Seasonally Adjusted'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -10403,6 +10433,9 @@ paths:
                             ImportIndexPlasticNSA:
                               type: number
                               description: 'Import Price Index: Plastics (Not Seasonally Adjusted)'
+                            PlasticRubberProdMfgNSA:
+                              type: number
+                              description: 'Import Price Index (NAICS): Plastics and Rubber Products Manufacturing, Not Seasonally Adjusted'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -10784,6 +10817,9 @@ paths:
                             GrossOutputWoodProducts:
                               type: number
                               description: 'Gross Output - Wood Products Manufacturing, Seasonally Adjusted (dollars)'
+                            TotalConstructionSA:
+                              type: number
+                              description: 'Industrial Production: Construction, Seasonally Adjusted'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -11235,6 +11271,66 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /fact/MarketIntel/IndInvFoodnBeverageMonthly:
+    summary: 'Inventory: Food & Beverage - Mthly'
+    description: Monthly Statistics on food and beverage industry
+    get:
+      tags:
+        - Industry
+      summary: 'Inventory: Food & Beverage - Mthly'
+      description: Monthly Statistics on food and beverage industry
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      IndInvFoodnBeverageMonthlies:
+                        type: array
+                        items:
+                          title: IndInvFoodnBeverageMonthly
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Month:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            InvShpmntRatioBeveragenTabaccoProdNSA:
+                              type: number
+                              description: 'Manufacturers'' Inventories to Shipments Ratios: Beverage and Tobacco Products'
+                            RetailInventoryFoodnBeverageStoresSA:
+                              type: number
+                              description: 'Retail Inventories: Food and Beverage Stores'
+                            WholesalersAlcoholicBeveragesInventories:
+                              type: number
+                              description: 'Merchant Wholesalers (except Manufacturers'' Sales Branches and Offices): Nondurable Goods: Beer, Wine, and Distilled Alcoholic Beverages Inventories'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /fact/MarketIntel/IndInvFurnitureMonthly:
     summary: 'Inventory: Furniture - Mthly'
     description: Monthly statistics for inventory in furniture industry
@@ -11623,7 +11719,7 @@ paths:
                               format: YYYY-MM-DD
                             MerchantSalesPercentSA:
                               type: number
-                              description: 'Merchant Wholesalers, Except Manufacturers'' Sales Branches and Offices Sales: Durable Goods: Lumber and Other Construction Materials Sales (%)  (Seasonally Adjusted)'
+                              description: 'Merchant Wholesalers, Except Manufacturers'' Sales Branches and Offices Sales: Durable Goods: Lumber and Other Construction Materials Sales (%) (Seasonally Adjusted)'
                             MerchantSalesSA:
                               type: number
                               description: 'Merchant Wholesalers, Except Manufacturers'' Sales Branches and Offices Sales: Durable Goods: Lumber and Other Construction Materials Sales (Seasonally Adjusted)'
@@ -12092,6 +12188,9 @@ paths:
                             TotalInventoriesIronAndSteelProducts:
                               type: number
                               description: 'Manufacturers'' Total Inventories: Iron and Steel Mills and Ferroalloy and Steel Product Manufacturing'
+                            TotalInventoriesManufacturingSA:
+                              type: number
+                              description: 'Manufacturers'' Total Inventories: Total Manufacturing, Seasonally Adjusted'
                             TotalInventoriesMiningEquipments:
                               type: number
                               description: 'Manufacturers'' Total Inventories: Mining, Oil, and Gas Field Machinery Manufacturing'
@@ -12582,6 +12681,114 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /fact/MarketIntel/OutputDaily:
+    summary: Output - Daily
+    description: Daily data of Country wise Output
+    get:
+      tags:
+        - Macroeconomic
+      summary: Output - Daily
+      description: Daily data of Country wise Output
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      OutputDailies:
+                        type: array
+                        items:
+                          title: OutputDaily
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            5yearInflationExpectationRateDailyNSA:
+                              type: number
+                              description: '5-Year Forward Inflation Expectation Rate, Not Seasonally Adjusted'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/OutputMonthly:
+    summary: Output - Mthly
+    description: Monthly statistics for Country wise Output
+    get:
+      tags:
+        - Macroeconomic
+      summary: Output - Mthly
+      description: Monthly statistics for Country wise Output
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      OutputMonthlies:
+                        type: array
+                        items:
+                          title: OutputMonthly
+                          type: object
+                          properties:
+                            Country:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            Month:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            CirculatedCurrency:
+                              type: number
+                              description: 'Currency in Circulation, Not Seasonally Adjusted'
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /fact/MarketIntel/OutputQuarterly:
     summary: Output - Quarterly
     description: Quarterly data of Country wise Output
@@ -12623,12 +12830,18 @@ paths:
                             ConstructionOutputSA:
                               type: number
                               description: 'Production Output in Construction Sector (Index), Seasonally Adjusted'
+                            GDPbyExpenditureSA:
+                              type: number
+                              description: 'GDP by Expenditure (Constant Prices), Seasonally Adjusted'
                             GDPNSA:
                               type: number
                               description: Gross Domestic Product (Not Seasonally Adjused)
                             GDPSA:
                               type: number
                               description: Gross Domestic Product (Seasonally Adjused)
+                            HouseholdDebttoGDPRatio:
+                              type: number
+                              description: 'Household Debt to GDP Ratio, Not Seasonally Adjusted'
                             PerCapitaRealGDPNSA:
                               type: number
                               description: Gross Domestic Product per capita (Not Seasonally Adjused)
@@ -13283,21 +13496,6 @@ paths:
                             MalePopNSA:
                               type: number
                               description: Male Population
-                            PopAge0-15:
-                              type: number
-                              description: Annual Population by County with age less than 15
-                            PopAge15-25:
-                              type: number
-                              description: Annual Population by County for age group 15 to 25
-                            PopAge25-45:
-                              type: number
-                              description: Annual Population by County for age group 25 to 45
-                            PopAge45-65:
-                              type: number
-                              description: Annual Population by County for age group 45 to 65
-                            PopAge65+:
-                              type: number
-                              description: Annual Population by County with age greater than 65
                             TotalPopNSA:
                               type: number
                               description: Total Monthly Population (Not Seasonally Adjusted)
@@ -13352,24 +13550,9 @@ paths:
                               type: string
                               description: "(*Filterable dimensional attribute*) Year.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
-                            HouseholdsAvgSize:
-                              type: number
-                              description: Average Household Size
-                            HouseholdsHavingChildren:
-                              type: number
-                              description: No of Households with Children
-                            HouseholdsHavingNoChildren:
-                              type: number
-                              description: No of Households with no Children
-                            SingleHouseholds:
-                              type: number
-                              description: No of Households with single family
                             TotalHouseholds:
                               type: number
                               description: Total No of Households
-                            TotalHousingUnits:
-                              type: number
-                              description: Total Number of Housing Units
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -13421,13 +13604,13 @@ paths:
                             Zip:
                               type: string
                               description: "(*Filterable dimensional attribute*) ZIP or Postal Code.  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            '%PopTotalAmericanIndianandAlaskaNative':
+                            '%PopTotalAmericanIndianAndAlaskaNative':
                               type: number
                               description: Percentage Of American Indian And Alaska Native
                             '%PopTotalAsianAlone':
                               type: number
                               description: Percentage Of Asian People
-                            '%PopTotalBlackorAfricanAmerican':
+                            '%PopTotalBlackOrAfricanAmerican':
                               type: number
                               description: Percentage Of Black Or African American People
                             '%PopTotalNativeHawaiianAndOtherPacificIslander':
@@ -13460,13 +13643,13 @@ paths:
                             MedianAgeTotalZipYearly:
                               type: number
                               description: Median Age Of Total Population
-                            PopTotalAmericanIndianandAlaskaNative:
+                            PopTotalAmericanIndianAndAlaskaNative:
                               type: number
                               description: Total Population Of American Indian And Alaska Native
                             PopTotalAsianAlone:
                               type: number
                               description: Total Population Of Asian People
-                            PopTotalBlackorAfricanAmerican:
+                            PopTotalBlackOrAfricanAmerican:
                               type: number
                               description: Total Population Of Black Or African American People
                             PopTotalNativeHawaiianAndOtherPacificIslander:
@@ -13796,6 +13979,9 @@ paths:
                             ChemicalsOrganicNSA:
                               type: number
                               description: 'Producer Price Index Organic Chemicals (Not Seasonally Adjusted) [Index 1982=100]'
+                            ChlorineandAlkalies:
+                              type: number
+                              description: 'Producer Price Index by Commodity for Chemicals and Allied Products: Chlorine, Sodium Hydroxide, and Other Alkalies, Not Seasonally Adjusted'
                             CO2NSA:
                               type: number
                               description: 'Producer Price Index CO2 (Not Seasonally Adjusted) [Index 1982=100]'
@@ -13870,7 +14056,7 @@ paths:
                               format: YYYY-MM-DD
                             MineralWoolNSA:
                               type: number
-                              description: 'Producer Price Index by Industry: Mineral Wool  (Not Seasonally Adjusted)'
+                              description: 'Producer Price Index by Industry: Mineral Wool (Not Seasonally Adjusted)'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -14507,6 +14693,18 @@ paths:
                               type: string
                               description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            BeverageManufacturingNSA:
+                              type: number
+                              description: 'Producer Price Index by Industry: Beverage Manufacturing'
+                            CommodityPPIBeerandAleCannedNSA:
+                              type: number
+                              description: 'Producer Price Index by Commodity: Processed Foods and Feeds: Canned Beer and Ale'
+                            CommodityPPIBeerandAleKegsNSA:
+                              type: number
+                              description: 'Producer Price Index by Commodity: Processed Foods and Feeds: Bottled Beer and Ale'
+                            CommodityPPIGinVodkaandOthersNSA:
+                              type: number
+                              description: 'Producer Price Index by Commodity: Processed Foods and Feeds: Bottled Gin, Vodka, Rum, Cordials, Cocktails, and Similar Compounds'
                             FinishedConsumerFoodsDemandNSA:
                               type: number
                               description: 'Producer Price Index: Final Demand: Finished Consumer Foods (Not Seasonally Adjusted)'
@@ -14516,12 +14714,30 @@ paths:
                             FoodDemandSA:
                               type: number
                               description: 'Producer Price Index: Final Demand Foods (Seasonally Adjusted)'
+                            IndustryPPIBeerandAleCannedNSA:
+                              type: number
+                              description: 'Producer Price Index by Industry: Breweries: Canned Beer and Ale Case Goods'
+                            IndustryPPIBeerandAleKegsNSA:
+                              type: number
+                              description: 'Producer Price Index by Industry: Breweries: Beer and Ale in Barrels and Kegs'
+                            IndustryPPIBeerLiquorRetailersNSA:
+                              type: number
+                              description: 'Producer Price Index: Beer, Wine, and Liquor Retailers'
+                            IndustryPPIGinVodkaandOthersNSA:
+                              type: number
+                              description: 'Producer Price Index by Industry: Distilleries: Bottled Gin, Vodka, Rum, Cordials, Cocktails, and Similar Compounds'
                             ProcessedFoodPeanutButterNSA:
                               type: number
                               description: 'Producer Price Index for Processed Foods and Feeds: Peanut Butter (Not Seasonally Adjusted)'
                             ProcessedFoodProcessedEggsNSA:
                               type: number
                               description: 'Producer Price Index for Processed Foods and Feeds: Processed Eggs, Liquid, Dried, or Frozen (Not Seasonally Adjusted)'
+                            ProcessedMeatNSA:
+                              type: number
+                              description: 'Producer Price Index by Commodity for Processed Foods and Feeds: Fresh/Processed Sausae, Deli and Cooked Meats, Not Seasonally Adjusted'
+                            ProcessedPetFoodNSA:
+                              type: number
+                              description: 'Producer Price Index by Commodity for Processed Foods and Feeds: Pet Food, Not Seasonally Adjusted'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -15470,6 +15686,9 @@ paths:
                             OthersDemandSA:
                               type: number
                               description: 'Producer Price Index: Final Demand Less Foods and Energy (Seasonally Adjusted)'
+                            PPIUnprocessedGoodsInterDemand:
+                              type: number
+                              description: 'Producer Price Index by Commodity: Unprocessed Goods for Intermediate Demand, Seasonally Adjusted'
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -15767,6 +15986,9 @@ paths:
                             PlasticSA:
                               type: number
                               description: 'Producer Price Index Plastic (Seasonally Adjusted) [Index 1982=100]'
+                            ResinRubberFilamentMfg:
+                              type: number
+                              description: 'Producer Price Index by Industry: Resin, Synthetic Rubber, and Artificial/Synthetic Fiber/Filaments Manufacturing, Not Seasonally Adjusted'
                             RubbernPlasticsNSA:
                               type: number
                               description: 'Producer Price Index: Rubber and Plastic Products (Not Seasonally Adjusted)'
@@ -15833,6 +16055,9 @@ paths:
                             AccomodationServicesNSA:
                               type: number
                               description: 'Producer Price Index: Accommodation Services (Not Seasonally Adjusted)'
+                            CommodityPPICleaningSupplies:
+                              type: number
+                              description: 'Producer Price Index by Commodity for Retail Trade Services: Cleaning Supplies and Paper Products, Not Seasonally Adjusted'
                             InternetAdvertisingSalesNSA:
                               type: number
                               description: 'Producer Price Index: Internet Advertising Sales, Excluding Internet Advertising Sold by Print Publishers (Not Seasonally Adjusted)'
@@ -17765,6 +17990,9 @@ paths:
                               type: string
                               description: "(*Filterable dimensional attribute*) Month.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
+                            RetailSalesPharmaSA:
+                              type: number
+                              description: 'Retail Sales (Pharmacies and Drug Stores), Seasonally Adjusted'
                             SalesNSA:
                               type: number
                               description: 'Retail Sales: Pharmacies (Not Seasonally Adjusted)'
@@ -18299,63 +18527,6 @@ paths:
                             StrictlyEnforced:
                               type: number
                               description: Restricted leaving of home with minimal exceptions
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/SpendingCountyYearly:
-    summary: Spending (Yrly) By County
-    description: Yearly statistics of yearly spending
-    get:
-      tags:
-        - Consumer Metrics
-      summary: Spending (Yrly) By County
-      description: Yearly statistics of yearly spending
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      SpendingCountyYearlies:
-                        type: array
-                        items:
-                          title: SpendingCountyYearly
-                          type: object
-                          properties:
-                            County:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Name of County or Municipal Authority.  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Year:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Year.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            BikesTotal:
-                              type: number
-                              description: Spending on Bikes
-                            CarsTotal:
-                              type: number
-                              description: Spending on Cars
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -19268,6 +19439,12 @@ paths:
                             NewPassengerCarRegistrationsNSA:
                               type: number
                               description: New Passenger Car Registrations (Not Seasonally Adjusted)
+                            OutboundAirFrtIndexAsiaNSA:
+                              type: number
+                              description: 'Outbound Price Index (International Services): Air Freight for Asia, Not Seasonally Adjusted'
+                            OutboundAirFrtIndexNSA:
+                              type: number
+                              description: 'Outbound Price Index (International Services): Air Freight, Not Seasonally Adjusted'
                             RailFreightCarLoadsNSA:
                               type: number
                               description: Rail freight carloads (Not Seasonally Adjusted)
@@ -19280,6 +19457,12 @@ paths:
                             RailFreightIntermodalSA:
                               type: number
                               description: 'Rail Intermodal Traffic, Seasonally Adjusted'
+                            TonnageInternalWaterwaysSA:
+                              type: number
+                              description: 'Tonnage for Internal Waterways, Seasonally Adjusted'
+                            TonnageTruckSA:
+                              type: number
+                              description: 'Truck Tonnage Index, Seasonally Adjusted'
                             TotalIntermodalTrafficNSA:
                               type: number
                               description: 'Railway carloadings statistics, by total tonnage transported, monthly'
@@ -19351,9 +19534,9 @@ paths:
                             Country:
                               type: string
                               description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            WeekTue:
+                            WeekMon:
                               type: string
-                              description: "(*Filterable dimensional attribute*) Week starting from Tuesday.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              description: "(*Filterable dimensional attribute*) Week starting from Monday.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
                               format: YYYY-MM-DD
                             DieselPriceNSA:
                               type: number
@@ -19421,6 +19604,74 @@ paths:
                             AirPassengersDaily:
                               type: number
                               description: Daily number of passengers in air travel
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
+  /fact/MarketIntel/Cyclones:
+    summary: Tropical Cyclones
+    description: Data on Tropical cyclones across the globe
+    get:
+      tags:
+        - Disasters
+      summary: Tropical Cyclones
+      description: Data on Tropical cyclones across the globe
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      Cyclones:
+                        type: array
+                        items:
+                          title: Cyclones
+                          type: object
+                          properties:
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            CycloneAlertLevel:
+                              type: string
+                              description: Tropical Cyclone Alert level (Red/Orange/Green)
+                            CycloneCountry:
+                              type: string
+                              description: Countries affected by the tropical cyclone
+                            CycloneDescription:
+                              type: string
+                              description: Tropical Cyclone Description
+                            CycloneEndDate:
+                              type: string
+                              description: Tropical Cyclone End Date
+                              format: YYYY-MM-DD
+                            CycloneGeometry:
+                              type: string
+                              description: Tropical Cyclone - Cone of uncertainty (weblink to geoJSON)
+                            CycloneStartDate:
+                              type: string
+                              description: Tropical Cyclone Start Date
+                              format: YYYY-MM-DD
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
@@ -19809,6 +20060,80 @@ paths:
           $ref: '#/components/responses/406'
         '500':
           $ref: '#/components/responses/500'
+  /fact/MarketIntel/VolcanoesDaily:
+    summary: 'Volcanoes: Daily'
+    description: Volcanic Activity at a daily level
+    get:
+      tags:
+        - Disasters
+      summary: 'Volcanoes: Daily'
+      description: Volcanic Activity at a daily level
+      parameters:
+        - $ref: '#/components/parameters/Token'
+        - $ref: '#/components/parameters/Filters'
+        - $ref: '#/components/parameters/Size'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Data:
+                    type: object
+                    properties:
+                      VolcanoesDailies:
+                        type: array
+                        items:
+                          title: VolcanoesDaily
+                          type: object
+                          properties:
+                            Day:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
+                              format: YYYY-MM-DD
+                            Volcano:
+                              type: string
+                              description: "(*Filterable dimensional attribute*) Unique ID and Name of a Volcano.  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
+                            VolcanoAlertLevel:
+                              type: string
+                              description: Volcano Alert Level
+                            VolcanoDescription:
+                              type: string
+                              description: Volcanic Event Description
+                            VolcanoEndDate:
+                              type: string
+                              description: Volcanic Eruption End Date
+                              format: YYYY-MM-DD
+                            VolcanoLatitude:
+                              type: number
+                              description: Volcano Latitude
+                            VolcanoLongitude:
+                              type: number
+                              description: Volcano Longitude
+                            VolcanoStartDate:
+                              type: string
+                              description: Volcanic Eruption Start Date
+                              format: YYYY-MM-DD
+                            VolcanoTitle:
+                              type: string
+                              description: Name of the Volcano
+                  Cursor:
+                    type: string
+                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '406':
+          $ref: '#/components/responses/406'
+        '500':
+          $ref: '#/components/responses/500'
   /fact/MarketIntel/WeatherForecastDaily:
     summary: Weather Forecast - Daily
     description: Weather Forecast - Daily
@@ -19940,81 +20265,6 @@ paths:
                             Precipitation:
                               type: number
                               description: Daily Weather by City - Precipitation
-                  Cursor:
-                    type: string
-                    description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
-        '401':
-          $ref: '#/components/responses/401'
-        '403':
-          $ref: '#/components/responses/403'
-        '404':
-          $ref: '#/components/responses/404'
-        '406':
-          $ref: '#/components/responses/406'
-        '500':
-          $ref: '#/components/responses/500'
-  /fact/MarketIntel/DailyCountryWeather:
-    summary: 'Weather: Country'
-    description: These are measures that are aggregated at the country to learn broad seasonal effects.
-    get:
-      tags:
-        - Weather
-      summary: 'Weather: Country'
-      description: These are measures that are aggregated at the country to learn broad seasonal effects.
-      parameters:
-        - $ref: '#/components/parameters/Token'
-        - $ref: '#/components/parameters/Filters'
-        - $ref: '#/components/parameters/Size'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  Data:
-                    type: object
-                    properties:
-                      DailyCountryWeathers:
-                        type: array
-                        items:
-                          title: DailyCountryWeather
-                          type: object
-                          properties:
-                            Country:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Three letter alphabetic code for country [Alpha 3 per ISO 3166-1].  \n<br/>*See 'Geo (Dimension)' in this document for the other attributes that might be used for filtering*"
-                            Day:
-                              type: string
-                              description: "(*Filterable dimensional attribute*) Day.  \n<br/>*See 'Time (Dimension)' in this document for the other attributes that might be used for filtering*"
-                              format: YYYY-MM-DD
-                            AvgTemperature:
-                              type: number
-                              description: Daily Weather by Country - Average Temperature
-                            AvgTemperatureForecast:
-                              type: number
-                              description: Daily Weather Forecast by Country - Average Temperature
-                            MaxTemperature:
-                              type: number
-                              description: Daily Weather by Country - Maximum Temperature
-                            MaxTemperatureForecast:
-                              type: number
-                              description: Daily Weather Forecast by Country - Maximum Temperature
-                            MinTemperature:
-                              type: number
-                              description: Daily Weather by Country - Minimum Temperature
-                            MinTemperatureForecast:
-                              type: number
-                              description: Daily Weather Forecast by Country - Minimum Temperature
-                            Precipitation:
-                              type: number
-                              description: Daily Weather by Country - Precipitation
-                            PrecipitationForecast:
-                              type: number
-                              description: Daily Weather Forecast by Country - Precipitation
                   Cursor:
                     type: string
                     description: When present it signifies a paginated response. Use this value as a query parameter to get the next page of results.
